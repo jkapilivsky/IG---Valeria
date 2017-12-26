@@ -104,14 +104,17 @@ while error > 0:
                 search_results[0].click()
                 sleep()
             except:
-                driver.find_element_by_class_name('_oznku')
-                data = pickle.load(open("../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[people, 'Not_searchable', str(datetime.datetime.now())]],
-                                  columns=['username', 'status', 'time_stamp'])
-                data = data.append(df)
-                pickle.dump(data, open("../data/Instagram_data.p", "wb"))
-                search.clear()
-                continue
+                try:
+                    driver.find_element_by_class_name('_oznku')
+                    data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                    df = pd.DataFrame([[people, 'Not_searchable', str(datetime.datetime.now())]],
+                                      columns=['username', 'status', 'time_stamp'])
+                    data = data.append(df)
+                    pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                    search.clear()
+                    continue
+                except NoSuchElementException:
+                    continue
 
             # Check if they found hashtag
             try:

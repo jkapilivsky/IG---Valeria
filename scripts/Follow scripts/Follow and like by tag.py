@@ -99,11 +99,14 @@ def follow_like_people(number_of_people, minutes):
     count = 0
     followed = 0
     while count < number_of_people:
-        follow_button = driver.find_element_by_class_name('_4tgw8')
-        if follow_button.text == 'Follow':
-            follow_button.click()
-            write_pickle()
-            followed += 1
+        try:
+            follow_button = driver.find_element_by_class_name('_4tgw8')
+            if follow_button.text == 'Follow':
+                follow_button.click()
+                write_pickle()
+                followed += 1
+        except NoSuchElementException:
+            continue
 
         time.sleep(.3)
         like_unlike_check()
