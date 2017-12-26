@@ -6,16 +6,23 @@ import datetime
 import pickle
 import pandas as pd
 from random import *
+import sys, logging
+
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def open_chrome():
     global driver
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Insta files/Profiles/Follow_Famous_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Follow_Famous_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
-    client = Client('AC190d9ac5ae8e8d522ee14d55704ae686', 'cc9f66925040f499193c5cd92427b1a2')  # For Twilio
     sleep()
 
 def sleep():
@@ -109,6 +116,11 @@ def follow_people(amount):
 
         write_to_database(name, future_followers)
 
+def error_handling():
+    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+                                     sys.exc_info()[1],
+                                     sys.exc_info()[2].tb_lineno)
+
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'Follow Famous people followers', str(datetime.datetime.now())]],
@@ -120,6 +132,7 @@ errors = 3
 while errors > 0:
     try:
         open_chrome()
+        twilio()
         who_to_follow('hotsootuff', 'kimkardashian')  # day and night
         search_famous_person()
         follow_people(6)  # amount = number of people to follow
@@ -130,7 +143,8 @@ while errors > 0:
 
 
     except Exception as err:
-        error_log(err)
+        issue = logging.error(error_handling())
+        error_log(issue)
         driver.close()
 
         errors -= 1

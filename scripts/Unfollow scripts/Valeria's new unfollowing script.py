@@ -8,7 +8,24 @@ from twilio.rest import Client
 import pickle
 import pandas as pd
 from random import *
+import sys, logging
 
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
+
+def open_chrome():
+    global driver
+    global client
+    options = webdriver.ChromeOptions()
+    options.add_argument(
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Unfollow_Profile")  # Path to your chrome profile
+    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
+    driver.get("https://www.instagram.com/")
+    sleep()
 
 def sleep():
     time.sleep(randint(4, 6))
@@ -62,6 +79,11 @@ def text_me(message):
     client.messages.create(to=jamie_number,
                            from_=twilio_number,
                            body=message)
+
+def error_handling():
+    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+                                     sys.exc_info()[1],
+                                     sys.exc_info()[2].tb_lineno)
 
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
@@ -131,17 +153,12 @@ following_list = ['graciejudson', 'chezkakae', 'yolandaolivares10', 'duckieoffic
                   'ashngar', 'rgone12', 'lauren_analy', 'mgbigred', 'rreyesz36', 'pcano1994', 'cris.c__', 'adaexplainsitall',
                   'luisedtr', 'jon_cruz88', 'madchicanita', 'satou912']
 #
-global driver
-# print('waiting')
-# time.sleep(60*11)
+
 error = 3
 while error > 0:
     try:
-        options = webdriver.ChromeOptions()
-        options.add_argument("user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Insta files/Profiles/Unfollow_Profile")  # Path to your chrome profile
-        driver = webdriver.Chrome(executable_path= '../../assets/chromedriver', chrome_options= options)
-        driver.get("https://www.instagram.com/")
-        client = Client('AC190d9ac5ae8e8d522ee14d55704ae686', 'cc9f66925040f499193c5cd92427b1a2')  # For Twilio
+        open_chrome()
+        twilio()
 
 
         start = timeit.default_timer()
@@ -206,7 +223,8 @@ while error > 0:
         print('Minutes: ', (stop - start)/60)
 
     except Exception as err:
-        error_log(err)
+        issue = logging.error(error_handling())
+        error_log(issue)
         driver.close()
         error -= 1
         text_me('oldschool | Unfollow stopped working!')

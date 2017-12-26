@@ -7,16 +7,23 @@ import datetime
 import pickle
 import pandas as pd
 from random import *
-#
+import sys, logging
+
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
+
 def open_chrome():
     global driver
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Insta files/Profiles/Follow_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Follow_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
-    client = Client('AC190d9ac5ae8e8d522ee14d55704ae686', 'cc9f66925040f499193c5cd92427b1a2')  # For Twilio
     sleep()
 
 def sleep():
@@ -163,6 +170,11 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
         driver.back()
         sleep()
 
+def error_handling():
+    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+                                     sys.exc_info()[1],
+                                     sys.exc_info()[2].tb_lineno)
+
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'new FOLLOW script', str(datetime.datetime.now())]],
@@ -175,6 +187,7 @@ followings = 0
 while errors > 0:
     try:
         open_chrome()
+        twilio()
         # go to profile
         driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
         sleep()
@@ -205,15 +218,15 @@ while errors > 0:
         #driver.close()
 
     except Exception as err:
+        issue = logging.error(error_handling())
+        error_log(issue)
         driver.close()
-
-        error_log(err)
 
         errors -= 1
         if errors == 0:
             text_me('new follow script quit!')
             quit()
-        message = 'Follow error = ' + str((3 - errors)) + ' ... ' + str(errors) + ' errors remaining'
+        message = 'Follow error = #' + str(errors)
         text_me(message)
 
 

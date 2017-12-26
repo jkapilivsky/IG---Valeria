@@ -8,6 +8,24 @@ from random import *
 import pickle
 import datetime
 import pandas as pd
+import sys, logging
+
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
+
+def open_chrome():
+    global driver
+    global client
+    options = webdriver.ChromeOptions()
+    options.add_argument(
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Liking_Profile")  # Path to your chrome profile
+    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
+    driver.get("https://www.instagram.com/")
+    sleep()
 
 def sleep():
     time.sleep(randint(4,7))
@@ -288,15 +306,23 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
         pic_counter += 1
 
+def error_handling():
+    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+                                     sys.exc_info()[1],
+                                     sys.exc_info()[2].tb_lineno)
+
+def error_log(err):
+    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
+    df = pd.DataFrame([[err, 'Liking people who liked us script', str(datetime.datetime.now())]],
+                      columns=['error message', 'script', 'time_stamp'])
+    error_log = error_log.append(df)
+    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
+#
 error = 1
 while error >= 0:
     try:
-        global driver
-        options = webdriver.ChromeOptions()
-        options.add_argument("user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Insta files/Profiles/Liking_Profile")  # Path to your chrome profile
-        driver = webdriver.Chrome(executable_path= '../../assets/chromedriver', chrome_options= options)
-        driver.get("https://www.instagram.com/")
-        client = Client('AC190d9ac5ae8e8d522ee14d55704ae686', 'cc9f66925040f499193c5cd92427b1a2')  # For Twilio
+        open_chrome()
+        twilio()
 
         start = timeit.default_timer()
         sleep()
@@ -327,13 +353,8 @@ while error >= 0:
         driver.close()  #
 
     except Exception as err:
-
-        error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
-        df = pd.DataFrame([[err, 'Unfollow from Pickle', str(datetime.datetime.now())]],
-                          columns=['error message', 'script', 'time_stamp'])
-        error_log = error_log.append(df)
-        pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
-
+        issue = logging.error(error_handling())
+        error_log(issue)
         driver.close()
         error -= 1
 

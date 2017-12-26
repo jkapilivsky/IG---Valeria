@@ -103,7 +103,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 1
+errors = 3
 while errors > 0:
     try:
         start = timeit.default_timer()

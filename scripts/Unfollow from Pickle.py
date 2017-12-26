@@ -7,6 +7,24 @@ import datetime
 import pickle
 import pandas as pd
 from random import *
+import sys, logging
+
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
+
+def open_chrome():
+    global driver
+    global client
+    options = webdriver.ChromeOptions()
+    options.add_argument(
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Unfollow_Profile")  # Path to your chrome profile
+    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
+    driver.get("https://www.instagram.com/")
+    sleep()
 
 def sleep():
     time.sleep(randint(6, 9))
@@ -40,17 +58,6 @@ def log_into_instagram(username, password):
     pw.send_keys(Keys.ENTER)
     time.sleep(3)
 
-def open_chrome():
-    global driver
-    global client
-    options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Insta files/Profiles/Unfollow_Profile")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../assets/chromedriver', chrome_options=options)
-    driver.get("https://www.instagram.com/")
-    client = Client('AC190d9ac5ae8e8d522ee14d55704ae686', 'cc9f66925040f499193c5cd92427b1a2')  # For Twilio
-    sleep()
-
 def read_pickle():
     # Begin pickle
     global follow_unfollow_df
@@ -62,11 +69,25 @@ def read_pickle():
     follow_unfollow_df = follow_unfollow_df[~follow_unfollow_df['status'].isin(bad_status)]
     follow_unfollow_df = follow_unfollow_df[~follow_unfollow_df['time_stamp'].isin([today])]
 
+def error_handling():
+    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+                                     sys.exc_info()[1],
+                                     sys.exc_info()[2].tb_lineno)
+
+def error_log(err):
+    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
+    df = pd.DataFrame([[err, 'Valeria new unfollowing script', str(datetime.datetime.now())]],
+                      columns=['error message', 'script', 'time_stamp'])
+    error_log = error_log.append(df)
+    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
+
+
 count = 0
 error = 2
 while error > 0:
     try:
         open_chrome()
+        twilio()
         read_pickle()
 
         for people in follow_unfollow_df['username']:
@@ -189,16 +210,11 @@ while error > 0:
 
         driver.close()
     except Exception as err:
+        issue = logging.error(error_handling())
+        error_log(issue)
         driver.close()
-
-        error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
-        df = pd.DataFrame([[err, 'Unfollow from Pickle', str(datetime.datetime.now())]],
-                          columns=['error message', 'script', 'time_stamp'])
-        error_log = error_log.append(df)
-        pickle.dump(error_log, open("../data/Instagram_error_log.p", "wb"))
 
         error -= 1
-        driver.close()
         msg = 'Unfollow issue!'
         if error == 0:
             text_me('unfollow ended!')

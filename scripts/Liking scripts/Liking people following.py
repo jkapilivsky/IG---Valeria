@@ -8,16 +8,23 @@ from random import *
 import pickle
 import datetime
 import pandas as pd
+import sys, logging
+
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def open_chrome():
     global driver
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Insta files/Profiles/Extra_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Liking_people_following_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
-    client = Client('AC190d9ac5ae8e8d522ee14d55704ae686', 'cc9f66925040f499193c5cd92427b1a2')  # For Twilio
     sleep()
 
 def sleep():
@@ -264,6 +271,11 @@ def like_peoples_stuffs(people_to_follow, number_of_pics_to_like):
     driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
     sleep()
 
+def error_handling():
+    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+                                     sys.exc_info()[1],
+                                     sys.exc_info()[2].tb_lineno)
+
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'Liking people following', str(datetime.datetime.now())]],
@@ -275,6 +287,7 @@ error = 1
 while error >= 0:
     try:
         open_chrome()
+        twilio()
         start = timeit.default_timer()
         sleep()
 
@@ -287,7 +300,8 @@ while error >= 0:
         driver.close()
 
     except Exception as err:
-        error_log(err)
+        issue = logging.error(error_handling())
+        error_log(issue)
         driver.close()
         error -= 1
         if error == 0:

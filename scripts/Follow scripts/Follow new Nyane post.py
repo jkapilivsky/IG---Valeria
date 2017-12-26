@@ -7,16 +7,23 @@ import datetime
 import pickle
 import pandas as pd
 from random import *
+import sys, logging
+
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def open_chrome():
     global driver
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Insta files/Profiles/Liking_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Follow_Nyane_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
-    client = Client('AC190d9ac5ae8e8d522ee14d55704ae686', 'cc9f66925040f499193c5cd92427b1a2')  # For Twilio
     sleep()
 
 def sleep():
@@ -101,6 +108,11 @@ def check_for_new_post(amount):
     else:
         pass
 
+def error_handling():
+    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+                                     sys.exc_info()[1],
+                                     sys.exc_info()[2].tb_lineno)
+
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'Follow new Nyane post', str(datetime.datetime.now())]],
@@ -121,8 +133,10 @@ while errors > 0:
         time.sleep(20*60)
 
     except Exception as err:
-        error_log(err)
+        issue = logging.error(error_handling())
+        error_log(issue)
         driver.close()
+
         errors -= 1
         if errors == 0:
             text_me('follow famous person QUIT!')
