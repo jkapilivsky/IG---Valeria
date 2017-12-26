@@ -12,9 +12,25 @@ import pandas as pd
 from selenium.webdriver.common.action_chains import ActionChains
 from random import *
 
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
+
+def open_chrome():
+    global driver
+    global client
+    options = webdriver.ChromeOptions()
+    options.add_argument(
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Extra_Profile")  # Path to your chrome profile
+    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
+    driver.get("https://www.instagram.com/")
+    sleep()
+
 def sleep():
     time.sleep(randint(1, 6))
-
 
 def text_me(message):
     twilio_number = '+19563912057'
@@ -26,34 +42,12 @@ def text_me(message):
                            from_=twilio_number,
                            body=message)
 
-
-def log_into_instagram(username, password):
-    driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
-    time.sleep(1.5)
-
-    # Input username
-    user = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[1]/div/input''')
-    user.clear()
-    user.send_keys(username)
-
-    # Input password
-    pw = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/input''')
-    pw.clear()
-    pw.send_keys(password)
-
-    pw.send_keys(Keys.ENTER)
-    time.sleep(3)
-
-
 def remove_k_m_periods_commas(value):
     value = value.replace('k', '')
     value = value.replace('m', '')
     value = value.replace('.', '')
     value = value.replace(',', '')
     return value
-
 
 def follower_following_range(follower_min, follower_max, following_min, following_max):
     num_follower = driver.find_element_by_xpath(
@@ -75,11 +69,10 @@ def follower_following_range(follower_min, follower_max, following_min, followin
         print('good to go')
         return True
 
-driver = webdriver.Chrome('../assets/chromedriver')
-driver.get("https://www.instagram.com/")
-client = Client('AC9709d76b68dc19ec27d6e6f7110bff97', 'b1e1c73b81733409ed8dcf18fa510ba0')  # For Twilio
 
-log_into_instagram('linethmm', 'I1232123you')
+open_chrome()
+twilio()
+
 sleep()
 
 locations = ['Austin, TX']
