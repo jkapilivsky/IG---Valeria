@@ -80,12 +80,14 @@ def text_me(message):
 def open_chrome():
     global driver
     global client
+    twilio_key_account = 'AC190d9ac5ae8e8d522ee14d55704ae686'
+    twilio_key_2 = 'cc9f66925040f499193c5cd92427b1a2'
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Profiles/GSheet_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/GSheet_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
-    client = Client('AC190d9ac5ae8e8d522ee14d55704ae686', 'cc9f66925040f499193c5cd92427b1a2')  # For Twilio
+    client = Client(twilio_key_account, twilio_key_2)  # For Twilio
     sleep()
 
 errors = 1
@@ -93,7 +95,6 @@ while errors > 0:
     try:
         start = timeit.default_timer()
         open_chrome()
-        time.sleep(564654561321)
         posts = follower = following = None
         sleep()
         #log_into_instagram('linethmm', 'I1232123you')
@@ -147,7 +148,7 @@ while errors > 0:
 
         # use creds to create a client to interact with the Google Drive API
         scope = ['https://spreadsheets.google.com/feeds']
-        creds = ServiceAccountCredentials.from_json_keyfile_name('GSheet_client_secret', scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name('../../API Keys/GSheet_client_secret', scope)
         client = gspread.authorize(creds)
 
         # Find a workbook by name and open the first sheet
