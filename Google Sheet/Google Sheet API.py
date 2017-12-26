@@ -9,10 +9,12 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import datetime
 from twilio.rest import Client
+import sys, logging
+import pandas as pd
+import pickle
 
 def sleep():
     time.sleep(3.5)
-
 
 def log_into_instagram(username, password):
     driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
@@ -33,14 +35,12 @@ def log_into_instagram(username, password):
     pw.send_keys(Keys.ENTER)
     time.sleep(3)
 
-
 def repeat_space_bar(number_of_times):
     count = 0
     while count < number_of_times:
         driver.find_element_by_class_name('coreSpriteGlyphBlack').send_keys(Keys.SPACE)
         time.sleep(1)
         count += 1
-
 
 def overall_stats():
     # grab followers number
@@ -65,7 +65,6 @@ def overall_stats():
 
     sleep()
 
-
 def text_me(message):
     twilio_number = '+19562720613'
     jamie_number = '+19568214550'
@@ -76,25 +75,40 @@ def text_me(message):
                            from_=twilio_number,
                            body=message)
 
+def twilio():
+    global client
+    twilio_dict = pd.read_pickle('../../API Keys/Twilio_API.p')
+    twilio_acc = list(twilio_dict.values())[0]
+    twilio_cred = list(twilio_dict.values())[1]
+    client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def open_chrome():
     global driver
-    global client
-    twilio_key_account = 'AC190d9ac5ae8e8d522ee14d55704ae686'
-    twilio_key_2 = 'cc9f66925040f499193c5cd92427b1a2'
     options = webdriver.ChromeOptions()
     options.add_argument(
         "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/GSheet_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
-    client = Client(twilio_key_account, twilio_key_2)  # For Twilio
     sleep()
+
+def error_handling():
+    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+                                     sys.exc_info()[1],
+                                     sys.exc_info()[2].tb_lineno)
+
+def error_log(err):
+    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
+    df = pd.DataFrame([[err, 'new FOLLOW script', str(datetime.datetime.now())]],
+                      columns=['error message', 'script', 'time_stamp'])
+    error_log = error_log.append(df)
+    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
 errors = 1
 while errors > 0:
     try:
         start = timeit.default_timer()
         open_chrome()
+        twilio()
         posts = follower = following = None
         sleep()
         #log_into_instagram('linethmm', 'I1232123you')
@@ -112,7 +126,7 @@ while errors > 0:
         except NoSuchElementException:
             pass
 
-        repeat_space_bar(45)  # Scrolls down to the bottom of the profile page
+        repeat_space_bar(round(int(posts)/3))  # Scrolls down to the bottom of the profile page
 
         likes = 0
         video_views = 0
@@ -236,7 +250,9 @@ while errors > 0:
         time.sleep(wait_time)
 
     except Exception as err:
+        issue = logging.error(error_handling())
+        error_log(issue)
         driver.close()
-        errors -= 1
         msg = "Google API down" + repr(err)
         text_me(message=msg)
+        errors -= 1
