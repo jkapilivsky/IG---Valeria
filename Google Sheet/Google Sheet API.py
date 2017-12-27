@@ -250,7 +250,7 @@ while errors > 0:
         time.sleep(wait_time)
 
     except Exception as err:
-        issue = logging.error(error_handling())
+        issue = error_handling()
         error_log(issue)
         driver.close()
         msg = "Google API down" + repr(err)

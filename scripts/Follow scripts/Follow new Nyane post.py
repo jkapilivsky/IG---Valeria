@@ -133,7 +133,7 @@ while errors > 0:
         time.sleep(20*60)
 
     except Exception as err:
-        issue = logging.error(error_handling())
+        issue = error_handling()
         error_log(issue)
         driver.close()
 

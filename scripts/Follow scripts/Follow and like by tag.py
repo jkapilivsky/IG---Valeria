@@ -25,6 +25,7 @@ def open_chrome():
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
+
 def sleep():
     time.sleep(randint(6, 9))
 
@@ -137,10 +138,12 @@ errors = 1
 while errors > 0:
     try:
         open_chrome()
-        hastag_list = ['#hudabeauty', '#beautiful', '#iggers', '#followforfollow', '#likeforlike',
+        hashtag_list = ['#hudabeauty', '#beautiful', '#iggers', '#followforfollow', '#likeforlike',
                        '#Beautiful', '#me', '#instagood', '#Austin']
+        #Randomizes list!
+        hashtag_list = sorted(hashtag_list, key=lambda x: random())
 
-        for hash in hastag_list:
+        for hash in hashtag_list:
             search_famous_person(hash)
            # click first image of 'recent posts' *skipping to posts
             driver.find_element_by_xpath(
@@ -156,6 +159,7 @@ while errors > 0:
         issue = logging.error(error_handling())
         error_log(issue)
         driver.close()
+        print(err)
         errors -= 1
         if errors == 0:
             text_me('follow #tags quit!')

@@ -213,7 +213,7 @@ while error > 0:
 
         driver.close()
     except Exception as err:
-        issue = logging.error(error_handling())
+        issue = error_handling()
         error_log(issue)
         driver.close()
 

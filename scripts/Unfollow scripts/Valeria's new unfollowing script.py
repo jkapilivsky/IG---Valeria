@@ -188,7 +188,7 @@ while error > 0:
         repeat_space_bar(100)
 
         count = 0
-        for people in range(430, 0, -1):
+        for people in range(350, 0, -1):
             unfollow_button = driver.find_elements_by_class_name('_qv64e')
             name = driver.find_elements_by_class_name('_2g7d5')
 
@@ -223,7 +223,7 @@ while error > 0:
         print('Minutes: ', (stop - start)/60)
 
     except Exception as err:
-        issue = logging.error(error_handling())
+        issue = error_handling()
         error_log(issue)
         driver.close()
         error -= 1

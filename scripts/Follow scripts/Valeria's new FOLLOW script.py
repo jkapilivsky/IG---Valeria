@@ -171,7 +171,7 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
         sleep()
 
 def error_handling():
-    return '{}, {}, line: {}'.format(sys.exc_info()[0],
+    return '{} {} line: {}'.format(sys.exc_info()[0],
                                      sys.exc_info()[1],
                                      sys.exc_info()[2].tb_lineno)
 
@@ -182,10 +182,11 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 #
-errors = 3
+errors = 1
 followings = 0
 while errors > 0:
     try:
+        aa + b
         open_chrome()
         twilio()
         # go to profile
@@ -218,7 +219,7 @@ while errors > 0:
         #driver.close()
 
     except Exception as err:
-        issue = logging.error(error_handling())
+        issue = error_handling()
         error_log(issue)
         driver.close()
 
