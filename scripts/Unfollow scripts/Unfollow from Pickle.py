@@ -84,7 +84,7 @@ def error_log(err):
 
 
 count = 0
-error = 2
+error = 1
 while error > 0:
     try:
         open_chrome()
@@ -107,11 +107,11 @@ while error > 0:
             except:
                 try:
                     driver.find_element_by_class_name('_oznku')
-                    data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                    data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                     df = pd.DataFrame([[people, 'Not_searchable', str(datetime.datetime.now())]],
                                       columns=['username', 'status', 'time_stamp'])
                     data = data.append(df)
-                    pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                    pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                     search.clear()
                     continue
                 except NoSuchElementException:
@@ -121,11 +121,11 @@ while error > 0:
             try:
                 driver.find_element_by_class_name('_kwqc3')
 
-                data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                 df = pd.DataFrame([[people, 'hashtag', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
-                pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 continue
             except NoSuchElementException:
                 pass
@@ -134,11 +134,11 @@ while error > 0:
             try:
                 driver.find_element_by_class_name('_thew0')
 
-                data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                 df = pd.DataFrame([[people, 'location', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
-                pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 continue
             except NoSuchElementException:
                 pass
@@ -147,11 +147,11 @@ while error > 0:
             try:
                 driver.find_element_by_class_name('error-container')
 
-                data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                 df = pd.DataFrame([[people, 'deleted_account', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
-                pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 driver.find_element_by_xpath('''/html/body/div/div[1]/header/div/div[1]/a''').click()
                 time.sleep(3)
                 continue
@@ -160,11 +160,11 @@ while error > 0:
 
             # Found the wrong person!
             if driver.find_element_by_class_name('_rf3jb').text != people:
-                data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                 df = pd.DataFrame([[people, 'Wrong_search', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
-                pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 continue
 
             button = driver.find_element_by_class_name('_r9b8f')
@@ -203,9 +203,9 @@ while error > 0:
                 # End pickle
 
             # Updates data frame files
-            data = pickle.load(open("../data/Instagram_data.p", "rb"))
+            data = pickle.load(open("../../data/Instagram_data.p", "rb"))
             data.drop_duplicates(subset='username', keep='last', inplace=True)
-            pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+            pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
             # End pickle
 
             if (count + 1) % 16 == 0:  # Sleeps for 15 minutes every 16 unfollow
@@ -222,4 +222,5 @@ while error > 0:
         msg = 'Unfollow issue!'
         if error == 0:
             text_me('unfollow ended!')
+            quit()
         text_me(msg)

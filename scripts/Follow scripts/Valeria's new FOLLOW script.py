@@ -117,8 +117,11 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
             continue
 
         # clicks followers
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]/a''').click()
-        sleep()
+        try:
+            driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]/a''').click()
+            sleep()
+        except: 
+            continue
 
         repeat_space_bar(30)
 
@@ -213,7 +216,7 @@ while errors > 0:
             '''//*[@id="react-root"]/section/main/article/header/section/ul/li[3]/a''').text
 
         f = remove_k_m_periods_commas(f)
-        followings = int(f)
+        followings = int(f)  #TODO - error here!
         print(followings)
         #driver.close()
 

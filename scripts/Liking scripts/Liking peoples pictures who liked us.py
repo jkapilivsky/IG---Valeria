@@ -187,6 +187,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
         # Likes the first x people!
         for x in people_list:  # Still need to click out of image to get to the search bar!!
+            sleep()
             print(people_list.index(x), x)
             search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
             search.clear()
@@ -201,11 +202,14 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
                 search_results[0].click()
                 sleep()
             except:
-                driver.find_element_by_class_name('_oznku')
-                search.clear()
-                # if statement that breaks for loop if were at the end...
-                if people_list.index(x) == len(people_list)-1:
-                    break
+                try:
+                    driver.find_element_by_class_name('_oznku')
+                    search.clear()
+                    # if statement that breaks for loop if were at the end...
+                    if people_list.index(x) == len(people_list)-1:
+                        break
+                except:
+                    search.clear()
                 continue
 
             # Check if they found hashtag
