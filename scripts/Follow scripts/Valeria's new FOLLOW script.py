@@ -186,7 +186,6 @@ errors = 1
 followings = 0
 while errors > 0:
     try:
-        aa + b
         open_chrome()
         twilio()
         # go to profile

@@ -221,6 +221,7 @@ while error > 0:
         stop = timeit.default_timer()
         print('Unfollowed: ', count, ' people!')
         print('Minutes: ', (stop - start)/60)
+        driver.close()
 
     except Exception as err:
         issue = error_handling()

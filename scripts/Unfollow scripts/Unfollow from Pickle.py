@@ -61,13 +61,14 @@ def log_into_instagram(username, password):
 def read_pickle():
     # Begin pickle
     global follow_unfollow_df
-    data = pickle.load(open("../data/Instagram_data.p", "rb"))
+    data = pickle.load(open("../../data/Instagram_data.p", "rb"))
 
     bad_status = ['Not_searchable', 'Wrong_search', 'hashtag', 'location', 'deleted_account']
     today = str(datetime.date.today())  # Gets today's date
     follow_unfollow_df = data[data['status'].isin(['Following'])]
     follow_unfollow_df = follow_unfollow_df[~follow_unfollow_df['status'].isin(bad_status)]
     follow_unfollow_df = follow_unfollow_df[~follow_unfollow_df['time_stamp'].isin([today])]
+    print('unfollowing:', follow_unfollow_df['username'].tolist())
 
 def error_handling():
     return '{}, {}, line: {}'.format(sys.exc_info()[0],
@@ -76,7 +77,7 @@ def error_handling():
 
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
-    df = pd.DataFrame([[err, 'Valeria new unfollowing script', str(datetime.datetime.now())]],
+    df = pd.DataFrame([[err, 'Unfollow from Pickle', str(datetime.datetime.now())]],
                       columns=['error message', 'script', 'time_stamp'])
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
@@ -173,11 +174,11 @@ while error > 0:
                 print('unfollowed', people)
                 sleep()
                 # Begin pickle
-                data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                 df = pd.DataFrame([[people, 'Unfollowed', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
-                pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 count += 1
                 # End pickle
 
@@ -185,20 +186,20 @@ while error > 0:
                 # button.click()
                 # print('unfollow requested! Need to track this by time', people)
                 # Begin pickle
-                data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                 df = pd.DataFrame([[people, 'Requested', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
-                pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 # End pickle
 
             elif button.text == 'Follow':
                 # Begin pickle
-                data = pickle.load(open("../data/Instagram_data.p", "rb"))
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                 df = pd.DataFrame([[people, 'Unfollowed', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
-                pickle.dump(data, open("../data/Instagram_data.p", "wb"))
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 # End pickle
 
             # Updates data frame files
