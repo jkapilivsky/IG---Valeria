@@ -21,7 +21,7 @@ def open_chrome():
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Follow_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()

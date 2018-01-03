@@ -66,8 +66,10 @@ def twilio():
 def open_chrome():
     global driver
     options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/GSheet_Profile")  # Path to your chrome profile
+    options_dict = pd.read_pickle('../assets/ChromeOptions.p')
+    # options_desktop = list(options_dict.values())[0]
+    # options_work_laptop = list(options_dict.values())[1]
+    options.add_argument('user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Extra_Profile')  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()

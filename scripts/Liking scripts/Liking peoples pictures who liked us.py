@@ -22,7 +22,7 @@ def open_chrome():
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Liking_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Liking_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
@@ -296,10 +296,10 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
         # Clicks first image!
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[1]/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[3]/a/div''').click()
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[1]/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[3]/a/div''').click()
 
         sleep()
         while pic_count < pic_counter:
@@ -339,11 +339,11 @@ while error >= 0:
         # select image
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[1]/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[3]/a/div''').click()
 
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[1]/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[3]/a/div''').click()
 
         sleep()
 
