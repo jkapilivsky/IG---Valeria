@@ -97,11 +97,11 @@ def error_handling():
                                      sys.exc_info()[2].tb_lineno)
 
 def error_log(err):
-    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
+    error_log = pickle.load(open("../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'new FOLLOW script', str(datetime.datetime.now())]],
                       columns=['error message', 'script', 'time_stamp'])
     error_log = error_log.append(df)
-    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
+    pickle.dump(error_log, open("../data/Instagram_error_log.p", "wb"))
 
 errors = 3
 while errors > 0:
