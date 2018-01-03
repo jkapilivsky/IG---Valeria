@@ -8,17 +8,13 @@ from selenium.webdriver.common.action_chains import ActionChains
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import datetime
-from twilio.rest import Client
-import sys, logging
+import sys
 import pandas as pd
 import pickle
-from random import randint
 
 sys.path.insert(0, 'C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import *
+from Insta_functions import twilio, text_me, sleep, error_handling
 
-def sleep():
-    time.sleep(randint(3, 4))
 
 def repeat_space_bar(number_of_times):
     count = 0
@@ -50,46 +46,23 @@ def overall_stats():
 
     sleep()
 
-# def text_me(message):
-#     twilio_number = '+19562720613'
-#     jamie_number = '+19568214550'
-#     valeria_number = '+19564370322'
-#     #phone_number = '+1%s' % input('What is your phone number?')
-#
-#     client.messages.create(to=jamie_number,
-#                            from_=twilio_number,
-#                            body=message)
-
-# def twilio():
-#     global client
-#     twilio_dict = pd.read_pickle('../../API Keys/Twilio_API.p')
-#     twilio_acc = list(twilio_dict.values())[0]
-#     twilio_cred = list(twilio_dict.values())[1]
-#     client = Client(twilio_acc, twilio_cred)  # For Twilio
-
 def open_chrome():
     global driver
     options = webdriver.ChromeOptions()
-    options_dict = pd.read_pickle('../assets/ChromeOptions.p')
+    #options_dict = pd.read_pickle('../../assets/ChromeOptions.p')
     # options_desktop = list(options_dict.values())[0]
     # options_work_laptop = list(options_dict.values())[1]
-    options.add_argument('user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Extra_Profile')  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../assets/chromedriver', chrome_options=options)
+    options.add_argument('user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Extra_Profile')  # Path to your chrome profile
+    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
 
-def error_handling():
-    return '{}, {}, line: {}'.format(sys.exc_info()[0],
-                                     sys.exc_info()[1],
-                                     sys.exc_info()[2].tb_lineno)
-
 def error_log(err):
-    error_log = pickle.load(open("../data/Instagram_error_log.p", "rb"))
+    error_log = pickle.load(open("..../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'new FOLLOW script', str(datetime.datetime.now())]],
                       columns=['error message', 'script', 'time_stamp'])
     error_log = error_log.append(df)
-    pickle.dump(error_log, open("../data/Instagram_error_log.p", "wb"))
-
+    pickle.dump(error_log, open("..../data/Instagram_error_log.p", "wb"))
 
 errors = 3
 while errors > 0:
@@ -97,9 +70,8 @@ while errors > 0:
         start = timeit.default_timer()
         open_chrome()
         twilio()
-        posts = follower = following = None
         sleep()
-        #log_into_instagram('linethmm', 'I1232123you')
+        posts = follower = following = None
 
         # go to profile
         driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
@@ -150,7 +122,7 @@ while errors > 0:
 
         # use creds to create a client to interact with the Google Drive API
         scope = ['https://spreadsheets.google.com/feeds']
-        creds = ServiceAccountCredentials.from_json_keyfile_name('../../API Keys/GSheet_client_secret', scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name('../../../API Keys/GSheet_client_secret', scope)  # TODO- make sure this is ok!
         client = gspread.authorize(creds)
 
         # Find a workbook by name and open the first sheet
