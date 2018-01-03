@@ -11,10 +11,13 @@ import datetime
 import sys
 import pandas as pd
 import pickle
+from random import randint
 
 sys.path.insert(0, 'C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import twilio, text_me, sleep, error_handling
+from Insta_functions import twilio, text_me, error_handling
 
+def sleep():
+    time.sleep(randint(3, 4))
 
 def repeat_space_bar(number_of_times):
     count = 0
@@ -58,11 +61,18 @@ def open_chrome():
     sleep()
 
 def error_log(err):
-    error_log = pickle.load(open("..../data/Instagram_error_log.p", "rb"))
+    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'new FOLLOW script', str(datetime.datetime.now())]],
                       columns=['error message', 'script', 'time_stamp'])
     error_log = error_log.append(df)
-    pickle.dump(error_log, open("..../data/Instagram_error_log.p", "wb"))
+    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
+
+def remove_k_m_periods_commas(value):
+    value = value.replace('k', '')
+    value = value.replace('m', '')
+    value = value.replace('.', '')
+    value = value.replace(',', '')
+    return value
 
 errors = 3
 while errors > 0:
@@ -103,8 +113,17 @@ while errors > 0:
             information = driver.find_element_by_class_name('_lpowm').find_elements_by_tag_name("span")
 
             try:
+                add_likes = 0
                 driver.find_element_by_class_name('_puatn')
-                likes += int(information[0].text)
+                like_with_k = information[0].text
+                add_likes = int(remove_k_m_periods_commas(like_with_k))
+
+                if '.' in like_with_k:
+                    add_likes = likes * 100
+                elif 'k' in like_with_k:
+                    add_likes = likes * 1000
+
+                likes += add_likes
 
             except NoSuchElementException:
                 # driver.find_element_by_class_name('_d9a84')
@@ -216,3 +235,4 @@ while errors > 0:
         msg = "Google API down" + repr(err)
         text_me(message=msg)
         errors -= 1
+

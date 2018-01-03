@@ -22,7 +22,7 @@ def open_chrome():
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Liking_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Liking_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
@@ -330,7 +330,7 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 6
+row = 3
 column = 1
 
 error = 1

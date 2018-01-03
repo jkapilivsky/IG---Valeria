@@ -1,17 +1,8 @@
-import math
-from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.keys import Keys
 import time
-import timeit
-from selenium.webdriver.common.action_chains import ActionChains
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
-import datetime
 from twilio.rest import Client
 import sys, logging
 import pandas as pd
-import pickle
+
 from random import randint
 
 def text_me(message):
@@ -32,7 +23,7 @@ def twilio():
     client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def sleep():
-    time.sleep(randint(3, 4))
+    time.sleep(randint(6, 8))
 
 def error_handling():
     return '{}, {}, line: {}'.format(sys.exc_info()[0],
