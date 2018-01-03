@@ -12,9 +12,13 @@ from twilio.rest import Client
 import sys, logging
 import pandas as pd
 import pickle
+from random import randint
+
+sys.path.insert(0, 'C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Insta files/scripts/Functions')
+from Insta_functions import *
 
 def sleep():
-    time.sleep(3.5)
+    time.sleep(randint(3, 4))
 
 def repeat_space_bar(number_of_times):
     count = 0
@@ -46,22 +50,22 @@ def overall_stats():
 
     sleep()
 
-def text_me(message):
-    twilio_number = '+19562720613'
-    jamie_number = '+19568214550'
-    valeria_number = '+19564370322'
-    #phone_number = '+1%s' % input('What is your phone number?')
+# def text_me(message):
+#     twilio_number = '+19562720613'
+#     jamie_number = '+19568214550'
+#     valeria_number = '+19564370322'
+#     #phone_number = '+1%s' % input('What is your phone number?')
+#
+#     client.messages.create(to=jamie_number,
+#                            from_=twilio_number,
+#                            body=message)
 
-    client.messages.create(to=jamie_number,
-                           from_=twilio_number,
-                           body=message)
-
-def twilio():
-    global client
-    twilio_dict = pd.read_pickle('../../API Keys/Twilio_API.p')
-    twilio_acc = list(twilio_dict.values())[0]
-    twilio_cred = list(twilio_dict.values())[1]
-    client = Client(twilio_acc, twilio_cred)  # For Twilio
+# def twilio():
+#     global client
+#     twilio_dict = pd.read_pickle('../../API Keys/Twilio_API.p')
+#     twilio_acc = list(twilio_dict.values())[0]
+#     twilio_cred = list(twilio_dict.values())[1]
+#     client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def open_chrome():
     global driver
@@ -85,6 +89,7 @@ def error_log(err):
                       columns=['error message', 'script', 'time_stamp'])
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../data/Instagram_error_log.p", "wb"))
+
 
 errors = 3
 while errors > 0:

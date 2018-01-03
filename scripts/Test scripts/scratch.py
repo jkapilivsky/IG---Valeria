@@ -13,7 +13,11 @@ import pickle
 from random import random
 import sys, logging
 
-df = pickle.load(open('../../data/Instagram_data.p', 'rb'))
 
-not_official_friends = df[~df['status'].isin(['official_friend'])]
-print(not_official_friends)
+def jamie():
+    print('a')
+
+# df = pickle.load(open('../../data/Instagram_data.p', 'rb'))
+#
+# not_official_friends = df[~df['status'].isin(['official_friend'])]
+# print(not_official_friends)
