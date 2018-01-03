@@ -22,7 +22,7 @@ def open_chrome():
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Liking_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Liking_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
@@ -296,10 +296,10 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
         # Clicks first image!
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[3]/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[3]/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
 
         sleep()
         while pic_count < pic_counter:
@@ -320,7 +320,19 @@ def error_log(err):
                       columns=['error message', 'script', 'time_stamp'])
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
-#
+
+
+def repeat_space_bar(number_of_times):
+    count = 0
+    while count < number_of_times:
+        driver.find_element_by_class_name('coreSpriteGlyphBlack').send_keys(Keys.SPACE)
+        time.sleep(1)
+        count += 1
+
+# choose the picture!
+row = 6
+column = 1
+
 error = 1
 while error >= 0:
     try:
@@ -336,14 +348,23 @@ while error >= 0:
         driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
         sleep()
 
+        # Click 'load more'
+        try:
+            driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div/a''').click()
+            sleep()
+        except NoSuchElementException:
+            pass
+
+        repeat_space_bar(round(row/3))  # Scrolls down to the bottom of the profile page
+        sleep()
         # select image
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[3]/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
 
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[4]/div[3]/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
 
         sleep()
 
