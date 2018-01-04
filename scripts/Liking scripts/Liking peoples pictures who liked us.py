@@ -171,7 +171,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
             actions.send_keys(Keys.SPACE)
             actions.perform()
 
-            time.sleep(.25)
+            time.sleep(.75)
             count += 1
         # #################################End repeat space bar###############################################
 
@@ -326,12 +326,15 @@ def repeat_space_bar(number_of_times):
     count = 0
     while count < number_of_times:
         driver.find_element_by_class_name('coreSpriteGlyphBlack').send_keys(Keys.SPACE)
-        time.sleep(1)
+        sleep()
         count += 1
 
 # choose the picture!
-row = 3
+row = 15
 column = 1
+#Notes to not repeat same picture!
+# 1/3/18 - ran 6/1 and 15/1
+
 
 error = 1
 while error >= 0:
@@ -355,7 +358,7 @@ while error >= 0:
         except NoSuchElementException:
             pass
 
-        repeat_space_bar(round(row/3))  # Scrolls down to the bottom of the profile page
+        repeat_space_bar(round(row/2))  # Scrolls down to the bottom of the profile page
         sleep()
         # select image
         try:
@@ -368,7 +371,7 @@ while error >= 0:
 
         sleep()
 
-        like_peoples_stuffs(20, 200, 4)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(20, 250, 4)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')

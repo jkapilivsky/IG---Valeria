@@ -139,18 +139,23 @@ while errors > 0:
     try:
         open_chrome()
         hashtag_list = ['#hudabeauty', '#beautiful', '#iggers', '#followforfollow', '#likeforlike',
-                       '#Beautiful', '#me', '#instagood', '#Austin']
+                       '#Beautiful', '#me', '#instagood', '#Austin', '#makeupbyme']
+
+        makeup_list = ['#makeupbyme', '#makeupdolls', '#makeupaddict', '#instamakeup', '#makeupblogger',
+                       '#beautyblogger', '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
+                       '#lashlover', '#naturallashes', '#hudabeauty', '#lipstick', '#eyeshadow']
         #Randomizes list!
         hashtag_list = sorted(hashtag_list, key=lambda x: random())
+        makeup_list = sorted(makeup_list, key=lambda x: random())
 
-        for hash in hashtag_list:
+        for hash in makeup_list:
             search_famous_person(hash)
            # click first image of 'recent posts' *skipping to posts
             driver.find_element_by_xpath(
                 '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
             sleep()
 
-            follow_like_people(22, 20)  # number of people to follow, time to wait every 10 people followed
+            follow_like_people(22, 15)  # number of people to follow/like, time to wait every 10 people followed
             driver.get("https://www.instagram.com/")
 
         driver.close()

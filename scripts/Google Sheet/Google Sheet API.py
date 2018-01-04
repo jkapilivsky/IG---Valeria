@@ -13,7 +13,7 @@ import pandas as pd
 import pickle
 from random import randint
 
-sys.path.insert(0, 'C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Insta files/scripts/Functions')
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import twilio, text_me, error_handling
 
 def sleep():
@@ -55,7 +55,7 @@ def open_chrome():
     #options_dict = pd.read_pickle('../../assets/ChromeOptions.p')
     # options_desktop = list(options_dict.values())[0]
     # options_work_laptop = list(options_dict.values())[1]
-    options.add_argument('user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Extra_Profile')  # Path to your chrome profile
+    options.add_argument('user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Extra_Profile')  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()

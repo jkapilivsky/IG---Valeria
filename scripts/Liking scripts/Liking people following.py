@@ -3,19 +3,20 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time
 import timeit
-from twilio.rest import Client
-from random import *
 import pickle
 import datetime
 import pandas as pd
-import sys, logging
+import sys
+
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
+from Insta_functions import twilio, text_me, error_handling, sleep
 
 def open_chrome():
     global driver
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Liking_people_following_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Liking_people_following_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
@@ -239,8 +240,6 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../data/Instagram_error_log.p", "wb"))
 
-sys.path.insert(0, 'C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import twilio, text_me, error_handling, sleep
 
 error = 1
 while error >= 0:
