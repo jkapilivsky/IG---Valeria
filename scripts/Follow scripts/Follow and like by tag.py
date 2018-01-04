@@ -21,13 +21,13 @@ def open_chrome():
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Follow_Like_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Like_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
 
 def sleep():
-    time.sleep(randint(6, 9))
+    time.sleep(randint(5, 8))
 
 def text_me(message):
     twilio_number = '+19562720613'
@@ -96,7 +96,50 @@ def write_pickle():
     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
     # End pickle
 
-def follow_like_people(number_of_people, minutes):
+def remove_k_m_periods_commas(value):
+    value = value.replace('k', '')
+    value = value.replace('m', '')
+    value = value.replace('.', '')
+    value = value.replace(',', '')
+    return value
+
+def likes_persons_posts(num_images_to_like):
+    count_posts = 0
+
+    while count_posts < num_images_to_like:
+        # if statement looks for a video
+        try:
+            like_unlike_check()
+            sleep()
+            # right click on images to scroll
+            driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
+            sleep()
+            count_posts += 1
+
+        except NoSuchElementException:
+            print('Image is not a picture!')
+            count_posts += 1
+
+def follower_following_range(follower_min, follower_max, following_min, following_max):
+    num_follower = driver.find_element_by_xpath(
+        '''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]/a/span''').text
+
+    num_following = driver.find_element_by_xpath(
+        '''//*[@id="react-root"]/section/main/article/header/section/ul/li[3]/a/span''').text
+
+    num_follower = int(remove_k_m_periods_commas(num_follower))
+    num_following = int(remove_k_m_periods_commas(num_following))
+
+    print('follower:', num_follower, '| following: ', num_following)
+
+    if (num_follower < follower_min or num_follower > follower_max or
+                num_following < following_min or num_following > following_max):
+        print('Out of follower/following range!')
+        return False
+    else:
+        return True
+
+def follow_like_people(number_of_people, number_pics_to_like, minutes):
     count = 0
     followed = 0
     while count < number_of_people:
@@ -108,9 +151,46 @@ def follow_like_people(number_of_people, minutes):
                 followed += 1
         except NoSuchElementException:
             continue
+        sleep()
 
-        time.sleep(.3)
-        like_unlike_check()
+        # clicks image to go to profile!
+        driver.find_element_by_class_name('_rewi8').click()
+        sleep()
+        # Move to top of page
+        variable = driver.find_element_by_class_name('_rf3jb')
+        actions = webdriver.ActionChains(driver)
+        actions.move_to_element(variable)
+
+        # If out of range. Go back and select next picture
+        if follower_following_range(10, 5000, 10, 5000) is False:
+            driver.back()
+            sleep()
+            driver.find_element_by_class_name('coreSpriteRightPaginationArrow').click()
+            continue
+
+        # Makes sure that the user has enough images to like!
+        total_images = driver.find_element_by_xpath(
+            '''//*[@id="react-root"]/section/main/article/header/section/ul/li[1]/span/span''').text
+        total_images = remove_k_m_periods_commas(total_images)
+        total_images = int(total_images)
+
+        # Clicks the person's first image
+        try:
+            driver.find_element_by_class_name('''_e3il2''').click()
+            sleep()
+        except NoSuchElementException:
+            driver.back()
+            continue
+
+        if total_images >= number_pics_to_like:
+            total_images = number_pics_to_like
+            sleep()
+
+        likes_persons_posts(total_images)
+
+        #Goes back twice to get back to hashtag
+        driver.back()
+        driver.back()
         # right click on images to scroll
         driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
         count += 1
@@ -155,7 +235,7 @@ while errors > 0:
                 '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
             sleep()
 
-            follow_like_people(22, 15)  # number of people to follow/like, time to wait every 10 people followed
+            follow_like_people(10, 4, 11)  # number of people, number of pics to like, time to wait every 10 people followed
             driver.get("https://www.instagram.com/")
 
         driver.close()
