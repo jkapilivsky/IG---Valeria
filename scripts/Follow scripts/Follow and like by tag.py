@@ -146,16 +146,19 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
         try:
             follow_button = driver.find_element_by_class_name('_4tgw8')
             if follow_button.text == 'Follow':
-                follow_button.click()
-                write_pickle()
+                #follow_button.click()
+                #write_pickle()
                 followed += 1
         except NoSuchElementException:
             continue
         sleep()
 
-        # clicks image to go to profile!
+        # TODO - this section likes the follower!! its been removed for testing O.o
+        #clicks image to go to profile!
         driver.find_element_by_class_name('_rewi8').click()
         sleep()
+        # TODO - ends here!
+
         # Move to top of page
         variable = driver.find_element_by_class_name('_rf3jb')
         actions = webdriver.ActionChains(driver)
@@ -235,19 +238,19 @@ while errors > 0:
                 '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
             sleep()
 
-            follow_like_people(10, 4, 11)  # number of people, number of pics to like, time to wait every 10 people followed
+            follow_like_people(2, 1, 1)  # number of people, number of pics to like, time to wait every 10 people followed
             driver.back()
 
         driver.close()
 
     except Exception as err:
-        issue = logging.error(error_handling())
-        error_log(issue)
+        # issue = error_handling()
+        # error_log(issue)
         driver.close()
         print(err)
-        errors -= 1
-        if errors == 0:
-            text_me('follow #tags quit!')
-            quit()
-        message = 'Follow #tag error...'  + str(errors) + ' errors remaining'
-        text_me(message)
+        # errors -= 1
+        # if errors == 0:
+        #     text_me('follow #tags quit!')
+        #     quit()
+        # message = 'Follow #tag error...'  + str(errors) + ' errors remaining'
+        # text_me(message)
