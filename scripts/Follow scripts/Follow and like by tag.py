@@ -25,7 +25,7 @@ def open_chrome():
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
-
+#
 def sleep():
     time.sleep(randint(5, 8))
 
@@ -236,7 +236,7 @@ while errors > 0:
             sleep()
 
             follow_like_people(10, 4, 11)  # number of people, number of pics to like, time to wait every 10 people followed
-            driver.get("https://www.instagram.com/")
+            driver.back()
 
         driver.close()
 

@@ -330,7 +330,7 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 15
+row = 12
 column = 1
 #Notes to not repeat same picture!
 # 1/3/18 - ran 6/1 and 15/1
