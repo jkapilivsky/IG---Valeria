@@ -330,7 +330,7 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 12
+row = 2
 column = 1
 #Notes to not repeat same picture!
 # 1/3/18 - ran 6/1 and 15/1
@@ -371,7 +371,7 @@ while error >= 0:
 
         sleep()
 
-        like_peoples_stuffs(20, 250, 4)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(20, 425, 3)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')
@@ -380,6 +380,7 @@ while error >= 0:
         driver.close()  #
 
     except Exception as err:
+        print(err)
         issue = error_handling()
         error_log(issue)
         driver.close()

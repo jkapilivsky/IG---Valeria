@@ -228,12 +228,12 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 3
+errors = 1
 while errors > 0:
     try:
         open_chrome()
-        hashtag_list = ['#hudabeauty', '#beautiful', '#iggers', '#followforfollow', '#likeforlike',
-                       '#Beautiful', '#me', '#instagood', '#Austin', '#makeupbyme']
+        hashtag_list = ['#beautiful', '#iggers', '#followforfollow', '#likeforlike',
+                       '#me', '#instagood', '#Austin']
 
         makeup_list = ['#makeupbyme', '#makeupdolls', '#makeupaddict', '#instamakeup', '#makeupblogger',
                        '#beautyblogger', '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
@@ -242,7 +242,7 @@ while errors > 0:
         hashtag_list = sorted(hashtag_list, key=lambda x: random())
         makeup_list = sorted(makeup_list, key=lambda x: random())
 
-        for hash in makeup_list:
+        for hash in hashtag_list:
             search_famous_person(hash)
            # click first image of 'recent posts' *skipping to posts
             driver.find_element_by_xpath(

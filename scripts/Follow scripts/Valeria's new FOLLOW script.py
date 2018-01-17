@@ -165,7 +165,7 @@ sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts
 from Insta_functions import twilio, text_me, error_handling, sleep
 
 
-errors = 1
+errors = 3
 followings = 0
 while errors > 0:
     try:
@@ -184,7 +184,7 @@ while errors > 0:
         # Create new list of people to follow!
         user_followers_list = []
 
-        follow_people(45, 13, 15)  # Number of people, number of followings, time to wait
+        follow_people(40, 12, 16)  # Number of people, number of followings, time to wait
         print(user_followers_list)
 
         # ###################################Check # of followings##########################################################

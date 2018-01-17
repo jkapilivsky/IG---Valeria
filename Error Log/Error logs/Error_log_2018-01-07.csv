@@ -1,0 +1,19 @@
+,error message,script,time_stamp,timestamp
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 241",Follow and like by tag,2018-01-06 17:18:03.950041,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-06 17:20:03.901714,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-01-06 17:45:53.416249,
+0,"<class 'ConnectionRefusedError'>, [WinError 10061] No connection could be made because the target machine actively refused it, line: 138",Follow Famous people followers,2018-01-06 17:47:04.875634,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[20]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-01-06 20:43:00.411097,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-06 21:41:14.398291,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-06 23:01:06.200106,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-06 23:15:53.529438,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-07 06:02:58.738411,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-01-07 07:45:02.039723,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-07 09:31:41.484730,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_rewi8""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 241",Follow and like by tag,2018-01-07 10:04:23.067776,
