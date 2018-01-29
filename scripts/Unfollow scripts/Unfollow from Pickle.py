@@ -70,6 +70,12 @@ def read_pickle():
     follow_unfollow_df = follow_unfollow_df[~follow_unfollow_df['time_stamp'].isin([today])]
     print('unfollowing:', follow_unfollow_df['username'].tolist())
 
+def no_unfollow():
+    if len(follow_unfollow_df) == 0:
+        text_me('nothing to follow?')
+        driver.close()
+        quit()
+
 def error_handling():
     return '{}, {}, line: {}'.format(sys.exc_info()[0],
                                      sys.exc_info()[1],
@@ -90,6 +96,7 @@ while error > 0:
         open_chrome()
         twilio()
         read_pickle()
+        no_unfollow()
 
         for people in follow_unfollow_df['username']:
             search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')

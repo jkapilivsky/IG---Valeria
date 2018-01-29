@@ -42,6 +42,7 @@ def text_me(message):
 def search_famous_person(hashtag):
     # Search bar
     search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
+    #search = driver.find_element_by_class_name('_eduze')
     search.clear()
     search.send_keys(hashtag)
     search.send_keys(Keys.ENTER)
@@ -165,7 +166,7 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
         # TODO - ends here!
 
         # Move to top of page
-        variable = driver.find_element_by_class_name('_rf3jb')
+        variable = driver.find_element_by_class_name('_8scx2')
         actions = webdriver.ActionChains(driver)
         actions.move_to_element(variable)
 
@@ -228,7 +229,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 3
+errors = 4
 while errors > 0:
     try:
         open_chrome()
@@ -244,7 +245,11 @@ while errors > 0:
 
         for hash in makeup_list:
             search_famous_person(hash)
-           # click first image of 'recent posts' *skipping to posts
+           # Goes to the text "Most recent"
+            var = driver.find_element_by_class_name('_nhglx')
+            actions = webdriver.ActionChains(driver)
+            actions.move_to_element(var)
+            # click first image of 'recent posts' *skipping to posts
             driver.find_element_by_xpath(
                 '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
             sleep()

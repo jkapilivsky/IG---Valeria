@@ -22,7 +22,7 @@ def open_chrome():
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Unfollow_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Unfollow_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
@@ -154,7 +154,7 @@ following_list = ['graciejudson', 'chezkakae', 'yolandaolivares10', 'duckieoffic
                   'luisedtr', 'jon_cruz88', 'madchicanita', 'satou912']
 #
 
-error = 3
+error = 1
 while error > 0:
     try:
         open_chrome()
@@ -188,7 +188,7 @@ while error > 0:
         repeat_space_bar(100)
 
         count = 0
-        for people in range(350, 0, -1):
+        for people in range(0, 350, 1):
             unfollow_button = driver.find_elements_by_class_name('_qv64e')
             name = driver.find_elements_by_class_name('_2g7d5')
 

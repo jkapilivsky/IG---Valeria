@@ -184,7 +184,7 @@ while errors > 0:
         # Create new list of people to follow!
         user_followers_list = []
 
-        follow_people(40, 12, 16)  # Number of people, number of followings, time to wait
+        follow_people(40, 10, 16)  # Number of people, number of followings, time to wait
         print(user_followers_list)
 
         # ###################################Check # of followings##########################################################
@@ -193,10 +193,10 @@ while errors > 0:
         sleep()
 
         f = driver.find_element_by_xpath(
-            '''//*[@id="react-root"]/section/main/article/header/section/ul/li[3]/a''').text
+            '''//*[@id="react-root"]/section/main/article/header/section/ul/li[3]/a/span''').text
 
         f = remove_k_m_periods_commas(f)
-        followings = int(f)  #TODO - error here!
+        followings = int(f)
         print(followings)
         #driver.close()
 
