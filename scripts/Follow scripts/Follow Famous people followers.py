@@ -73,7 +73,7 @@ def search_famous_person():
     search.send_keys(Keys.ENTER)
     sleep()
     # Goes to first person in search
-    search_results = driver.find_elements_by_class_name('_gimca')
+    search_results = driver.find_elements_by_class_name('_ndl3t')
     search_results[0].click()
     sleep()
 

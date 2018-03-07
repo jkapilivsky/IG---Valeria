@@ -131,7 +131,7 @@ while errors > 0:
 
             comments += int(information[2].text)
 
-            time.sleep(.3)
+            time.sleep(.4)
 
         print(likes)
         print(video_views)
@@ -234,5 +234,6 @@ while errors > 0:
         driver.close()
         msg = "Google API down" + repr(err)
         text_me(message=msg)
+        print(msg)
         errors -= 1
 

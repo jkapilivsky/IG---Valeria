@@ -195,8 +195,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
             search.send_keys(Keys.ENTER)
             sleep()
             # Goes to first person in search
-            search_results = driver.find_elements_by_class_name('_gimca')
-
+            search_results = driver.find_elements_by_class_name('_ndl3t')
             # checks if results are found
             try:
                 search_results[0].click()
@@ -321,7 +320,6 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-
 def repeat_space_bar(number_of_times):
     count = 0
     while count < number_of_times:
@@ -330,8 +328,8 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 1
-column = 3
+row = 3
+column = 1
 #Notes to not repeat same picture!
 # 1/3/18 - ran 6/1 and 15/1
 
@@ -363,15 +361,14 @@ while error >= 0:
         # select image
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()  # They changed the xpath -.- its fixed now
 
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
 
         sleep()
-
-        like_peoples_stuffs(20, 425, 3)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(20, 425, 5)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')

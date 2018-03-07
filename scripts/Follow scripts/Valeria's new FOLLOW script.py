@@ -90,7 +90,7 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
         search.send_keys(Keys.ENTER)
         sleep()
         # Goes to first person in search
-        search_results = driver.find_elements_by_class_name('_gimca')
+        search_results = driver.find_elements_by_class_name('_ndl3t')
         search_results[0].click()
         sleep()
 
@@ -164,7 +164,6 @@ def error_log(err):
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import twilio, text_me, error_handling, sleep
 
-
 errors = 3
 followings = 0
 while errors > 0:
@@ -184,7 +183,7 @@ while errors > 0:
         # Create new list of people to follow!
         user_followers_list = []
 
-        follow_people(40, 10, 16)  # Number of people, number of followings, time to wait
+        follow_people(40, 12, 16)  # Number of people, number of followings, time to wait
         print(user_followers_list)
 
         # ###################################Check # of followings##########################################################
