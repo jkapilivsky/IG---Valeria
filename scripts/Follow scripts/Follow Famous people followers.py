@@ -141,7 +141,7 @@ while errors > 0:
         print('Waiting 20 minutes!')
         time.sleep(20*60)
 
-
+#
     except Exception as err:
         issue = error_handling()
         error_log(issue)

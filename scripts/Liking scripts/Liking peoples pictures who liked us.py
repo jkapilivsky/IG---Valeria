@@ -324,12 +324,13 @@ def repeat_space_bar(number_of_times):
     count = 0
     while count < number_of_times:
         driver.find_element_by_class_name('coreSpriteGlyphBlack').send_keys(Keys.SPACE)
-        sleep()
+        time.sleep(1)
         count += 1
 
 # choose the picture!
-row = 3
-column = 1
+row = 7
+column = 3
+
 #Notes to not repeat same picture!
 # 1/3/18 - ran 6/1 and 15/1
 
@@ -356,7 +357,12 @@ while error >= 0:
         except NoSuchElementException:
             pass
 
-        repeat_space_bar(round(row/2))  # Scrolls down to the bottom of the profile page
+        if row < 10:
+            spacebars = row/2
+        else:
+            spacebars = row/2 - 3
+
+        repeat_space_bar(spacebars)  # Scrolls down to the bottom of the profile page
         sleep()
         # select image
         try:
@@ -368,7 +374,7 @@ while error >= 0:
                 '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
 
         sleep()
-        like_peoples_stuffs(20, 425, 5)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(20, 350, 4)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')

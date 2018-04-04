@@ -8,7 +8,6 @@ import pickle
 import pandas as pd
 from random import *
 import sys, logging
-
 def twilio():
     global client
     twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
@@ -48,7 +47,7 @@ def search_famous_person(hashtag):
     search.send_keys(Keys.ENTER)
     sleep()
     # Goes to first person in search
-    search_results = driver.find_elements_by_class_name('_gimca')
+    search_results = driver.find_elements_by_class_name('_ndl3t')
     search_results[0].click()
     sleep()
 
@@ -111,7 +110,7 @@ def likes_persons_posts(num_images_to_like):
         # if statement looks for a video
         try:
             like_unlike_check()
-            sleep()
+            time.sleep(2)
             # right click on images to scroll
             driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
             sleep()
@@ -197,6 +196,7 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
             driver.back()
             continue
 
+        # TODO - is this correct?! shouldn't it be <= num_pics_to_like?
         if total_images >= number_pics_to_like:
             total_images = number_pics_to_like
             sleep()
@@ -254,7 +254,8 @@ while errors > 0:
                 '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
             sleep()
 
-            follow_like_people(10, 4, 5)  # number of people, number of pics to like, time to wait every 10 people followed
+            follow_like_people(4, 2, 1)  # number of people, number of pics to like, time to wait every 10 people followed
+                                         # Not following anyone!
             driver.back()
 
         driver.close()

@@ -99,7 +99,7 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
 
         # clicks followers
         try:
-            driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]/a''').click()
+            driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]''').click()
             sleep()
         except: 
             continue
@@ -164,7 +164,7 @@ def error_log(err):
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import twilio, text_me, error_handling, sleep
 
-errors = 3
+errors = 4
 followings = 0
 while errors > 0:
     try:
@@ -173,10 +173,15 @@ while errors > 0:
         # go to profile
         driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
         sleep()
-
+        # old xpath for followers
+        '''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]/a'''
         # Get's people to follow!
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[3]/a''').click()
+        driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]''').click()
         sleep()
+        driver.back()
+        driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]''').click()
+        sleep()
+
 
         repeat_space_bar(15)
 
@@ -188,7 +193,7 @@ while errors > 0:
 
         # ###################################Check # of followings##########################################################
         # go to profile
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
+        driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]''').click()
         sleep()
 
         f = driver.find_element_by_xpath(
@@ -200,6 +205,7 @@ while errors > 0:
         #driver.close()
 
     except Exception as err:
+        print(err)
         issue = error_handling()
         error_log(issue)
         driver.close()

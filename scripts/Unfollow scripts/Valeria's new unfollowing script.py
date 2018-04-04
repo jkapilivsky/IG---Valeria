@@ -153,8 +153,7 @@ following_list = ['graciejudson', 'chezkakae', 'yolandaolivares10', 'duckieoffic
                   'ashngar', 'rgone12', 'lauren_analy', 'mgbigred', 'rreyesz36', 'pcano1994', 'cris.c__', 'adaexplainsitall',
                   'luisedtr', 'jon_cruz88', 'madchicanita', 'satou912']
 #
-
-error = 1
+error = 3
 while error > 0:
     try:
         open_chrome()
