@@ -1,0 +1,1318 @@
+,error message,script,time_stamp,timestamp
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 241",Follow and like by tag,2018-01-06 17:18:03.950041,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-06 17:20:03.901714,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-01-06 17:45:53.416249,
+0,"<class 'ConnectionRefusedError'>, [WinError 10061] No connection could be made because the target machine actively refused it, line: 138",Follow Famous people followers,2018-01-06 17:47:04.875634,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[20]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-01-06 20:43:00.411097,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-06 21:41:14.398291,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-06 23:01:06.200106,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-06 23:15:53.529438,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-07 06:02:58.738411,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-01-07 07:45:02.039723,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-07 09:31:41.484730,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_rewi8""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 241",Follow and like by tag,2018-01-07 10:04:23.067776,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 246",Follow and like by tag,2018-01-07 11:36:14.888432,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 219",Follow and like by tag,2018-01-07 11:55:41.793626,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 237",Follow and like by tag,2018-01-07 12:32:59.623566,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 246",Follow and like by tag,2018-01-07 13:17:03.506537,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/header/section/ul/li[2]/a/span""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 246",Follow and like by tag,2018-01-07 13:44:00.400256,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 231",Follow and like by tag,2018-01-07 14:04:29.205959,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[13]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-01-07 15:06:21.107515,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/header/section/ul/li[3]/a/span""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 237",Follow and like by tag,2018-01-07 15:07:38.049879,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[22]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-01-07 15:08:26.386643,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/header/section/ul/li[3]/a/span""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 246",Follow and like by tag,2018-01-07 15:11:11.033961,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 252",Follow and like by tag,2018-01-07 17:16:24.058134,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-08 01:53:46.432001,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-08 07:49:11.563241,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 87",new FOLLOW script,2018-01-08 10:46:10.248581,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-08 10:54:49.641045,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[9]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-01-08 17:44:16.585442,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-08 17:54:11.163350,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-08 23:51:40.752890,
+0,"<class 'ValueError'>, invalid literal for int() with base 10: '1094 following', line: 199",new FOLLOW script,2018-01-09 04:33:39.502796,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-09 10:24:16.370195,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-09 11:54:09.144063,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-09 12:44:09.633358,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-01-09 16:58:38.019034,
+0,"<class 'ValueError'>, invalid literal for int() with base 10: '1345 following', line: 199",new FOLLOW script,2018-01-10 01:20:25.702841,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-10 12:29:20.270501,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 252",Follow and like by tag,2018-01-10 13:56:00.763391,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-10 21:35:08.183769,
+0,"<class 'EOFError'>, Ran out of input, line: 206",Unfollow from Pickle,2018-01-10 21:38:06.003903,
+0,"<class 'ValueError'>, invalid literal for int() with base 10: '1595 following', line: 199",new FOLLOW script,2018-01-10 23:19:55.328679,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 342",Liking people who liked us script,2018-01-11 00:04:42.930143,
+0,"<class 'EOFError'>, Ran out of input, line: 198",Unfollow from Pickle,2018-01-11 01:51:07.545604,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-01-11 08:55:38.329595,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-11 13:07:18.117919,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-11 16:21:15.108494,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 96",Unfollow from Pickle,2018-01-11 23:02:45.266155,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 252",Follow and like by tag,2018-01-11 23:10:20.589115,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-11 23:29:33.287922,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 252",Follow and like by tag,2018-01-12 17:51:50.693423,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 374",Liking people who liked us script,2018-01-12 17:51:51.036458,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 91",Unfollow from Pickle,2018-01-12 18:54:03.644200,
+0,"<class 'EOFError'>, Ran out of input, line: 207",Unfollow from Pickle,2018-01-12 20:11:02.625183,
+0,"<class 'EOFError'>, Ran out of input, line: 207",Unfollow from Pickle,2018-01-12 23:19:59.812280,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 91",Unfollow from Pickle,2018-01-13 00:14:23.614449,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-01-13 03:07:26.561418,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 90",Unfollow from Pickle,2018-01-13 03:43:23.230754,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-13 09:20:29.083527,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-13 10:09:50.620519,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-14 01:53:19.295562,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-14 02:14:27.311442,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-14 04:18:41.423273,
+0,"<class 'IndexError'>, list index out of range, line: 374",Liking people who liked us script,2018-01-14 11:11:54.673281,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[23]/div[3]/a/div""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-01-14 12:48:56.244547,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 92",Unfollow from Pickle,2018-01-14 14:35:16.287439,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-01-14 18:08:53.460465,
+0,"<class 'ValueError'>, invalid literal for int() with base 10: '1686 following', line: 199",new FOLLOW script,2018-01-14 22:54:16.489970,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_rf3jb""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 162",Unfollow from Pickle,2018-01-15 02:38:19.118498,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-01-15 05:13:54.543047,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-15 05:57:53.881769,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 206",Unfollow from Pickle,2018-01-15 11:07:48.767066,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-15 11:46:28.087618,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-01-15 18:08:15.320270,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-15 21:10:54.892967,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-01-16 00:04:05.146331,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 173",Unfollow from Pickle,2018-01-16 06:10:59.487087,
+0,"<class 'ValueError'>, invalid literal for int() with base 10: '2110 following', line: 199",new FOLLOW script,2018-01-16 07:47:27.368412,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-16 15:19:52.792795,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-16 16:53:11.168330,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-16 17:38:35.489865,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 189",Unfollow from Pickle,2018-01-16 19:51:17.947533,
+0,"<class 'EOFError'>, Ran out of input, line: 177",Unfollow from Pickle,2018-01-16 20:25:04.726501,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-16 20:43:16.419437,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-16 21:10:18.332458,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-16 22:14:31.339999,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 118",new FOLLOW script,2018-01-17 03:27:26.406036,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 118",new FOLLOW script,2018-01-17 04:29:56.433716,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 132",new FOLLOW script,2018-01-17 10:31:32.988681,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot create default profile directory
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 160",Valeria new unfollowing script,2018-01-17 11:25:02.095717,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-17 12:52:54.033066,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-18 12:15:29.593307,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-01-18 18:35:54.687378,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-18 22:49:33.519661,
+0,"<class '_pickle.UnpicklingError'>, invalid load key, '\x7f'., line: 206",Unfollow from Pickle,2018-01-19 00:33:23.529087,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-19 08:22:38.827155,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-19 08:31:17.452573,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-19 14:56:47.674625,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 90",Unfollow from Pickle,2018-01-19 21:22:11.640612,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 252",Follow and like by tag,2018-01-20 14:29:19.288298,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-20 17:22:30.815615,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 87",new FOLLOW script,2018-01-20 23:34:35.326515,
+0,"<class 'ConnectionResetError'>, [WinError 10054] An existing connection was forcibly closed by the remote host, line: 342",Liking people who liked us script,2018-01-22 08:06:00.122195,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 252",Follow and like by tag,2018-01-22 09:09:24.797014,
+0,"<class 'gspread.exceptions.RequestError'>, (503, '503: b\'<!DOCTYPE html><html lang=""en""><head><meta name=""description"" content=""Web word processing, presentations and spreadsheets""><meta name=""viewport"" content=""width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0""><link rel=""shortcut icon"" href=""//ssl.gstatic.com/docs/common/drive_favicon1.ico""><title>Google Drive Error</title><link href=""//fonts.googleapis.com/css?family=Product+Sans"" rel=""stylesheet"" type=""text/css""><style>/* Copyright 2018 Google Inc. All Rights Reserved. */\\n.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}#drive-logo{margin:18px 0;position:absolute;white-space:nowrap}.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_116x41dp.png\\\');background-size:116px 41px;display:inline-block;height:41px;vertical-align:bottom;width:116px}.docs-drivelogo-text{color:#000;display:inline-block;opacity:0.54;text-decoration:none;font-family:\\\'Product Sans\\\',Arial,Helvetica,sans-serif;font-size:32px;text-rendering:optimizeLegibility;position:relative;top:-6px;left:-7px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:144dpi){.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_116x41dp.png\\\')}}</style><style type=""text/css"">body {background-color: #fff; font-family: Arial,sans-serif; font-size: 13px; margin: 0; padding: 0;}a, a:link, a:visited {color: #112ABB;}</style><style type=""text/css"">.errorMessage {font-size: 12pt; font-weight: bold; line-height: 150%;}</style></head><body><div id=""outerContainer""><div id=""innerContainer""><div style=""position: absolute; top: -80px;""><div id=""drive-logo""><a href=""/""><span class=""docs-drivelogo-img"" title=""Google logo""></span><span class=""docs-drivelogo-text"">&nbsp;Drive</span></a></div></div><p style=""padding-top: 15px"">Google Docs encountered an error. Please try reloading this page, or coming back to it in a few minutes.</p><p>To learn more about the Google Docs editors, please visit our <a href=""https://support.google.com/docs/?hl=en&p=error_help"" target=""_blank"">help center</a>.</p><p><br><b>We\\\'re sorry for the inconvenience.</b><br><i>- The Google Docs Team</i></p></div></div></body><style>#outerContainer {margin: auto; max-width: 750px;}#innerContainer {margin-bottom: 20px; margin-left: 40px; margin-right: 40px; margin-top: 80px; position: relative;}</style></html>\''), line: 184",new FOLLOW script,2018-01-22 12:12:21.558696,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-23 03:53:00.175788,
+0,"<class 'gspread.exceptions.RequestError'>, (409, '409: b\'<!DOCTYPE html><html lang=""en""><head><meta name=""description"" content=""Web word processing, presentations and spreadsheets""><meta name=""viewport"" content=""width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0""><link rel=""shortcut icon"" href=""//ssl.gstatic.com/docs/common/drive_favicon1.ico""><title>Google Drive -- Page Not Found</title><link href=""//fonts.googleapis.com/css?family=Product+Sans"" rel=""stylesheet"" type=""text/css""><style>/* Copyright 2018 Google Inc. All Rights Reserved. */\\n.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}#drive-logo{margin:18px 0;position:absolute;white-space:nowrap}.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_116x41dp.png\\\');background-size:116px 41px;display:inline-block;height:41px;vertical-align:bottom;width:116px}.docs-drivelogo-text{color:#000;display:inline-block;opacity:0.54;text-decoration:none;font-family:\\\'Product Sans\\\',Arial,Helvetica,sans-serif;font-size:32px;text-rendering:optimizeLegibility;position:relative;top:-6px;left:-7px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:144dpi){.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_116x41dp.png\\\')}}</style><style type=""text/css"">body {background-color: #fff; font-family: Arial,sans-serif; font-size: 13px; margin: 0; padding: 0;}a, a:link, a:visited {color: #112ABB;}</style><style type=""text/css"">.errorMessage {font-size: 12pt; font-weight: bold; line-height: 150%;}</style></head><body><div id=""outerContainer""><div id=""innerContainer""><div style=""position: absolute; top: -80px;""><div id=""drive-logo""><a href=""/""><span class=""docs-drivelogo-img"" title=""Google logo""></span><span class=""docs-drivelogo-text"">&nbsp;Drive</span></a></div></div><div align=""center""><p class=""errorMessage"" style=""padding-top: 50px"">Sorry, unable to open the file at this time.</p><p> Please check the address and try again. </p><div style=""background: #F0F6FF; border: 1px solid black; margin-top: 35px; padding: 10px 125px; width: 300px;""><p><strong>Get stuff done with Google Drive</strong></p><p>Apps in Google Drive make it easy to create, store and share online documents, spreadsheets, presentations and more.</p><p>Learn more at <a href=""https://drive.google.com/start/apps"">drive.google.com/start/apps</a>.</p></div></div></div></div></body><style>#outerContainer {margin: auto; max-width: 750px;}#innerContainer {margin-bottom: 20px; margin-left: 40px; margin-right: 40px; margin-top: 80px; position: relative;}</style></html>\''), line: 184",new FOLLOW script,2018-01-23 04:53:19.394085,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 252",Follow and like by tag,2018-01-23 08:01:29.142492,
+0,"<class 'ValueError'>, invalid literal for int() with base 10: '491 following', line: 199",new FOLLOW script,2018-01-23 18:22:42.333154,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-23 23:57:32.681768,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-24 02:17:30.708244,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-24 03:33:53.775222,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-24 08:24:01.679350,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-24 08:46:34.238044,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-24 09:10:19.743905,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-24 15:07:33.508137,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[6]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-24 16:09:29.222883,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-01-24 20:25:18.823879,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-01-25 00:29:27.050721,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-25 09:33:48.338637,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-01-25 11:59:31.960616,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-25 14:19:59.775711,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-01-25 14:50:57.335085,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-25 18:19:08.376860,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""_e3il2"">...</div> is not clickable at point (160, 320). Other element would receive the click: <ul class=""_lpowm"">...</ul>
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-01-25 18:22:15.254460,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-25 20:50:00.642266,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-26 00:40:59.359396,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 196",Unfollow from Pickle,2018-01-26 00:44:35.175642,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-26 02:32:08.306891,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 113",new FOLLOW script,2018-01-26 15:54:48.987126,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-26 16:46:41.730727,
+0,"<class 'requests.exceptions.ConnectionError'>, ('Connection aborted.', TimeoutError(10060, 'A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond', None, 10060, None)), line: 202",new FOLLOW script,2018-01-26 18:00:20.376766,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 134",Follow Famous people followers,2018-01-26 18:14:54.497324,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-27 18:12:30.845993,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-27 19:19:54.906391,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-01-27 20:03:15.889931,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-01-27 21:35:18.838220,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-27 22:25:17.299305,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-27 22:46:48.589554,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 252",Follow and like by tag,2018-01-28 10:11:51.918700,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-28 13:38:38.417454,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 234",Follow and like by tag,2018-01-28 18:07:45.018129,
+0,"<class 'selenium.common.exceptions.InvalidElementStateException'>, Message: invalid element state: Element must be user-editable in order to clear it.
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 247",Follow and like by tag,2018-01-28 18:24:03.853944,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-01-28 18:50:43.219030,
+0,"<class 'ValueError'>, invalid literal for int() with base 10: '1128 following', line: 199",new FOLLOW script,2018-01-29 02:06:44.581008,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-29 02:30:41.413511,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-29 07:50:25.614122,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-29 07:53:05.505192,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 247",Follow and like by tag,2018-01-29 08:32:08.478096,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-29 08:47:13.514434,
+0,"<class 'TypeError'>, 'RequestError' object does not support indexing, line: 188",new FOLLOW script,2018-01-29 13:16:15.681118,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-01-29 17:30:53.302564,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-01-29 17:37:35.577366,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-29 18:09:08.856761,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-29 18:46:23.467518,
+0,"<class 'IndexError'>, list index out of range, line: 374",Liking people who liked us script,2018-01-29 20:46:05.248920,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-29 21:40:18.068434,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-30 00:05:33.836816,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-01-30 02:24:21.132213,
+0,"<class 'IndexError'>, list index out of range, line: 374",Liking people who liked us script,2018-01-30 18:38:44.992422,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-30 18:40:30.186389,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-01-30 19:12:08.678099,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-01-30 19:46:07.625739,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-30 20:50:21.185332,
+0,"<class 'IndexError'>, list index out of range, line: 374",Liking people who liked us script,2018-01-30 21:37:58.698422,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-01-30 22:10:17.193383,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 187",new FOLLOW script,2018-01-30 22:27:41.090597,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 187",new FOLLOW script,2018-01-30 22:29:10.490668,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.119)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 113",new FOLLOW script,2018-01-31 08:19:51.917429,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-31 08:31:43.354768,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-31 08:41:57.682616,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-31 09:20:53.305103,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-01-31 09:56:16.063516,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-01-31 17:59:11.681583,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-01-31 18:31:44.166312,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-02-01 05:42:20.153182,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-02-01 05:43:28.085004,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-02-01 14:47:36.618184,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.119)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-02-01 16:32:36.320561,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-02-01 17:03:54.702083,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=64.0.3282.119)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-02-01 17:19:31.742237,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-02-02 05:58:01.478528,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-02-02 05:59:09.865408,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-02-02 11:45:22.404780,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-02-02 22:14:57.455847,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-02-02 22:16:07.098792,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 184",Unfollow from Pickle,2018-02-02 23:59:03.866170,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-02-03 11:16:16.028992,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-02-03 11:59:54.315481,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-02-03 16:54:23.705800,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-03 17:00:20.904032,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-02-03 19:03:00.101415,
+0,"<class 'MemoryError'>, , line: 138",Follow Famous people followers,2018-02-03 19:37:02.891332,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-02-04 00:58:27.517204,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-02-04 02:08:09.761456,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.119)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-02-04 02:42:54.562741,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 184",Unfollow from Pickle,2018-02-04 10:24:55.417477,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-02-04 10:31:32.578005,
+0,"<class 'EOFError'>, Ran out of input, line: 184",Unfollow from Pickle,2018-02-04 11:09:30.635228,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-02-04 11:36:57.110642,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-02-04 12:22:00.704983,
+0,"<class 'OSError'>, [Errno 22] Invalid argument: '../../data/Instagram_data.p', line: 138",Follow Famous people followers,2018-02-04 17:50:03.723794,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 184",Unfollow from Pickle,2018-02-04 23:52:13.686130,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-02-05 01:35:10.127542,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 172",new FOLLOW script,2018-02-05 01:36:19.982311,
+0,"<class 'EOFError'>, Ran out of input, line: 187",new FOLLOW script,2018-02-05 12:21:34.212280,
+0,"<class 'OSError'>, [Errno 22] Invalid argument: '../../data/Instagram_data.p', line: 215",Unfollow from Pickle,2018-02-05 13:12:22.165413,
+0,"<class 'IndexError'>, list index out of range, line: 187",new FOLLOW script,2018-02-05 21:22:31.613545,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 187",new FOLLOW script,2018-02-06 00:10:20.662708,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=64.0.3282.119)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-02-06 02:52:25.265330,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 342",Liking people who liked us script,2018-02-06 10:11:40.791057,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.119)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 257",Follow and like by tag,2018-02-06 10:25:16.983324,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-06 12:18:00.919006,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 186",new FOLLOW script,2018-02-06 12:21:14.015960,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-06 13:24:54.890697,
+0,"<class 'TypeError'>, 'RequestError' object does not support indexing, line: 187",new FOLLOW script,2018-02-06 14:32:05.036336,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-06 14:57:21.209150,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-02-07 11:52:36.403810,
+0,"<class 'gspread.exceptions.RequestError'>, (409, '409: b\'<!DOCTYPE html><html lang=""en""><head><meta name=""description"" content=""Web word processing, presentations and spreadsheets""><meta name=""viewport"" content=""width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0""><link rel=""shortcut icon"" href=""//ssl.gstatic.com/docs/common/drive_favicon1.ico""><title>Google Drive -- Page Not Found</title><link href=""//fonts.googleapis.com/css?family=Product+Sans"" rel=""stylesheet"" type=""text/css""><style>/* Copyright 2018 Google Inc. All Rights Reserved. */\\n.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}#drive-logo{margin:18px 0;position:absolute;white-space:nowrap}.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_116x41dp.png\\\');background-size:116px 41px;display:inline-block;height:41px;vertical-align:bottom;width:116px}.docs-drivelogo-text{color:#000;display:inline-block;opacity:0.54;text-decoration:none;font-family:\\\'Product Sans\\\',Arial,Helvetica,sans-serif;font-size:32px;text-rendering:optimizeLegibility;position:relative;top:-6px;left:-7px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:144dpi){.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_116x41dp.png\\\')}}</style><style type=""text/css"">body {background-color: #fff; font-family: Arial,sans-serif; font-size: 13px; margin: 0; padding: 0;}a, a:link, a:visited {color: #112ABB;}</style><style type=""text/css"">.errorMessage {font-size: 12pt; font-weight: bold; line-height: 150%;}</style></head><body><div id=""outerContainer""><div id=""innerContainer""><div style=""position: absolute; top: -80px;""><div id=""drive-logo""><a href=""/""><span class=""docs-drivelogo-img"" title=""Google logo""></span><span class=""docs-drivelogo-text"">&nbsp;Drive</span></a></div></div><div align=""center""><p class=""errorMessage"" style=""padding-top: 50px"">Sorry, unable to open the file at this time.</p><p> Please check the address and try again. </p><div style=""background: #F0F6FF; border: 1px solid black; margin-top: 35px; padding: 10px 125px; width: 300px;""><p><strong>Get stuff done with Google Drive</strong></p><p>Apps in Google Drive make it easy to create, store and share online documents, spreadsheets, presentations and more.</p><p>Learn more at <a href=""https://drive.google.com/start/apps"">drive.google.com/start/apps</a>.</p></div></div></div></div></body><style>#outerContainer {margin: auto; max-width: 750px;}#innerContainer {margin-bottom: 20px; margin-left: 40px; margin-right: 40px; margin-top: 80px; position: relative;}</style></html>\''), line: 184",new FOLLOW script,2018-02-07 12:26:42.133852,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-07 13:29:02.214008,
+0,"<class 'OSError'>, [Errno 22] Invalid argument: '../../data/Instagram_data.p', line: 186",new FOLLOW script,2018-02-07 14:09:52.461998,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 186",new FOLLOW script,2018-02-07 15:36:35.857158,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-08 12:15:30.264510,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-08 12:17:48.911375,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-08 13:21:58.817751,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-02-08 15:23:33.911562,
+0,"<class 'IndexError'>, list index out of range, line: 374",Liking people who liked us script,2018-02-08 16:53:15.900853,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-08 20:13:24.250517,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-08 20:14:34.334462,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-02-09 00:03:28.213512,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-09 07:47:01.485759,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-09 07:50:14.754747,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 257",Follow and like by tag,2018-02-09 08:09:30.473280,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-09 08:37:02.701002,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-09 09:59:03.419128,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 87",new FOLLOW script,2018-02-09 10:12:32.777067,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/header/section/ul/li[2]/a/span""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 90",new FOLLOW script,2018-02-09 10:12:56.062392,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/header/section/ul/li[2]/a/span""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 90",new FOLLOW script,2018-02-09 10:13:14.806423,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""_e3il2"">...</div> is not clickable at point (160, 453). Other element would receive the click: <div class=""_gftfm""></div>
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 254",Follow and like by tag,2018-02-09 10:18:33.715513,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-09 10:20:56.845633,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-09 14:18:36.248849,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 254",Follow and like by tag,2018-02-09 16:37:51.398791,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-09 16:55:36.421206,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-09 16:57:15.962881,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-09 16:58:56.174537,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-10 00:26:03.532282,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-10 00:27:44.029966,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-10 00:29:24.113643,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-10 01:26:44.176811,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-10 07:20:41.974486,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-10 18:23:01.283847,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/header/section/ul/li[2]/a""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 138",Follow Famous people followers,2018-02-10 18:25:28.868223,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-02-10 20:37:58.055105,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-02-10 22:28:30.198311,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-11 18:09:40.834804,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 118",new FOLLOW script,2018-02-11 18:12:58.531019,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-11 18:14:46.489144,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-11 18:16:26.822439,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-02-11 18:17:20.711495,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-11 18:20:06.054871,
+0,"<class 'IndexError'>, list index out of range, line: 247",Follow and like by tag,2018-02-11 18:41:38.565444,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-02-11 20:00:30.016801,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-12 01:37:38.456155,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-12 01:40:22.416456,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-02-12 20:31:50.854907,
+0,"<class 'EOFError'>, Ran out of input, line: 195",Unfollow from Pickle,2018-02-13 01:54:04.406492,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-13 07:47:43.872189,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-13 07:48:52.659061,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/header/section/ul/li[2]/a""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 138",Follow Famous people followers,2018-02-13 18:29:39.900769,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/header/section/ul/li[2]/a""}
+  (Session info: chrome=64.0.3282.140)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 138",Follow Famous people followers,2018-02-13 18:30:08.037338,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 247",Follow and like by tag,2018-02-14 18:21:21.593075,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-14 18:46:52.403494,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-14 23:34:04.111211,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-15 00:09:36.001944,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-15 00:57:33.666203,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-15 01:20:57.172575,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-02-15 15:30:45.973307,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-02-15 15:57:41.593541,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-16 03:43:36.689346,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-16 03:44:46.159466,
+0,"<class '_pickle.UnpicklingError'>, invalid load key, '\x00'., line: 212",Unfollow from Pickle,2018-02-17 21:04:42.725877,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-18 03:59:15.259203,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-18 10:20:09.843183,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-18 15:31:17.745214,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-19 15:51:46.332038,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-19 15:53:32.807002,
+0,"<class 'IndexError'>, list index out of range, line: 111",new FOLLOW script,2018-02-19 15:55:19.278272,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-19 16:56:43.198106,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-19 16:59:58.707267,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-19 17:03:02.893782,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-20 01:03:02.212370,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-20 06:16:54.511642,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-02-20 12:14:35.142264,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-20 12:37:04.152713,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-20 12:58:55.243564,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-20 13:00:05.137584,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-02-20 13:00:13.387056,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-21 15:19:47.856880,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-21 18:31:04.283652,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 186",new FOLLOW script,2018-02-21 18:49:03.880202,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-22 02:20:55.873962,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-22 15:33:00.078292,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-02-23 01:54:33.246212,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-23 03:08:15.355142,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-23 03:09:23.817049,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-02-23 17:46:35.443700,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 374",Liking people who liked us script,2018-02-24 00:07:09.359327,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-02-24 11:42:05.200999,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[2]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 370",Liking people who liked us script,2018-02-24 11:43:16.553900,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-24 13:12:39.473440,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-24 14:38:16.397665,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-24 16:21:55.671227,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-24 19:09:54.182116,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[2]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 373",Liking people who liked us script,2018-02-24 20:22:40.827345,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-02-25 23:23:30.915843,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[3]/div[2]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 373",Liking people who liked us script,2018-02-26 03:52:06.869312,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-26 06:35:11.182710,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-26 06:36:18.718584,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-02-26 09:30:53.914841,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-26 09:46:44.983125,
+0,"<class 'EOFError'>, Ran out of input, line: 214",Valeria new unfollowing script,2018-02-26 13:35:03.306147,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-26 15:19:20.296034,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 235",Follow and like by tag,2018-02-26 15:38:45.973616,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-26 16:46:51.482819,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[1]/div/div[1]/div[2]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 369",Liking people who liked us script,2018-02-26 16:55:32.088540,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-26 19:03:49.317968,
+0,"<class 'EOFError'>, Ran out of input, line: 214",Valeria new unfollowing script,2018-02-26 20:06:58.786373,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-27 04:44:41.967523,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-27 04:48:09.591617,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[1]/div/div[1]/div[3]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 369",Liking people who liked us script,2018-02-27 07:55:38.137543,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-02-27 08:17:17.807740,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-27 08:21:10.530026,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-27 14:18:51.920240,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-27 18:09:56.339748,
+0,"<class 'AttributeError'>, 'NoneType' object has no attribute 'text', line: 257",Follow and like by tag,2018-02-27 20:33:48.200533,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-02-27 21:11:16.288875,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-02-28 00:11:34.135457,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-28 10:01:30.385872,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-02-28 10:02:38.267754,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-02-28 15:39:58.701646,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-02-28 15:49:23.044864,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-02-28 16:45:23.177670,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-01 05:35:41.523092,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-01 05:36:47.859196,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-03-01 23:39:15.817878,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-02 01:07:15.812326,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-02 02:34:18.223451,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-02 05:05:20.880924,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-02 15:07:52.987823,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-03-02 21:07:50.425162,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[30]/div[3]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 369",Liking people who liked us script,2018-03-02 21:11:29.080194,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-02 21:54:07.778267,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-02 22:59:20.173622,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 257",Follow and like by tag,2018-03-02 23:56:47.890134,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-03 01:24:38.282808,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[15]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-03 07:01:07.228024,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-03-03 23:44:19.357148,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-04 05:43:10.039062,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-04 06:28:09.023136,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[14]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-04 08:32:01.240428,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-04 10:44:08.172969,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-03-04 13:01:21.608522,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-04 13:25:11.075159,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-04 13:25:33.184391,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-03-04 14:51:20.854300,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-04 21:30:18.658873,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[12]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-04 21:39:30.383357,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-05 01:17:19.901485,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-05 01:18:28.220385,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-05 03:08:20.077707,
+0,"<class 'EOFError'>, Ran out of input, line: 214",Valeria new unfollowing script,2018-03-05 03:31:56.959614,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[10]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-05 08:30:39.221597,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-03-05 08:49:52.665415,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-05 12:35:56.436791,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-05 12:49:42.792935,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-05 15:15:32.287438,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-05 17:55:50.503534,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-05 17:56:14.067913,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-05 19:53:35.966922,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[22]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 369",Liking people who liked us script,2018-03-05 20:02:41.435035,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[18]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 369",Liking people who liked us script,2018-03-05 20:04:37.488689,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-03-05 20:49:48.776446,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-05 21:51:08.116524,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 214",Valeria new unfollowing script,2018-03-05 22:14:55.295973,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-06 03:06:27.702129,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-06 03:27:57.764394,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-03-06 08:43:50.437304,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-06 12:05:06.022718,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-06 12:47:18.554271,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 249",Follow and like by tag,2018-03-06 12:50:06.643867,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[13]/div[2]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 369",Liking people who liked us script,2018-03-06 12:50:52.590491,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[19]/div[2]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 369",Liking people who liked us script,2018-03-06 13:34:36.266273,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-06 15:54:33.918725,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-06 15:55:19.975350,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-06 15:55:45.695787,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-03-06 16:29:13.659433,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 214",Valeria new unfollowing script,2018-03-06 17:03:30.732855,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-06 17:26:54.947020,
+0,"<class 'IndexError'>, list index out of range, line: 247",Follow and like by tag,2018-03-06 17:27:09.020824,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-06 17:27:17.744322,
+0,"<class 'IndexError'>, list index out of range, line: 247",Follow and like by tag,2018-03-06 17:27:40.666630,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-06 17:27:41.590684,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-06 20:26:18.794675,
+0,"<class 'IndexError'>, list index out of range, line: 247",Follow and like by tag,2018-03-06 21:12:58.608866,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-06 22:16:13.012516,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-06 22:17:21.382421,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <a class=""_8scx2 _gvoze coreSpriteDesktopNav..."" href=""/linethmm/"">Profile</a> is not clickable at point (887, 26). Other element would receive the click: <div class=""_gftfm""></div>
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 372",Liking people who liked us script,2018-03-06 22:35:59.793238,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-07 00:15:47.239187,
+0,"<class 'IndexError'>, list index out of range, line: 137",Follow Famous people followers,2018-03-07 00:16:11.555576,
+0,"<class 'IndexError'>, list index out of range, line: 247",Follow and like by tag,2018-03-07 00:16:36.172016,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""_e3il2"">...</div> is not clickable at point (469, 294). Other element would receive the click: <ul class=""_lpowm"">...</ul>
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 369",Liking people who liked us script,2018-03-07 00:16:39.484170,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-07 00:17:12.279042,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-07 00:18:21.569026,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-07 00:19:32.708059,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 160",Valeria new unfollowing script,2018-03-07 13:08:43.977555,
+0,"<class 'IndexError'>, list index out of range, line: 247",Follow and like by tag,2018-03-07 13:51:06.071204,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-07 13:51:24.987284,
+0,"<class 'IndexError'>, list index out of range, line: 371",Liking people who liked us script,2018-03-07 14:01:19.847023,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 258",Follow and like by tag,2018-03-07 14:21:50.939289,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[20]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 373",Liking people who liked us script,2018-03-07 14:25:45.351752,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[21]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 373",Liking people who liked us script,2018-03-07 14:26:52.366150,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[22]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 373",Liking people who liked us script,2018-03-07 14:28:06.602640,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 250",Follow and like by tag,2018-03-07 14:45:37.840655,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-07 15:01:25.080633,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-07 15:01:34.305141,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 186",new FOLLOW script,2018-03-07 16:52:55.403013,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-08 05:02:10.936317,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-08 19:49:45.200580,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 174",new FOLLOW script,2018-03-09 07:41:15.017908,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 174",new FOLLOW script,2018-03-09 07:46:33.126096,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 174",new FOLLOW script,2018-03-09 07:51:50.597219,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-09 11:14:21.676904,
+0,"<class 'AttributeError'>, 'NoneType' object has no attribute 'click', line: 349",Liking people who liked us script,2018-03-09 11:27:32.564224,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[20]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 373",Liking people who liked us script,2018-03-09 11:28:17.783805,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div/div[20]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 373",Liking people who liked us script,2018-03-09 11:29:00.585280,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_nhglx""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 250",Follow and like by tag,2018-03-09 11:42:11.308391,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-09 13:57:17.651203,
+0,"<class 'EOFError'>, Ran out of input, line: 214",Valeria new unfollowing script,2018-03-09 14:04:30.169868,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[17]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-09 15:44:52.960147,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-09 23:42:08.312711,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-10 08:06:09.986678,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-03-10 08:19:27.383204,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-10 08:41:11.171635,
+0,"<class 'IndexError'>, list index out of range, line: 376",Liking people who liked us script,2018-03-11 13:44:38.649100,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-11 14:00:38.621529,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-11 18:32:20.617880,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-11 19:56:00.671641,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 255",Follow and like by tag,2018-03-11 20:21:14.131390,
+0,"<class 'EOFError'>, Ran out of input, line: 214",Valeria new unfollowing script,2018-03-11 23:15:19.112300,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-12 07:27:50.878419,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-12 07:28:58.711596,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-12 08:13:53.816915,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 255",Follow and like by tag,2018-03-12 08:30:45.556306,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-12 08:37:22.169803,
+0,"<class 'EOFError'>, Ran out of input, line: 214",Valeria new unfollowing script,2018-03-12 09:01:30.585964,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-12 17:46:51.810701,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 255",Follow and like by tag,2018-03-12 18:47:00.839404,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-12 18:50:31.952380,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 214",Valeria new unfollowing script,2018-03-12 22:38:13.040300,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-13 00:43:32.455313,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-13 03:13:24.079158,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-13 04:25:28.706219,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-13 08:05:36.239516,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 258",Follow and like by tag,2018-03-13 08:12:11.966822,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-13 09:06:13.150663,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-13 11:57:16.285866,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 258",Follow and like by tag,2018-03-14 08:21:37.831642,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-14 11:03:19.761158,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-14 12:49:31.264080,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-14 14:37:01.405367,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-03-14 17:39:39.301791,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 186",new FOLLOW script,2018-03-14 18:51:24.071832,
+0,"<class 'IndexError'>, list index out of range, line: 376",Liking people who liked us script,2018-03-14 23:10:17.331838,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-03-14 23:12:00.654870,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 167",Valeria new unfollowing script,2018-03-15 01:06:09.357324,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-15 08:06:17.501945,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 258",Follow and like by tag,2018-03-15 08:25:40.526377,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-03-15 09:54:23.542410,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-15 10:17:55.080937,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 214",Valeria new unfollowing script,2018-03-15 10:54:14.775784,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-15 11:44:42.675453,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 214",Valeria new unfollowing script,2018-03-15 17:24:04.197035,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-03-15 18:03:13.929732,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-15 18:04:46.795966,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 258",Follow and like by tag,2018-03-15 18:49:45.676614,
+0,"<class 'EOFError'>, Ran out of input, line: 214",Valeria new unfollowing script,2018-03-15 18:50:38.102566,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 258",Follow and like by tag,2018-03-15 18:52:16.377431,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-15 19:29:27.953892,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-15 20:17:52.358587,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-16 05:10:36.920109,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 258",Follow and like by tag,2018-03-16 07:56:16.509035,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-16 08:57:11.282443,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-16 20:31:27.009285,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-16 20:32:34.927112,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-17 00:13:07.693880,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-03-17 00:21:41.894894,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-03-17 12:42:10.146840,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 186",new FOLLOW script,2018-03-17 13:33:46.751771,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 258",Follow and like by tag,2018-03-17 13:50:11.658748,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-18 01:10:39.239733,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 171",new FOLLOW script,2018-03-18 01:11:46.944617,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 257",Follow and like by tag,2018-03-18 11:48:22.312006,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-18 12:59:29.864749,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 186",new FOLLOW script,2018-03-19 00:09:06.144996,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-19 00:53:14.533718,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-19 05:09:33.908194,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 257",Follow and like by tag,2018-03-19 08:24:40.947642,
+0,"<class 'EOFError'>, Ran out of input, line: 214",Valeria new unfollowing script,2018-03-19 08:26:26.849764,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: chrome not reachable
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 188",Valeria new unfollowing script,2018-03-19 08:28:35.108213,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 188",Valeria new unfollowing script,2018-03-19 08:29:53.841733,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 188",Valeria new unfollowing script,2018-03-19 08:30:26.632662,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 188",Valeria new unfollowing script,2018-03-19 08:31:04.123797,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-19 09:08:15.727823,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-19 15:54:42.450197,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-03-19 22:57:12.397317,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-19 22:58:16.829444,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-20 01:03:35.106609,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-20 07:31:17.225510,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 254",Follow and like by tag,2018-03-20 08:22:00.259630,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-20 12:24:08.336287,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 167",Valeria new unfollowing script,2018-03-20 12:34:45.045074,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-03-20 12:39:23.585177,
+0,"<class 'OSError'>, [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted, line: 257",Follow and like by tag,2018-03-21 08:16:41.670047,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-21 09:56:09.068826,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-03-21 10:19:37.580669,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-21 11:43:58.618375,
+0,"<class 'EOFError'>, Ran out of input, line: 186",new FOLLOW script,2018-03-21 13:10:41.214903,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 376",Liking people who liked us script,2018-03-21 18:52:56.203798,
+0,"<class 'IndexError'>, list index out of range, line: 186",new FOLLOW script,2018-03-21 19:08:29.437374,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-03-21 19:10:25.324779,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 167",Valeria new unfollowing script,2018-03-21 20:49:14.410402,
+0,"<class 'IndexError'>, list index out of range, line: 376",Liking people who liked us script,2018-03-22 08:27:15.216146,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 364",Liking people who liked us script,2018-03-23 08:39:23.533992,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-23 08:39:27.342211,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-23 08:40:05.649517,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-23 08:40:42.788512,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-23 08:41:21.285634,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-25 18:54:41.978146,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-25 18:55:17.097239,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-25 18:55:53.205689,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 364",Liking people who liked us script,2018-03-25 18:56:13.326867,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-25 18:56:33.488047,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-26 18:22:57.532891,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-26 18:31:22.395594,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 364",Liking people who liked us script,2018-03-26 18:31:33.629240,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-28 19:16:02.732824,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-28 19:17:31.791941,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 364",Liking people who liked us script,2018-03-28 19:18:24.189952,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 181",new FOLLOW script,2018-03-30 21:24:24.052895,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 182",new FOLLOW script,2018-03-30 21:25:43.731100,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 182",new FOLLOW script,2018-03-30 21:28:16.728371,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 182",new FOLLOW script,2018-03-30 21:29:36.143851,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 182",new FOLLOW script,2018-03-30 21:32:16.012805,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 182",new FOLLOW script,2018-03-30 21:49:32.072189,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 183",new FOLLOW script,2018-03-30 21:50:28.138367,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 185",new FOLLOW script,2018-03-30 21:54:22.933583,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 186",new FOLLOW script,2018-03-30 21:55:53.417955,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: call function result missing 'value'
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.16299 x86_64)
+, line: 186",new FOLLOW script,2018-03-30 21:56:59.911686,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 191",new FOLLOW script,2018-03-30 22:06:47.038517,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-03-30 22:48:27.837495,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 254",Follow and like by tag,2018-03-31 00:44:07.377838,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-03-31 00:59:46.840815,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-03-31 15:10:11.519563,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-31 16:35:47.798618,
+0,"<class 'EOFError'>, Ran out of input, line: 191",new FOLLOW script,2018-03-31 16:37:11.302324,
+0,"<class 'EOFError'>, Ran out of input, line: 191",new FOLLOW script,2018-03-31 18:26:50.045069,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-03-31 19:52:32.572898,
+0,"<class 'EOFError'>, Ran out of input, line: 191",new FOLLOW script,2018-03-31 20:17:21.002784,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-03-31 21:22:07.368868,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 191",new FOLLOW script,2018-03-31 21:46:18.803517,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 174",new FOLLOW script,2018-03-31 22:18:07.359387,
+0,"<class 'EOFError'>, Ran out of input, line: 191",new FOLLOW script,2018-03-31 22:22:19.456612,
+0,"<class 'IndexError'>, list index out of range, line: 191",new FOLLOW script,2018-03-31 22:45:12.031954,
+0,"<class 'IndexError'>, list index out of range, line: 191",new FOLLOW script,2018-03-31 23:09:29.108104,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-04-01 01:25:24.326720,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-01 09:55:00.750285,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-01 09:56:41.377954,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-01 09:58:22.252639,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-04-01 11:01:58.505722,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 377",Liking people who liked us script,2018-04-01 11:11:09.803780,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 167",Valeria new unfollowing script,2018-04-01 11:42:36.520923,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-01 18:30:46.753377,
+0,"<class 'IndexError'>, list index out of range, line: 191",new FOLLOW script,2018-04-01 18:34:35.300682,
+0,"<class 'IndexError'>, list index out of range, line: 191",new FOLLOW script,2018-04-01 18:58:19.877554,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 191",new FOLLOW script,2018-04-01 19:01:14.100692,
+0,"<class 'IndexError'>, list index out of range, line: 191",new FOLLOW script,2018-04-01 20:45:46.490649,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 138",Follow Famous people followers,2018-04-01 20:50:27.711981,
+0,"<class 'IndexError'>, list index out of range, line: 191",new FOLLOW script,2018-04-02 01:08:36.883201,
+0,"<class 'IndexError'>, list index out of range, line: 191",new FOLLOW script,2018-04-02 04:00:34.510511,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-02 05:03:55.127658,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-04-02 10:32:08.093570,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-02 10:50:21.376153,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-02 17:53:14.466514,
+0,"<class 'IndexError'>, list index out of range, line: 191",new FOLLOW script,2018-04-02 19:42:59.227589,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-04-02 19:43:05.990981,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteRightPaginationArrow""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 377",Liking people who liked us script,2018-04-02 20:02:37.965139,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-03 09:25:51.441258,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-03 09:27:27.007610,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-03 09:29:10.681384,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-03 09:51:35.556690,
+0,"<class 'EOFError'>, Ran out of input, line: 138",Follow Famous people followers,2018-04-03 18:17:39.371220,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 377",Liking people who liked us script,2018-04-03 19:43:54.102015,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 137",Follow Famous people followers,2018-04-03 19:46:35.489047,
+0,"<class 'EOFError'>, Ran out of input, line: 213",Valeria new unfollowing script,2018-04-03 20:53:41.549704,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 191",new FOLLOW script,2018-04-03 21:14:48.351974,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-03 21:38:30.452204,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 174",new FOLLOW script,2018-04-03 21:38:48.283234,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 174",new FOLLOW script,2018-04-03 21:39:01.863021,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 210",Valeria new unfollowing script,2018-04-03 21:55:16.623363,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-03 22:13:51.013780,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-03 22:38:25.094038,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-03 23:03:27.947900,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 191",new FOLLOW script,2018-04-04 00:10:37.317112,
+0,"<class 'EOFError'>, Ran out of input, line: 213",Valeria new unfollowing script,2018-04-04 00:33:47.657031,

@@ -20,8 +20,8 @@ def open_chrome():
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Like_Profile")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
+        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Follow_Like_Profile")  # Path to your chrome profile
+    driver = webdriver.Chrome(executable_path='../../assets/chromedriver.exe', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
 #
@@ -143,6 +143,9 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
     count = 0
     followed = 0
     while count < number_of_people:
+
+        # TODO
+        '''NOT NEEDED SINCE WE AREN'T FOLLOWING'''
         try:
             follow_button = driver.find_element_by_class_name('_4tgw8')
             if follow_button.text == 'Follow':
@@ -152,9 +155,10 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
         except NoSuchElementException:
             continue
         sleep()
+        ''''''
 
         # TODO - this section likes the follower!! its been removed for testing O.o
-        #clicks image to go to profile!
+        #clicks image to go to user profile!
         try:
             driver.find_element_by_class_name('_rewi8').click()
             sleep()
@@ -229,7 +233,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 4
+errors = 1
 while errors > 0:
     try:
         open_chrome()
@@ -244,17 +248,25 @@ while errors > 0:
         makeup_list = sorted(makeup_list, key=lambda x: random())
 
         for hash in makeup_list:
+            # Works fine
             search_famous_person(hash)
-           # Goes to the text "Most recent"
-            var = driver.find_element_by_class_name('_nhglx')
-            actions = webdriver.ActionChains(driver)
-            actions.move_to_element(var)
-            # click first image of 'recent posts' *skipping to posts
-            driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
-            sleep()
 
-            follow_like_people(4, 2, 1)  # number of people, number of pics to like, time to wait every 10 people followed
+           #  '''Doesn't do anything'''
+           # # Goes to the text "Most recent"
+           #  var = driver.find_element_by_class_name('_nhglx')
+           #  actions = webdriver.ActionChains(driver)
+           #  actions.move_to_element(var)
+           #  ''''''
+
+            # click first image of 'recent posts' *skipping to posts
+            try:
+                driver.find_element_by_xpath(
+                    '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
+                sleep()
+            except:
+                continue
+
+            follow_like_people(9, 3, 1)  # number of people, number of pics to like, time to wait every 10 people followed
                                          # Not following anyone!
             driver.back()
 
