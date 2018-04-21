@@ -9,7 +9,6 @@ import pickle
 import pandas as pd
 from random import *
 import sys, logging
-
 def twilio():
     global client
     twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
@@ -71,7 +70,7 @@ def remove_k_m_periods_commas(value):
     return value
 
 def text_me(message):
-    twilio_number = '+19562720613'
+    twilio_number = '+19562653630'
     jamie_number = '+19568214550'
     valeria_number = '+19564370322'
     #phone_number = '+1%s' % input('What is your phone number?')

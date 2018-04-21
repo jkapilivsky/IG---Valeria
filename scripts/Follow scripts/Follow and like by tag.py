@@ -20,7 +20,7 @@ def open_chrome():
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/Follow_Like_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Like_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver.exe', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
@@ -29,7 +29,7 @@ def sleep():
     time.sleep(randint(5, 8))
 
 def text_me(message):
-    twilio_number = '+19562720613'
+    twilio_number = '+19562653630'
     jamie_number = '+19568214550'
     valeria_number = '+19564370322'
     #phone_number = '+1%s' % input('What is your phone number?')
@@ -40,6 +40,11 @@ def text_me(message):
 
 def search_famous_person(hashtag):
     # Search bar
+    try:
+        search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
+    except NoSuchElementException:
+        driver.find_element_by_class_name('_8scx2').click()
+
     search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
     #search = driver.find_element_by_class_name('_eduze')
     search.clear()
@@ -233,10 +238,12 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 1
+errors = 4
 while errors > 0:
     try:
+        twilio()
         open_chrome()
+        time.sleep(200)
         hashtag_list = ['#hudabeauty', '#beautiful', '#iggers', '#followforfollow', '#likeforlike',
                        '#Beautiful', '#me', '#instagood', '#Austin', '#makeupbyme']
 

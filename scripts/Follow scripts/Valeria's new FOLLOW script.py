@@ -164,11 +164,12 @@ def error_log(err):
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import twilio, text_me, error_handling, sleep
 
-errors = 4
+errors = 3
 followings = 0
 while errors > 0:
     try:
         open_chrome()
+        time.sleep(200)
         twilio()
         # go to profile
         driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()

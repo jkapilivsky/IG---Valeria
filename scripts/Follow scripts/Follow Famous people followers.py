@@ -23,13 +23,14 @@ def open_chrome():
         "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Famous_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     driver.get("https://www.instagram.com/")
+
     sleep()
 
 def sleep():
     time.sleep(randint(6, 9))
 
 def text_me(message):
-    twilio_number = '+19562720613'
+    twilio_number = '+19562653630'
     jamie_number = '+19568214550'
     valeria_number = '+19564370322'
     #phone_number = '+1%s' % input('What is your phone number?')
@@ -132,7 +133,8 @@ errors = 3
 while errors > 0:
     try:
         open_chrome()
-        twilio()
+        time.sleep(200)
+        #twilio()
         who_to_follow('hotsootuff', 'kimkardashian')  # day and night
         search_famous_person()
         follow_people(6)  # amount = number of people to follow
@@ -149,8 +151,8 @@ while errors > 0:
 
         errors -= 1
         if errors == 0:
-            text_me('follow famous person QUIT!')
+            #text_me('follow famous person QUIT!')
             quit()
         message = 'Famous person error...' + str((errors)) + ' errors remaining'
-        text_me(message)
+        #text_me(message)
 

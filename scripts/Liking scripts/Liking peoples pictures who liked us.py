@@ -31,7 +31,7 @@ def sleep():
     time.sleep(randint(4,7))
 
 def text_me(message):
-    twilio_number = '+19562720613'
+    twilio_number = '+19562653630'
     jamie_number = '+19568214550'
     valeria_number = '+19564370322'
     #phone_number = '+1%s' % input('What is your phone number?')
@@ -328,8 +328,8 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 7
-column = 3
+row = 6
+column = 2
 
 #Notes to not repeat same picture!
 # 1/3/18 - ran 6/1 and 15/1
@@ -340,7 +340,6 @@ while error >= 0:
     try:
         open_chrome()
         twilio()
-
         start = timeit.default_timer()
         sleep()
         #time.sleep(120)

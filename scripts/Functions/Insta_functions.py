@@ -6,7 +6,7 @@ import pandas as pd
 from random import randint
 
 def text_me(message):
-    twilio_number = '+19562720613'
+    twilio_number = '+19562653630'
     jamie_number = '+19568214550'
     valeria_number = '+19564370322'
     #phone_number = '+1%s' % input('What is your phone number?')
