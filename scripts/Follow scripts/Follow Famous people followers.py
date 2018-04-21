@@ -8,12 +8,8 @@ import pandas as pd
 from random import *
 import sys, logging
 
-def twilio():
-    global client
-    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
-    twilio_acc = list(twilio_dict.values())[0]
-    twilio_cred = list(twilio_dict.values())[1]
-    client = Client(twilio_acc, twilio_cred)  # For Twilio
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
+from Insta_functions import sleep, twilio, text_me, error_handling
 
 def open_chrome():
     global driver
@@ -25,19 +21,6 @@ def open_chrome():
     driver.get("https://www.instagram.com/")
 
     sleep()
-
-def sleep():
-    time.sleep(randint(6, 9))
-
-def text_me(message):
-    twilio_number = '+19562653630'
-    jamie_number = '+19568214550'
-    valeria_number = '+19564370322'
-    #phone_number = '+1%s' % input('What is your phone number?')
-
-    client.messages.create(to=jamie_number,
-                           from_=twilio_number,
-                           body=message)
 
 def log_into_instagram(username, password):
     driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
@@ -117,11 +100,6 @@ def follow_people(amount):
 
         write_to_database(name, future_followers)
 
-def error_handling():
-    return '{}, {}, line: {}'.format(sys.exc_info()[0],
-                                     sys.exc_info()[1],
-                                     sys.exc_info()[2].tb_lineno)
-
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'Follow Famous people followers', str(datetime.datetime.now())]],
@@ -133,17 +111,15 @@ errors = 3
 while errors > 0:
     try:
         open_chrome()
-        time.sleep(200)
-        #twilio()
+        twilio()
+        #people_list = ['nyane']
         who_to_follow('hotsootuff', 'kimkardashian')  # day and night
         search_famous_person()
         follow_people(6)  # amount = number of people to follow
-
         driver.close()
         print('Waiting 20 minutes!')
         time.sleep(20*60)
 
-#
     except Exception as err:
         issue = error_handling()
         error_log(issue)
