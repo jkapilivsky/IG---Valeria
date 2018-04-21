@@ -20,6 +20,7 @@ def open_chrome(profile):
         driver.add_cookie(cookie)
 
     driver.get("https://www.instagram.com/")
+    time.sleep(5)
 
     return driver
 

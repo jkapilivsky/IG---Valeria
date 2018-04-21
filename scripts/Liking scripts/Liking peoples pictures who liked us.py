@@ -10,35 +10,8 @@ import datetime
 import pandas as pd
 import sys, logging
 
-def twilio():
-    global client
-    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
-    twilio_acc = list(twilio_dict.values())[0]
-    twilio_cred = list(twilio_dict.values())[1]
-    client = Client(twilio_acc, twilio_cred)  # For Twilio
-
-def open_chrome():
-    global driver
-    global client
-    options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Liking_Profile")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
-    driver.get("https://www.instagram.com/")
-    sleep()
-
-def sleep():
-    time.sleep(randint(4,7))
-
-def text_me(message):
-    twilio_number = '+19562653630'
-    jamie_number = '+19568214550'
-    valeria_number = '+19564370322'
-    #phone_number = '+1%s' % input('What is your phone number?')
-
-    client.messages.create(to=jamie_number,
-                           from_=twilio_number,
-                           body=message)
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
 def like_unlike_check():
 
@@ -308,11 +281,6 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
         pic_counter += 1
 
-def error_handling():
-    return '{}, {}, line: {}'.format(sys.exc_info()[0],
-                                     sys.exc_info()[1],
-                                     sys.exc_info()[2].tb_lineno)
-
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'Liking people who liked us script', str(datetime.datetime.now())]],
@@ -338,7 +306,8 @@ column = 2
 error = 1
 while error >= 0:
     try:
-        open_chrome()
+        global driver
+        driver = open_chrome('Liking_pics_Profile')
         twilio()
         time.sleep(1231)
         start = timeit.default_timer()

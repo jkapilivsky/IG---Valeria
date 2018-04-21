@@ -11,17 +11,7 @@ from random import *
 import sys, logging
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling
-
-def open_chrome():
-    global driver
-    global client
-    options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Extra_Profile - Copy")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
-    driver.get("https://www.instagram.com/")
-    sleep()
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
 def log_into_instagram(username, password):
     driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
@@ -134,7 +124,8 @@ following_list = ['graciejudson', 'chezkakae', 'yolandaolivares10', 'duckieoffic
 error = 3
 while error > 0:
     try:
-        open_chrome()
+        global driver
+        driver = open_chrome('Unfollow_Profile')
         twilio()
 
 

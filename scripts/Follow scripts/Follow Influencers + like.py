@@ -1,53 +1,10 @@
-from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
-import time
-from twilio.rest import Client
-import datetime
-import pickle
+import time, datetime, pickle, sys
 import pandas as pd
-from random import *
-import sys, logging
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling
-
-def open_chrome():
-    global driver
-    global client
-    options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Famous_Profile")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
-    driver.get("https://www.instagram.com/")
-
-    sleep()
-
-def log_into_instagram(username, password):
-    driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
-    time.sleep(1.5)
-
-    # Input username
-    user = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[1]/div/input''')
-    user.clear()
-    user.send_keys(username)
-
-    # Input password
-    pw = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/input''')
-    pw.clear()
-    pw.send_keys(password)
-
-    pw.send_keys(Keys.ENTER)
-    time.sleep(3)
-
-def who_to_follow(day, night):
-    global famous_person
-    hour = int(datetime.datetime.now().strftime('%H'))
-    if hour <= 12:
-        famous_person = day
-    else:
-        famous_person = night
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
 def search_famous_person():
     # Search bar
@@ -66,12 +23,55 @@ def write_to_database(name, future_followers):
     data = pickle.load(open("../../data/Instagram_data.p", "rb"))
     df = pd.DataFrame(
         [[name[future_followers].text, 'Following', str(datetime.datetime.now()),
-          'Follow_famous_person_' + str(famous_person)]],
+          'Follow_influencer_person_' + str(famous_person)]],
         columns=['username', 'status', 'time_stamp', 'acquisition'])
     data = data.append(df)
     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
     # End pickle
     sleep()
+
+def like_unlike_check():
+
+    like_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Like']")
+    liked_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Unlike']")
+
+    if len(like_elem) == 1:
+        driver.execute_script(
+            "document.getElementsByClassName('" + like_elem[0].get_attribute("class") + "')[0].click()")
+        print('--> Image Liked!')
+        time.sleep(2)
+    elif len(liked_elem) == 1:
+        print('--> Already Liked!')
+    else:
+        print('--> Invalid Like Element!')
+
+def likes_persons_posts(num_images_to_like):
+    count_posts = 0
+    not_pic_count = 0
+
+    while count_posts < num_images_to_like:
+        # if statement looks for a video
+        try:
+            like_unlike_check()
+            time.sleep(2)
+            # right click on images to scroll
+            driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
+            sleep()
+            count_posts += 1
+
+        except NoSuchElementException:
+            print('Image is not a picture!')
+            not_pic_count += 1
+
+            if not_pic_count == 3:
+                break
+
+    if not_pic_count == 3:
+        driver.back()
+    else:
+        driver.back()
+        sleep()
+        driver.back()
 
 def follow_people(amount):
     # Click followers
@@ -85,20 +85,31 @@ def follow_people(amount):
         name = driver.find_elements_by_class_name('_2g7d5')
         buttons = "../../../../div[2]/span"
 
-        if name[future_followers].text == 'linethmm':
-            continue
-
-        if name[future_followers].text in username_list:
+        if name[future_followers].text == 'linethmm' or name[future_followers].text in username_list:
             continue
 
         if name[future_followers].find_element_by_xpath(buttons).text == 'Follow':
             name[future_followers].find_element_by_xpath(buttons).click()
+            print("Now following: ", name[future_followers].text)
+            write_to_database(name, future_followers)
             sleep()
         else:
             continue
-        print("Now following: ", name[future_followers].text)
 
-        write_to_database(name, future_followers)
+        # Click person in list order (goes to their profile)
+        name[future_followers].click()
+        sleep()
+
+        # Clicks the person's first image
+        try:
+            driver.find_element_by_class_name('''_e3il2''').click()
+            sleep()
+        except NoSuchElementException:
+            driver.back()
+            continue
+
+        likes_persons_posts(3)
+        sleep()
 
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
@@ -110,15 +121,18 @@ def error_log(err):
 errors = 3
 while errors > 0:
     try:
-        open_chrome()
+        global driver
+        driver = open_chrome('Follow_Like_Influencers')
         twilio()
-        #people_list = ['nyane']
-        who_to_follow('hotsootuff', 'kimkardashian')  # day and night
-        search_famous_person()
-        follow_people(6)  # amount = number of people to follow
-        driver.close()
-        print('Waiting 20 minutes!')
-        time.sleep(20*60)
+        influencers_list = ['nyane', 'wengie', 'sichenmakeupholic', 'hudabeauty', 'michellephan']
+
+        for influencer in influencers_list:
+            famous_person = influencer
+            search_famous_person()
+            follow_people(6)  # amount = number of people to follow
+            driver.close()
+            print('Waiting 4 minutes!')
+            time.sleep(4*60)
 
     except Exception as err:
         issue = error_handling()
@@ -129,6 +143,6 @@ while errors > 0:
         if errors == 0:
             #text_me('follow famous person QUIT!')
             quit()
-        message = 'Famous person error...' + str((errors)) + ' errors remaining'
+        message = 'Influencer error...' + str((errors)) + ' errors remaining'
         #text_me(message)
 

@@ -10,17 +10,7 @@ from random import *
 import sys, logging
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling
-
-def open_chrome():
-    global driver
-    global client
-    options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Like_by_tag_Profile")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver.exe', chrome_options=options)
-    driver.get("https://www.instagram.com/")
-    sleep()
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
 def search_famous_person(hashtag):
     # Search bar
@@ -220,16 +210,17 @@ def error_log(err):
 errors = 2
 while errors > 0:
     try:
+        global driver
+        driver = open_chrome('Like_by_tag_Profile')
         twilio()
-        open_chrome()
+
         hashtag_list = ['#hudabeauty', '#beautiful', '#iggers', '#followforfollow', '#likeforlike',
                        '#Beautiful', '#me', '#instagood', '#Austin', '#makeupbyme']
-
         makeup_list = ['#makeupbyme', '#makeupdolls', '#makeupaddict', '#instamakeup', '#makeupblogger',
                        '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
                        '#lashlover', '#naturallashes', '#hudabeauty', '#lipstick', '#eyeshadow']
-
         influnecer_list = ['#styleblogger', '#instamakeup']
+
         #Randomizes list!
         hashtag_list = sorted(hashtag_list, key=lambda x: random())
         makeup_list = sorted(makeup_list, key=lambda x: random())
@@ -270,4 +261,4 @@ while errors > 0:
             text_me('follow #tags quit!')
             quit()
         message = 'Follow #tag error...'  + str(errors) + ' errors remaining'
-        text_me(message)
+        #text_me(message)

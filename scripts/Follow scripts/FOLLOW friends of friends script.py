@@ -9,16 +9,8 @@ import pandas as pd
 from random import *
 import sys, logging
 
-
-def open_chrome():
-    global driver
-    global client
-    options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Profile")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
-    driver.get("https://www.instagram.com/")
-    sleep()
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
 def log_into_instagram(username, password):
     driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
@@ -161,14 +153,12 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import twilio, text_me, error_handling, sleep
-
 errors = 3
 followings = 0
 while errors > 0:
     try:
-        open_chrome()
+        global driver
+        driver = open_chrome('Follow_Profile')
         time.sleep(200)
         twilio()
         # go to profile
