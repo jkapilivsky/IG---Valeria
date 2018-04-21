@@ -8,35 +8,19 @@ import pickle
 import pandas as pd
 from random import *
 import sys, logging
-def twilio():
-    global client
-    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
-    twilio_acc = list(twilio_dict.values())[0]
-    twilio_cred = list(twilio_dict.values())[1]
-    client = Client(twilio_acc, twilio_cred)  # For Twilio
+
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
+from Insta_functions import sleep, twilio, text_me, error_handling
 
 def open_chrome():
     global driver
     global client
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Like_Profile")  # Path to your chrome profile
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Famous_Profile")  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver.exe', chrome_options=options)
     driver.get("https://www.instagram.com/")
     sleep()
-#
-def sleep():
-    time.sleep(randint(5, 8))
-
-def text_me(message):
-    twilio_number = '+19562653630'
-    jamie_number = '+19568214550'
-    valeria_number = '+19564370322'
-    #phone_number = '+1%s' % input('What is your phone number?')
-
-    client.messages.create(to=jamie_number,
-                           from_=twilio_number,
-                           body=message)
 
 def search_famous_person(hashtag):
     # Search bar
@@ -180,7 +164,7 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
 
         try:
         # If out of range. Go back and select next picture
-            if follower_following_range(10, 5000, 10, 5000) is False:
+            if follower_following_range(150, 15000, 150, 5000) is False:
                 driver.back()
                 sleep()
                 driver.find_element_by_class_name('coreSpriteRightPaginationArrow').click()
@@ -226,11 +210,6 @@ def wait_time(followed, minutes):
         print(followed, 'Followed: Waiting', minutes, 'minutes')
         time.sleep(minutes * 60)  # multiply by 60 seconds
 
-def error_handling():
-    return '{}, {}, line: {}'.format(sys.exc_info()[0],
-                                     sys.exc_info()[1],
-                                     sys.exc_info()[2].tb_lineno)
-
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'Follow and like by tag', str(datetime.datetime.now())]],
@@ -238,23 +217,25 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 4
+errors = 2
 while errors > 0:
     try:
         twilio()
         open_chrome()
-        time.sleep(200)
         hashtag_list = ['#hudabeauty', '#beautiful', '#iggers', '#followforfollow', '#likeforlike',
                        '#Beautiful', '#me', '#instagood', '#Austin', '#makeupbyme']
 
         makeup_list = ['#makeupbyme', '#makeupdolls', '#makeupaddict', '#instamakeup', '#makeupblogger',
-                       '#beautyblogger', '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
+                       '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
                        '#lashlover', '#naturallashes', '#hudabeauty', '#lipstick', '#eyeshadow']
+
+        influnecer_list = ['#styleblogger', '#instamakeup']
         #Randomizes list!
         hashtag_list = sorted(hashtag_list, key=lambda x: random())
         makeup_list = sorted(makeup_list, key=lambda x: random())
+        influnecer_list = sorted(influnecer_list, key=lambda x:random())
 
-        for hash in makeup_list:
+        for hash in influnecer_list:
             # Works fine
             search_famous_person(hash)
 
@@ -273,7 +254,7 @@ while errors > 0:
             except:
                 continue
 
-            follow_like_people(9, 3, 1)  # number of people, number of pics to like, time to wait every 10 people followed
+            follow_like_people(9, 6, 1)  # number of people, number of pics to like, time to wait every 10 people followed
                                          # Not following anyone!
             driver.back()
 

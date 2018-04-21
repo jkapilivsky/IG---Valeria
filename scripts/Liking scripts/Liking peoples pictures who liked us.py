@@ -340,6 +340,7 @@ while error >= 0:
     try:
         open_chrome()
         twilio()
+        time.sleep(1231)
         start = timeit.default_timer()
         sleep()
         #time.sleep(120)

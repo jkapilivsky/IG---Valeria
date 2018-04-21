@@ -23,7 +23,7 @@ def twilio():
     client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def sleep():
-    time.sleep(randint(8, 10))
+    time.sleep(randint(6, 9))
 
 def error_handling():
     return '{}, {}, line: {}'.format(sys.exc_info()[0],
