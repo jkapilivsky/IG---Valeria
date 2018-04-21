@@ -2,8 +2,26 @@ import time
 from twilio.rest import Client
 import sys, logging
 import pandas as pd
+from selenium import webdriver
+import pickle
 
 from random import randint
+
+def open_chrome(profile):
+    global driver
+    global client
+    options = webdriver.ChromeOptions()
+    options.add_argument(
+        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/" + profile)  # Path to your chrome profile
+    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
+
+    cookies = pickle.load(open("../../assets/cookies.p", "rb"))
+    for cookie in cookies:
+        driver.add_cookie(cookie)
+
+    driver.get("https://www.instagram.com/")
+
+    return driver
 
 def text_me(message):
     twilio_number = '+19562653630'

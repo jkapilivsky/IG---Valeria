@@ -9,18 +9,7 @@ from random import *
 import sys, logging
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling
-
-def open_chrome():
-    global driver
-    global client
-    options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Follow_Famous_Profile")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
-    driver.get("https://www.instagram.com/")
-
-    sleep()
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
 def log_into_instagram(username, password):
     driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
@@ -110,7 +99,9 @@ def error_log(err):
 errors = 3
 while errors > 0:
     try:
-        open_chrome()
+        global driver
+        driver = open_chrome('Follow_Famous_Profile')
+        #pickle.dump(driver.get_cookies(), open("cookies.p", "wb"))
         twilio()
         #people_list = ['nyane']
         who_to_follow('hotsootuff', 'kimkardashian')  # day and night
