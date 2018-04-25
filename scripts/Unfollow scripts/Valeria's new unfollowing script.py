@@ -153,10 +153,10 @@ while error > 0:
         driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[3]''').click()
         sleep()
 
-        repeat_space_bar(100)
+        repeat_space_bar(10)
 
         count = 0
-        for people in range(0, 350, 1):
+        for people in range(0, 40, 1):
             unfollow_button = driver.find_elements_by_class_name('_qv64e')
             name = driver.find_elements_by_class_name('_2g7d5')
 
@@ -170,8 +170,8 @@ while error > 0:
             count += 1
 
             if (people+1) % 16 == 0:  # Sleeps for 15 minutes every 16 unfollow
-                print(people, 'Unfollowed: Waiting 11 minutes')
-                time.sleep(11*60)
+                print(people, 'Unfollowed: Waiting 5 minutes')
+                time.sleep(5*60)
 
             if (people+1) % 25 == 0:  # Catches up for scrolling
                 driver.find_element_by_class_name('_2g7d5').send_keys(Keys.SPACE)

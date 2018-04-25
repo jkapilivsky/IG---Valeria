@@ -2,6 +2,8 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time, datetime, pickle, sys
 import pandas as pd
+from random import *
+
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
@@ -118,23 +120,25 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 3
+errors = 6
 while errors > 0:
     try:
         global driver
         driver = open_chrome('Follow_Like_Influencers')
         twilio()
-        influencers_list = ['nyane', 'wengie', 'sichenmakeupholic', 'hudabeauty', 'michellephan']
+        influencers_list = ['michellephan', 'wengie', 'sichenmakeupholic', 'hudabeauty', 'nyane']
+        randomized_list = sorted(influencers_list, key=lambda x:random())
 
-        for influencer in influencers_list:
+        for influencer in randomized_list:
             famous_person = influencer
             search_famous_person()
-            follow_people(6)  # amount = number of people to follow
-            driver.close()
-            print('Waiting 4 minutes!')
-            time.sleep(4*60)
+            follow_people(16)  # amount = number of people to follow
+            print('Waiting 5 minutes!')
+            time.sleep(5*60)
+            driver.back()
 
     except Exception as err:
+        print(err)
         issue = error_handling()
         error_log(issue)
         driver.close()

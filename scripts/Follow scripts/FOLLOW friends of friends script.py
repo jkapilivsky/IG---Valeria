@@ -12,25 +12,6 @@ import sys, logging
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
-def log_into_instagram(username, password):
-    driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
-    time.sleep(3)
-
-    # Input username
-    user = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[1]/div/input''')
-    user.clear()
-    user.send_keys(username)
-
-    # Input password
-    pw = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/input''')
-    pw.clear()
-    pw.send_keys(password)
-
-    pw.send_keys(Keys.ENTER)
-    time.sleep(3)
-
 def remove_k_m_periods_commas(value):
     value = value.replace('k', '')
     value = value.replace('m', '')
@@ -159,7 +140,6 @@ while errors > 0:
     try:
         global driver
         driver = open_chrome('Follow_Profile')
-        time.sleep(200)
         twilio()
         # go to profile
         driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()

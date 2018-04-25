@@ -3,6 +3,7 @@ import pandas as pd
 
 df = pickle.load(open('Instagram_data.p', 'rb'))
 print(df.count())
+quit()
 of_df = df[df['status'].isin(['official_friend'])]
 off_df = of_df['username']
 friend_list = off_df.tolist()  # 306
