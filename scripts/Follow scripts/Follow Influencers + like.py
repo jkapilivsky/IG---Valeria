@@ -52,10 +52,11 @@ def likes_persons_posts(num_images_to_like):
     not_pic_count = 0
 
     while count_posts < num_images_to_like:
+        time.sleep(randint(15, 23))
         # if statement looks for a video
         try:
             like_unlike_check()
-            time.sleep(2)
+            time.sleep(8)
             # right click on images to scroll
             driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
             sleep()
@@ -95,6 +96,8 @@ def follow_people(amount):
             print("Now following: ", name[future_followers].text)
             write_to_database(name, future_followers)
             sleep()
+            # #TODO - THIS IS WHERE TO TURN ON AND OFF THE LIKING STUFFFFFF
+            # continue
         else:
             continue
 
@@ -110,7 +113,7 @@ def follow_people(amount):
             driver.back()
             continue
 
-        likes_persons_posts(3)
+        likes_persons_posts(2)
         sleep()
 
 def error_log(err):
@@ -132,9 +135,9 @@ while errors > 0:
         for influencer in randomized_list:
             famous_person = influencer
             search_famous_person()
-            follow_people(16)  # amount = number of people to follow
-            print('Waiting 5 minutes!')
-            time.sleep(5*60)
+            follow_people(8)  # amount = number of people to follow
+            print('Waiting 15 minutes!')
+            time.sleep(20*60)
             driver.back()
 
     except Exception as err:

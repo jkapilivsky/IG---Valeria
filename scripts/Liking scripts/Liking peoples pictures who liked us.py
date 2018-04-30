@@ -75,25 +75,6 @@ def check_if_image_is_not_a_video():
         sleep()
         return False
 
-def log_into_instagram(username, password):
-    driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
-    time.sleep(4)
-
-    # Input username
-    user = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[1]/div/input''')
-    user.clear()
-    user.send_keys(username)
-
-    # Input password
-    pw = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/input''')
-    pw.clear()
-    pw.send_keys(password)
-
-    pw.send_keys(Keys.ENTER)
-    time.sleep(3)
-
 def remove_k_m_periods_commas(value):
     value = value.replace('k', '')
     value = value.replace('m', '')
@@ -296,8 +277,8 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 6
-column = 2
+row = 4
+column = 3
 
 #Notes to not repeat same picture!
 # 1/3/18 - ran 6/1 and 15/1
@@ -309,7 +290,6 @@ while error >= 0:
         global driver
         driver = open_chrome('Liking_pics_Profile')
         twilio()
-        time.sleep(1231)
         start = timeit.default_timer()
         sleep()
         #time.sleep(120)
@@ -336,11 +316,11 @@ while error >= 0:
         # select image
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()  # They changed the xpath -.- its fixed now
+                '''//*[@id="react-root"]/section/main/article/div[3]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()  # They changed the xpath -.- its fixed now
 
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[3]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
 
         sleep()
         like_peoples_stuffs(20, 350, 4)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
@@ -359,9 +339,9 @@ while error >= 0:
         error -= 1
 
         if error == 0:
-            text_me('Liking stuff QUIT!!!' + repr(err))
+            #text_me('Liking stuff QUIT!!!' + repr(err))
             quit()
 
         text = 'caught this error: ' + repr(err)
-        text_me(text)
+        #text_me(text)
 #

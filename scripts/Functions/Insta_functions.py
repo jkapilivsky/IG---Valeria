@@ -20,7 +20,7 @@ def open_chrome(profile):
         driver.add_cookie(cookie)
 
     driver.get("https://www.instagram.com/")
-    time.sleep(5)
+    time.sleep(randint(6, 9))
 
     return driver
 
@@ -39,10 +39,11 @@ def twilio():
     twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
     twilio_acc = list(twilio_dict.values())[0]
     twilio_cred = list(twilio_dict.values())[1]
+    print(twilio_acc, twilio_cred)
     client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def sleep():
-    time.sleep(randint(2, 4))
+    time.sleep(randint(6, 9))
 
 def error_handling():
     return '{}, {}, line: {}'.format(sys.exc_info()[0],

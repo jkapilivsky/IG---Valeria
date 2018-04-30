@@ -9,35 +9,10 @@ import pandas as pd
 from random import *
 import sys, logging
 
-def twilio():
-    global client
-    twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
-    twilio_acc = list(twilio_dict.values())[0]
-    twilio_cred = list(twilio_dict.values())[1]
-    client = Client(twilio_acc, twilio_cred)  # For Twilio
 
-def open_chrome():
-    global driver
-    global client
-    options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Unfollow_Profile")  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
-    driver.get("https://www.instagram.com/")
-    sleep()
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
-def sleep():
-    time.sleep(randint(6, 9))
-
-def text_me(message):
-    twilio_number = '+19562653630'
-    jamie_number = '+19568214550'
-    valeria_number = '+19564370322'
-    #phone_number = '+1%s' % input('What is your phone number?')
-
-    client.messages.create(to=jamie_number,
-                           from_=twilio_number,
-                           body=message)
 
 def log_into_instagram(username, password):
     driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
@@ -76,11 +51,6 @@ def no_unfollow():
         driver.close()
         quit()
 
-def error_handling():
-    return '{}, {}, line: {}'.format(sys.exc_info()[0],
-                                     sys.exc_info()[1],
-                                     sys.exc_info()[2].tb_lineno)
-
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
     df = pd.DataFrame([[err, 'Unfollow from Pickle', str(datetime.datetime.now())]],
@@ -92,7 +62,8 @@ count = 0
 error = 1
 while error > 0:
     try:
-        open_chrome()
+        global driver
+        driver = open_chrome('Unfollow_Profile')
         twilio()
         read_pickle()
         no_unfollow()
@@ -104,7 +75,7 @@ while error > 0:
             search.send_keys(Keys.ENTER)
             sleep()
             # Goes to first person in search
-            search_results = driver.find_elements_by_class_name('_gimca')
+            search_results = driver.find_elements_by_class_name('_ndl3t')
 
             # checks if results are found
             try:
@@ -165,12 +136,15 @@ while error > 0:
                 pass
 
             # Found the wrong person!
-            if driver.find_element_by_class_name('_rf3jb').text != people:
-                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[people, 'Wrong_search', str(datetime.datetime.now())]],
-                                  columns=['username', 'status', 'time_stamp'])
-                data = data.append(df)
-                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+            try:
+                if driver.find_element_by_class_name('_rf3jb').text != people:
+                    data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+                    df = pd.DataFrame([[people, 'Wrong_search', str(datetime.datetime.now())]],
+                                      columns=['username', 'status', 'time_stamp'])
+                    data = data.append(df)
+                    pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+                    continue
+            except NoSuchElementException:
                 continue
 
             button = driver.find_element_by_class_name('_r9b8f')
@@ -221,9 +195,10 @@ while error > 0:
         driver.close()
     except Exception as err:
         issue = error_handling()
+        print(issue)
         error_log(issue)
         driver.close()
-
+        print(err)
         error -= 1
         msg = 'Unfollow issue!'
         if error == 0:

@@ -9,7 +9,7 @@ import pandas as pd
 import sys
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import twilio, text_me, error_handling, sleep
+from Insta_functions import twilio, text_me, error_handling, sleep, open_chrome
 
 def open_chrome():
     global driver
@@ -244,8 +244,9 @@ def error_log(err):
 error = 1
 while error >= 0:
     try:
-        open_chrome()
-        twilio()
+        global driver
+        driver = open_chrome()
+        #twilio()
         start = timeit.default_timer()
         sleep()
 
@@ -263,9 +264,9 @@ while error >= 0:
         driver.close()
         error -= 1
         if error == 0:
-            text_me('Liking follower QUIT!!!' + repr(err))
+            #text_me('Liking follower QUIT!!!' + repr(err))
             quit()
         text = 'caught this error for liking followers: ' + repr(err)
-        text_me(text)
+        #text_me(text)
 
 #

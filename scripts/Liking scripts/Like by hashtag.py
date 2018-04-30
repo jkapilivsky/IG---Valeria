@@ -89,7 +89,7 @@ def likes_persons_posts(num_images_to_like):
         # if statement looks for a video
         try:
             like_unlike_check()
-            time.sleep(2)
+            time.sleep(randint(15, 24))
             # right click on images to scroll
             driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
             sleep()
@@ -245,7 +245,7 @@ while errors > 0:
             except:
                 continue
 
-            follow_like_people(9, 6, 1)  # number of people, number of pics to like, time to wait every 10 people followed
+            follow_like_people(8, 3, 10)  # number of people, number of pics to like, time to wait every 10 people followed
                                          # Not following anyone!
             driver.back()
 
