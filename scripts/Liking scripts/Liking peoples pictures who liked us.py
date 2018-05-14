@@ -277,7 +277,7 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 4
+row = 5
 column = 3
 
 #Notes to not repeat same picture!
@@ -316,14 +316,14 @@ while error >= 0:
         # select image
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[3]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()  # They changed the xpath -.- its fixed now
+                '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()  # They changed the xpath -.- its fixed now
 
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[3]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
+                '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
 
         sleep()
-        like_peoples_stuffs(20, 350, 4)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(20, 300, 3)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')

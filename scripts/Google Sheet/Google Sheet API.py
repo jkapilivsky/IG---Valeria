@@ -14,7 +14,7 @@ import pickle
 from random import randint
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import twilio, text_me, error_handling
+from Insta_functions import twilio, text_me, error_handling, open_chrome
 
 def sleep():
     time.sleep(randint(3, 4))
@@ -40,24 +40,12 @@ def overall_stats():
         '''//*[@id="react-root"]/section/main/article/header/section/ul/li[3]/a/span''').text
     following = following.replace(',', '')
     following = int(following)
-
     # Grab number of posts
     posts = driver.find_element_by_xpath(
         '''//*[@id="react-root"]/section/main/article/header/section/ul/li[1]/span/span''').text
     posts = posts.replace(',', '')
     posts = int(posts)
 
-    sleep()
-
-def open_chrome():
-    global driver
-    options = webdriver.ChromeOptions()
-    #options_dict = pd.read_pickle('../../assets/ChromeOptions.p')
-    # options_desktop = list(options_dict.values())[0]
-    # options_work_laptop = list(options_dict.values())[1]
-    options.add_argument('user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/Extra_Profile')  # Path to your chrome profile
-    driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
-    driver.get("https://www.instagram.com/")
     sleep()
 
 def error_log(err):
@@ -78,7 +66,8 @@ errors = 3
 while errors > 0:
     try:
         start = timeit.default_timer()
-        open_chrome()
+        global driver
+        driver = open_chrome('GSheet_Profile')
         twilio()
         sleep()
         posts = follower = following = None
@@ -89,6 +78,10 @@ while errors > 0:
 
         overall_stats()
 
+        print(posts)
+        print(follower)
+        print(following)
+        print('#'*40)
         # Click 'load more'
         try:
             driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div/a''').click()
@@ -96,42 +89,55 @@ while errors > 0:
         except NoSuchElementException:
             pass
 
-        repeat_space_bar(round(int(posts)/3))  # Scrolls down to the bottom of the profile page
+        # TODO - uncomment
+        #repeat_space_bar(round(posts/3))  # Scrolls down to the bottom of the profile page
 
         likes = 0
         video_views = 0
         comments = 0
 
-        # [0] is the first return in that function. aka posts
-        for pictures in range(int(posts)):
-            x = math.floor(pictures/3) + 1
-            y = (pictures % 3) + 1
+    # [0] is the first return in that function. aka posts
+    #
+    #     print('pic number', pictures)
+    #     x = math.floor(pictures/3) + 1
+    #     y = (pictures % 3) + 1
 
-            images = driver.find_elements_by_class_name('_e3il2')
-            hover = ActionChains(driver).move_to_element(images[pictures])
-            hover.perform()
-            information = driver.find_element_by_class_name('_lpowm').find_elements_by_tag_name("span")
+        #print(x ,y)
+        currentRow = -1
+        while True:
+            rows = driver.find_elements_by_class_name('_6d3hm')
+            #print(print("rows: %i" % len(rows)))
+            if currentRow == 12 and len(rows) <= 12:
+                break
 
-            try:
-                add_likes = 0
-                driver.find_element_by_class_name('_puatn')
-                like_with_k = information[0].text
-                add_likes = int(remove_k_m_periods_commas(like_with_k))
+            currentRow = 12 if currentRow == 12 else (currentRow+1)
+            images = rows[currentRow].find_elements_by_class_name('_e3il2')
+            #print("images: %i" % len(images))
+            for i in range(len(images)):
+                hover = ActionChains(driver).move_to_element(images[i])
+                hover.perform()
+                information = driver.find_element_by_class_name('_lpowm').find_elements_by_tag_name("span")
 
-                if '.' in like_with_k:
-                    add_likes = likes * 100
-                elif 'k' in like_with_k:
-                    add_likes = likes * 1000
+                try:
+                    add_likes = 0
+                    like_with_k = information[0].text
+                    add_likes = int(remove_k_m_periods_commas(like_with_k))
 
-                likes += add_likes
+                    if '.' in like_with_k:
+                        add_likes = likes * 100
+                    elif 'k' in like_with_k:
+                        add_likes = likes * 1000
 
-            except NoSuchElementException:
-                # driver.find_element_by_class_name('_d9a84')
-                video_views += int(information[0].text)
+                    likes += add_likes
 
-            comments += int(information[2].text)
+                except NoSuchElementException:
+                    # driver.find_element_by_class_name('_d9a84')
+                    video_views += int(information[0].text)
+                    pass
 
-            time.sleep(.4)
+                comments += int(information[2].text)
+
+                time.sleep(.4)
 
         print(likes)
         print(video_views)
@@ -229,11 +235,12 @@ while errors > 0:
         time.sleep(wait_time)
 
     except Exception as err:
+        print(err)
         issue = error_handling()
         error_log(issue)
         driver.close()
-        msg = "Google API down" + repr(err)
-        text_me(message=msg)
-        print(msg)
+        # msg = "Google API down" + repr(err)
+        # text_me(message=msg)
+        # print(msg)
         errors -= 1
 

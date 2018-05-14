@@ -39,7 +39,6 @@ def twilio():
     twilio_dict = pd.read_pickle('../../../API Keys/Twilio_API.p')
     twilio_acc = list(twilio_dict.values())[0]
     twilio_cred = list(twilio_dict.values())[1]
-    print(twilio_acc, twilio_cred)
     client = Client(twilio_acc, twilio_cred)  # For Twilio
 
 def sleep():
