@@ -251,10 +251,10 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
         # Clicks first image!
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
+                '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
+                '''//*[@id="react-root"]/section/main/div/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
 
         sleep()
         while pic_count < pic_counter:
@@ -279,7 +279,7 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 1
+row = 3
 column = 3
 
 #Notes to not repeat same picture!

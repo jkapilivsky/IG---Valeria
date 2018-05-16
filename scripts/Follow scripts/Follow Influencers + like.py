@@ -52,11 +52,11 @@ def likes_persons_posts(num_images_to_like):
     not_pic_count = 0
 
     while count_posts < num_images_to_like:
-        time.sleep(randint(15, 23))
+        sleep()
         # if statement looks for a video
         try:
             like_unlike_check()
-            time.sleep(8)
+            sleep()
             # right click on images to scroll
             driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
             sleep()
@@ -113,7 +113,7 @@ def follow_people(amount):
             driver.back()
             continue
 
-        likes_persons_posts(2)
+        likes_persons_posts(3)
         sleep()
 
 def error_log(err):
@@ -129,17 +129,19 @@ while errors > 0:
         global driver
         driver = open_chrome('Follow_Like_Influencers')
         twilio()
-        influencers_list = ['michellephan', 'wengie', 'sichenmakeupholic', 'hudabeauty', 'nyane']
+        influencers_list = ['wengie', 'sichenmakeupholic', 'hudabeauty', 'nyane']
+        #finding_hash_first = ['michellephan']
         new_influencers_list = ['vdethe', 'asheleesummer', 'snitchery', 'mamapeach_']
         randomized_list = sorted(influencers_list, key=lambda x:random())
         randomized_list2 = sorted(new_influencers_list, key=lambda x:random())
 
-        for influencer in randomized_list2:
+        for influencer in randomized_list:
+            print('following:', influencer)
             famous_person = influencer
             search_famous_person()
-            follow_people(8)  # amount = number of people to follow
-            print('Waiting 15 minutes!')
-            time.sleep(20*60)
+            follow_people(12)  # amount = number of people to follow
+            print('Waiting 12 minutes!')
+            time.sleep(12*60)
             driver.back()
 
     except Exception as err:
@@ -150,8 +152,8 @@ while errors > 0:
 
         errors -= 1
         if errors == 0:
-            #text_me('follow famous person QUIT!')
+            text_me('follow famous person QUIT!')
             quit()
         message = 'Influencer error...' + str((errors)) + ' errors remaining'
-        #text_me(message)
+        text_me(message)
 

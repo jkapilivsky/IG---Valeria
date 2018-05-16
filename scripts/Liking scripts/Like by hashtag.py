@@ -123,7 +123,7 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
     followed = 0
     while count < number_of_people:
 
-        # TODO
+        # TODO -- CAUSING INFINITE LOOP OF "SORRY PAGE NOT AVAILABLE!!"
         '''NOT NEEDED SINCE WE AREN'T FOLLOWING'''
         try:
             follow_button = driver.find_element_by_class_name('_4tgw8')
@@ -167,7 +167,7 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
 
         # Makes sure that the user has enough images to like!
         total_images = driver.find_element_by_xpath(
-            '''//*[@id="react-root"]/section/main/article/header/section/ul/li[1]/span/span''').text
+            '''//*[@id="react-root"]/section/main/div/header/section/ul/li[1]/span/span''').text
         total_images = remove_k_m_periods_commas(total_images)
         total_images = int(total_images)
 
