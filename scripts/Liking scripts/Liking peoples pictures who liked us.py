@@ -196,7 +196,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
             # Makes sure we are liking the right person!
             try:
-                username_found = driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/div[1]/h1''').text
+                username_found = driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/header/section/div[1]/h1''').text
                 if x != username_found:
                     if people_list.index(x) == len(people_list)-1:
                         break
@@ -212,7 +212,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
             # Makes sure that the user has enough images to like!
             total_images = driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/header/section/ul/li[1]/span/span''').text
+                '''//*[@id="react-root"]/section/main/div/header/section/ul/li[1]/span/span''').text
             total_images = remove_k_m_periods_commas(total_images)
             total_images = int(total_images)
 
@@ -220,7 +220,9 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
             # Clicks the person's first image
             try:
-                driver.find_element_by_class_name('''_e3il2''').click()
+                # Click first post
+                driver.find_element_by_xpath(
+                    '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[1]/div[1]/a/div''').click()
                 sleep()
             except NoSuchElementException:
                 driver.back()
@@ -277,7 +279,7 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 5
+row = 1
 column = 3
 
 #Notes to not repeat same picture!
@@ -316,14 +318,14 @@ while error >= 0:
         # select image
         try:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()  # They changed the xpath -.- its fixed now
+                '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[1]''').click()  # They changed the xpath -.- its fixed now
 
         except:
             driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
+                '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[2]''').click()
 
         sleep()
-        like_peoples_stuffs(20, 300, 3)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(20, 60, 2)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')

@@ -78,7 +78,7 @@ def likes_persons_posts(num_images_to_like):
 
 def follow_people(amount):
     # Click followers
-    driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]/a''').click()
+    driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a''').click()
     sleep()
 
     for future_followers in range(amount):
@@ -130,9 +130,11 @@ while errors > 0:
         driver = open_chrome('Follow_Like_Influencers')
         twilio()
         influencers_list = ['michellephan', 'wengie', 'sichenmakeupholic', 'hudabeauty', 'nyane']
+        new_influencers_list = ['vdethe', 'asheleesummer', 'snitchery', 'mamapeach_']
         randomized_list = sorted(influencers_list, key=lambda x:random())
+        randomized_list2 = sorted(new_influencers_list, key=lambda x:random())
 
-        for influencer in randomized_list:
+        for influencer in randomized_list2:
             famous_person = influencer
             search_famous_person()
             follow_people(8)  # amount = number of people to follow
