@@ -51,7 +51,7 @@ def remove_k_m_periods_commas(value):
     return value
 
 
-errors = 1
+errors = 3
 while errors > 0:
     try:
         start = timeit.default_timer()

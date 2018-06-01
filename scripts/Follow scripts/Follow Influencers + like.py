@@ -8,6 +8,13 @@ from random import *
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
 
+def remove_k_m_periods_commas(value):
+    value = value.replace('k', '')
+    value = value.replace('m', '')
+    value = value.replace('.', '')
+    value = value.replace(',', '')
+    return value
+
 def search_famous_person():
     # Search bar
     search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
@@ -54,6 +61,9 @@ def likes_persons_posts(num_images_to_like):
     while count_posts < num_images_to_like:
         sleep()
         # if statement looks for a video
+        if count_posts >= num_images_to_like:
+            break
+
         try:
             like_unlike_check()
             sleep()
@@ -76,7 +86,7 @@ def likes_persons_posts(num_images_to_like):
         sleep()
         driver.back()
 
-def follow_people(amount):
+def follow_people(amount, num_pics_to_like):
     # Click followers
     driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a''').click()
     sleep()
@@ -110,10 +120,21 @@ def follow_people(amount):
             driver.find_element_by_class_name('''_e3il2''').click()
             sleep()
         except NoSuchElementException:
+            print('Private account')
             driver.back()
             continue
 
-        likes_persons_posts(3)
+        # Check number of posts they have!
+        # Makes sure that the user has enough images to like!
+        total_images = driver.find_element_by_xpath(
+            '''//*[@id="react-root"]/section/main/div/header/section/ul/li[1]/span/span''').text
+        total_images = remove_k_m_periods_commas(total_images)
+        total_images = int(total_images)
+
+        if total_images >= num_pics_to_like:
+            total_images = num_pics_to_like
+
+        likes_persons_posts(total_images)
         sleep()
 
 def error_log(err):
@@ -129,9 +150,9 @@ while errors > 0:
         global driver
         driver = open_chrome('Follow_Like_Influencers')
         twilio()
-        influencers_list = ['wengie', 'sichenmakeupholic', 'hudabeauty', 'nyane']
-        #finding_hash_first = ['michellephan']
-        new_influencers_list = ['vdethe', 'asheleesummer', 'snitchery', 'mamapeach_']
+        influencers_list = ['wengie', 'sichenmakeupholic', 'nyane']
+        #finding_hash_first = ['michellephan', 'hudabeauty']
+        new_influencers_list = ['vdethe', 'asheleesummer', 'snitchery', 'mamapeach_'] + influencers_list
         randomized_list = sorted(influencers_list, key=lambda x:random())
         randomized_list2 = sorted(new_influencers_list, key=lambda x:random())
 
@@ -139,7 +160,7 @@ while errors > 0:
             print('following:', influencer)
             famous_person = influencer
             search_famous_person()
-            follow_people(12)  # amount = number of people to follow
+            follow_people(12, 3)  # amount = number of people to follow, number of pictures to like
             print('Waiting 12 minutes!')
             time.sleep(12*60)
             driver.back()
@@ -152,8 +173,8 @@ while errors > 0:
 
         errors -= 1
         if errors == 0:
-            text_me('follow famous person QUIT!')
+            text_me('Influencer+like QUIT!')
             quit()
-        message = 'Influencer error...' + str((errors)) + ' errors remaining'
+        message = 'Influencer+like error...' + str((errors)) + ' errors remaining'
         text_me(message)
 

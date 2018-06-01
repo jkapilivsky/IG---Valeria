@@ -279,8 +279,8 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 # choose the picture!
-row = 3
-column = 3
+row = 2
+column = 2
 
 #Notes to not repeat same picture!
 # 1/3/18 - ran 6/1 and 15/1
@@ -325,7 +325,7 @@ while error >= 0:
                 '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[2]''').click()
 
         sleep()
-        like_peoples_stuffs(20, 60, 2)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(20, 370, 2)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')

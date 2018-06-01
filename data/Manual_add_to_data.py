@@ -3,9 +3,11 @@ import pandas as pd
 
 df = pickle.load(open('Instagram_data.p', 'rb'))
 print(df.count())
-quit()
 of_df = df[df['status'].isin(['official_friend'])]
 off_df = of_df['username']
+# 410 official friends!
+print(off_df.count())
+quit()
 friend_list = off_df.tolist()  # 306
 
 # list = ['bee_anca76', 'nachiio', 'bossbabediva' ,'ali__peace',
@@ -28,7 +30,8 @@ friend_list = off_df.tolist()  # 306
 #         'adaexplainsitall', 'luisedtr' ,'jon_cruz88', 'breathingstorm', 'satou912',
 #         'eltiny_76', 'heraaclioo', 'clarimia_21']
 
-list = ['nyane']
+list = ['nyane','Lifeofamomboss', 'lifethroughtaylorslens', 'theravenhairedmama', 'jademorganmua', 'lees.garcia', 'dawn_melissa', 'thestylishmommy', 'texcreative',
+        'vdethe', 'ashleesummer', 'maryliascott', 'snitchery', 'mamapeach_', 'drios98', 'mitchlenzen', 'nathantrafford', 'japrentice', 'nicolechavez']
 
 # print('friend_list:', len(friend_list))  # 89
 # print('list:', len(list))

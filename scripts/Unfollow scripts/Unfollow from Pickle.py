@@ -58,6 +58,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
+time.sleep(20)
 count = 0
 error = 1
 while error > 0:
