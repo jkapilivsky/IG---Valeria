@@ -141,8 +141,8 @@ while errors > 0:
         global driver
         driver = open_chrome('Follow_Like_Influencers')
         twilio()
-        influencers_list = ['wengie', 'sichenmakeupholic', 'nyane']
-        #finding_hash_first = ['michellephan', 'hudabeauty']
+        influencers_list = ['sichenmakeupholic', 'nyane']
+        #finding_hash_first = ['michellephan', 'hudabeauty','wengie', ]
         new_influencers_list = ['vdethe', 'ashleesummer', 'snitchery', 'mamapeach_'] + influencers_list
         randomized_list = sorted(influencers_list, key=lambda x:random())
         randomized_list2 = sorted(new_influencers_list, key=lambda x:random())
@@ -170,3 +170,9 @@ while errors > 0:
         message = 'Influencer+like error...' + str((errors)) + ' errors remaining'
         text_me(message)
 
+# Traceback (most recent call last):
+#   File "C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Follow scripts/Follow Influencers + like.py", line 152, in <module>
+#     search(influencer)
+#   File "C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions\Insta_functions.py", line 62, in search
+#     # Goes to first person in search
+# IndexError: list index out of range

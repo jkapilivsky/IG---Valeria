@@ -10,7 +10,7 @@ import pickle
 from random import randint
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import twilio, text_me, error_handling, open_chrome
+from Insta_functions import twilio, text_me, error_handling, open_chrome, remove_k_m_periods_commas
 
 def sleep():
     time.sleep(randint(6, 9))
@@ -42,13 +42,6 @@ def error_log(err):
                       columns=['error message', 'script', 'time_stamp'])
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
-
-def remove_k_m_periods_commas(value):
-    value = value.replace('k', '')
-    value = value.replace('m', '')
-    value = value.replace('.', '')
-    value = value.replace(',', '')
-    return value
 
 
 errors = 3
@@ -83,20 +76,18 @@ while errors > 0:
         for picture in range(posts-1):
             #likes
             try:
-                like_amount = driver.find_element_by_xpath('''/html/body/div[4]/div/div[2]/div/article/div[2]/section[2]/div/a/span''').text
-                like_amount = like_amount.replace(',', '')
-                like_amount = int(like_amount)
-                likes += like_amount
+                like_amount = driver.find_element_by_xpath('''/html/body/div[3]/div/div[2]/div/article/div[2]/section[2]/div/a/span''').text
+                likes += remove_k_m_periods_commas(like_amount)
+                    #likes += like_amount
             except:
                 video_amount = driver.find_element_by_xpath(
-                    '''/html/body/div[4]/div/div[2]/div/article/div[2]/section[2]/div/span/span''').text
-                video_amount = video_amount.replace(',', '')
-                video_amount = int(video_amount)
-                video_views += video_amount
+                    '''/html/body/div[3]/div/div[2]/div/article/div[2]/section[2]/div/span/span''').text
+                video_views += remove_k_m_periods_commas(video_amount)
+                print(video_views)
 
             # Right arrow
-            driver.find_element_by_class_name('coreSpriteRightPaginationArrow').click()
-            sleep()
+            driver.find_element_by_class_name('HBoOv').click()
+            time.sleep(randint(3,4))
 
             #print(picture, likes)
 

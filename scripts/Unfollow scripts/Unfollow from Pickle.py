@@ -82,46 +82,16 @@ while error > 0:
                 search_results[0].click()
                 sleep()
             except:
-                try:
-                    driver.find_element_by_class_name('_oznku')
-                    data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                    df = pd.DataFrame([[person, 'Not_searchable', str(datetime.datetime.now())]],
-                                      columns=['username', 'status', 'time_stamp'])
-                    data = data.append(df)
-                    pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
-                    print(person, ':Not_searchable')
-                    search.clear()
-                    continue
-                except NoSuchElementException:
-                    continue
-
-            # Check if they found hashtag
-            try:
-                driver.find_element_by_class_name('_kwqc3')
-
                 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[person, 'hashtag', str(datetime.datetime.now())]],
+                df = pd.DataFrame([[person, 'Not_searchable', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+                print(person, ':Not_searchable')
+                search.clear()
                 continue
-            except NoSuchElementException:
-                pass
 
-            # Check if they found a location
-            try:
-                driver.find_element_by_class_name('_thew0')
-
-                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[person, 'location', str(datetime.datetime.now())]],
-                                  columns=['username', 'status', 'time_stamp'])
-                data = data.append(df)
-                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
-                continue
-            except NoSuchElementException:
-                pass
-
-            # Check if they found a Sorry, this page isn't available.
+             # Check if they found a Sorry, this page isn't available.
             try:
                 driver.find_element_by_class_name('error-container')
 
@@ -136,19 +106,36 @@ while error > 0:
             except NoSuchElementException:
                 pass
 
-            # Found the wrong person!
-            try:
-                if driver.find_element_by_class_name('_rf3jb').text != person:
-                    data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                    df = pd.DataFrame([[person, 'Wrong_search', str(datetime.datetime.now())]],
-                                      columns=['username', 'status', 'time_stamp'])
-                    data = data.append(df)
-                    pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
-                    continue
-            except NoSuchElementException:
+            # Check if they found hashtag
+            current_url = driver.current_url
+
+            if "/tags/" in current_url:
+                print(person, '= found a hashtag')
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+                df = pd.DataFrame([[person, 'hashtag', str(datetime.datetime.now())]],
+                                  columns=['username', 'status', 'time_stamp'])
+                data = data.append(df)
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 continue
 
-            button = driver.find_element_by_class_name('_r9b8f')
+            if "/locations/" in current_url:
+                print(person, '= location')
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+                df = pd.DataFrame([[person, 'location', str(datetime.datetime.now())]],
+                                  columns=['username', 'status', 'time_stamp'])
+                data = data.append(df)
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+                continue
+
+            if driver.find_element_by_class_name('AC5d8').text != person:
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+                df = pd.DataFrame([[person, 'Wrong_search', str(datetime.datetime.now())]],
+                                  columns=['username', 'status', 'time_stamp'])
+                data = data.append(df)
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+                continue
+
+            button = driver.find_element_by_class_name('_5f5mN')
 
             if button.text == 'Following':
                 button.click()
@@ -164,15 +151,11 @@ while error > 0:
                 # End pickle
 
             elif button.text == 'Requested':
-                # button.click()
-                # print('unfollow requested! Need to track this by time', people)
-                # Begin pickle
                 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
                 df = pd.DataFrame([[person, 'Requested', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
-                # End pickle
 
             elif button.text == 'Follow':
                 # Begin pickle
@@ -201,8 +184,8 @@ while error > 0:
         driver.close()
         print(err)
         error -= 1
-        msg = 'Unfollow issue!'
         if error == 0:
             text_me('unfollow ended!')
             quit()
+        msg = 'Unfollow issue!'
         text_me(msg)
