@@ -1,8 +1,11 @@
+# -*- coding: utf-8 -*-
+
 import time
 from twilio.rest import Client
 import sys, logging
 import pandas as pd
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import pickle
 
 from random import randint
@@ -48,3 +51,30 @@ def error_handling():
     return '{}, {}, line: {}'.format(sys.exc_info()[0],
                                      sys.exc_info()[1],
                                      sys.exc_info()[2].tb_lineno)
+
+def search(name):
+    # Search bar
+    search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
+    search.clear()
+    search.send_keys(name)
+    search.send_keys(Keys.ENTER)
+    sleep()
+    # Goes to first person in search
+    search_results = driver.find_elements_by_class_name('yCE8d')
+    search_results[0].click()
+    sleep()
+
+def remove_k_m_periods_commas(value):
+    value = value.replace('k', '')
+    value = value.replace('m', '')
+    value = value.replace('.', '')
+    value = value.replace(',', '')
+    return int(value)
+
+def isEnglish(characters):
+    try:
+        characters.encode(encoding='utf-8').decode('ascii')
+    except UnicodeDecodeError:
+        return False
+    else:
+        return True

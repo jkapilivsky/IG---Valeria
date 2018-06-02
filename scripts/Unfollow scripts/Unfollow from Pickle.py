@@ -11,7 +11,7 @@ import sys, logging
 
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search
 
 
 def log_into_instagram(username, password):
@@ -58,7 +58,6 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-time.sleep(20)
 count = 0
 error = 1
 while error > 0:
@@ -69,14 +68,14 @@ while error > 0:
         read_pickle()
         no_unfollow()
 
-        for people in follow_unfollow_df['username']:
+        for person in follow_unfollow_df['username']:
             search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
             search.clear()
-            search.send_keys(people)
+            search.send_keys(person)
             search.send_keys(Keys.ENTER)
             sleep()
             # Goes to first person in search
-            search_results = driver.find_elements_by_class_name('_ndl3t')
+            search_results = driver.find_elements_by_class_name('yCE8d')
 
             # checks if results are found
             try:
@@ -86,10 +85,11 @@ while error > 0:
                 try:
                     driver.find_element_by_class_name('_oznku')
                     data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                    df = pd.DataFrame([[people, 'Not_searchable', str(datetime.datetime.now())]],
+                    df = pd.DataFrame([[person, 'Not_searchable', str(datetime.datetime.now())]],
                                       columns=['username', 'status', 'time_stamp'])
                     data = data.append(df)
                     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+                    print(person, ':Not_searchable')
                     search.clear()
                     continue
                 except NoSuchElementException:
@@ -100,7 +100,7 @@ while error > 0:
                 driver.find_element_by_class_name('_kwqc3')
 
                 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[people, 'hashtag', str(datetime.datetime.now())]],
+                df = pd.DataFrame([[person, 'hashtag', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
@@ -113,7 +113,7 @@ while error > 0:
                 driver.find_element_by_class_name('_thew0')
 
                 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[people, 'location', str(datetime.datetime.now())]],
+                df = pd.DataFrame([[person, 'location', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
@@ -126,7 +126,7 @@ while error > 0:
                 driver.find_element_by_class_name('error-container')
 
                 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[people, 'deleted_account', str(datetime.datetime.now())]],
+                df = pd.DataFrame([[person, 'deleted_account', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
@@ -138,9 +138,9 @@ while error > 0:
 
             # Found the wrong person!
             try:
-                if driver.find_element_by_class_name('_rf3jb').text != people:
+                if driver.find_element_by_class_name('_rf3jb').text != person:
                     data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                    df = pd.DataFrame([[people, 'Wrong_search', str(datetime.datetime.now())]],
+                    df = pd.DataFrame([[person, 'Wrong_search', str(datetime.datetime.now())]],
                                       columns=['username', 'status', 'time_stamp'])
                     data = data.append(df)
                     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
@@ -152,11 +152,11 @@ while error > 0:
 
             if button.text == 'Following':
                 button.click()
-                print('unfollowed', people)
+                print('unfollowed', person)
                 sleep()
                 # Begin pickle
                 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[people, 'Unfollowed', str(datetime.datetime.now())]],
+                df = pd.DataFrame([[person, 'Unfollowed', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
@@ -168,7 +168,7 @@ while error > 0:
                 # print('unfollow requested! Need to track this by time', people)
                 # Begin pickle
                 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[people, 'Requested', str(datetime.datetime.now())]],
+                df = pd.DataFrame([[person, 'Requested', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
@@ -177,7 +177,7 @@ while error > 0:
             elif button.text == 'Follow':
                 # Begin pickle
                 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[people, 'Unfollowed', str(datetime.datetime.now())]],
+                df = pd.DataFrame([[person, 'Unfollowed', str(datetime.datetime.now())]],
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))

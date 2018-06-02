@@ -6,33 +6,15 @@ from random import *
 
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
-
-def remove_k_m_periods_commas(value):
-    value = value.replace('k', '')
-    value = value.replace('m', '')
-    value = value.replace('.', '')
-    value = value.replace(',', '')
-    return value
-
-def search_famous_person():
-    # Search bar
-    search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
-    search.clear()
-    search.send_keys(famous_person)
-    search.send_keys(Keys.ENTER)
-    sleep()
-    # Goes to first person in search
-    search_results = driver.find_elements_by_class_name('_ndl3t')
-    search_results[0].click()
-    sleep()
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, remove_k_m_periods_commas
+from Insta_functions import isEnglish
 
 def write_to_database(name, future_followers):
     # Begin pickle
     data = pickle.load(open("../../data/Instagram_data.p", "rb"))
     df = pd.DataFrame(
         [[name[future_followers].text, 'Following', str(datetime.datetime.now()),
-          'Follow_influencer_person_' + str(famous_person)]],
+          'Follow_influencer_person_' + str(influencer)]],
         columns=['username', 'status', 'time_stamp', 'acquisition'])
     data = data.append(df)
     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
@@ -58,7 +40,8 @@ def likes_persons_posts(num_images_to_like):
     count_posts = 0
     not_pic_count = 0
 
-    while count_posts < num_images_to_like:
+    while count_posts <= num_images_to_like:
+        count_posts += 1
         sleep()
         # if statement looks for a video
         if count_posts >= num_images_to_like:
@@ -68,13 +51,13 @@ def likes_persons_posts(num_images_to_like):
             like_unlike_check()
             sleep()
             # right click on images to scroll
-            driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
+            driver.find_element_by_class_name('''HBoOv''').click()
             sleep()
-            count_posts += 1
 
         except NoSuchElementException:
             print('Image is not a picture!')
             not_pic_count += 1
+            count_posts =- 1
 
             if not_pic_count == 3:
                 break
@@ -95,18 +78,26 @@ def follow_people(amount, num_pics_to_like):
         data_names = pickle.load(open("../../data/Instagram_data.p", "rb"))
         username_list = data_names['username'].tolist()
 
-        name = driver.find_elements_by_class_name('_2g7d5')
+        # TODO - update 1
+        name = driver.find_elements_by_class_name('FPmhX')
         buttons = "../../../../div[2]/span"
 
+        # Makes sure there are only english characters
+        if isEnglish(name[future_followers].text) == False:
+            continue
+
+        # Making sure we haven't already iteracted with them or is our own account
         if name[future_followers].text == 'linethmm' or name[future_followers].text in username_list:
+            # TODO - update 2 to check
+            print(name[future_followers].text)
             continue
 
         if name[future_followers].find_element_by_xpath(buttons).text == 'Follow':
             name[future_followers].find_element_by_xpath(buttons).click()
             print("Now following: ", name[future_followers].text)
             write_to_database(name, future_followers)
-            sleep()
-            # #TODO - THIS IS WHERE TO TURN ON AND OFF THE LIKING STUFFFFFF
+            sleep()  #Deletethis
+            # TODO - THIS IS WHERE TO TURN ON AND OFF THE LIKING STUFFFFFF
             # continue
         else:
             continue
@@ -115,24 +106,24 @@ def follow_people(amount, num_pics_to_like):
         name[future_followers].click()
         sleep()
 
-        # Clicks the person's first image
-        try:
-            driver.find_element_by_class_name('''_e3il2''').click()
-            sleep()
-        except NoSuchElementException:
-            print('Private account')
-            driver.back()
-            continue
-
         # Check number of posts they have!
         # Makes sure that the user has enough images to like!
         total_images = driver.find_element_by_xpath(
             '''//*[@id="react-root"]/section/main/div/header/section/ul/li[1]/span/span''').text
         total_images = remove_k_m_periods_commas(total_images)
-        total_images = int(total_images)
 
         if total_images >= num_pics_to_like:
             total_images = num_pics_to_like
+
+        # Clicks the person's first image
+        try:
+            # TODO - update 3... change class name from _e3il2 to eLAPa
+            driver.find_element_by_class_name('''eLAPa''').click()
+            sleep()
+        except NoSuchElementException:
+            print('Private account')
+            driver.back()
+            continue
 
         likes_persons_posts(total_images)
         sleep()
@@ -144,7 +135,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 3
+errors = 1
 while errors > 0:
     try:
         global driver
@@ -152,18 +143,19 @@ while errors > 0:
         twilio()
         influencers_list = ['wengie', 'sichenmakeupholic', 'nyane']
         #finding_hash_first = ['michellephan', 'hudabeauty']
-        new_influencers_list = ['vdethe', 'asheleesummer', 'snitchery', 'mamapeach_'] + influencers_list
+        new_influencers_list = ['vdethe', 'ashleesummer', 'snitchery', 'mamapeach_'] + influencers_list
         randomized_list = sorted(influencers_list, key=lambda x:random())
         randomized_list2 = sorted(new_influencers_list, key=lambda x:random())
 
-        for influencer in randomized_list:
+        for influencer in randomized_list2:
             print('following:', influencer)
-            famous_person = influencer
-            search_famous_person()
-            follow_people(12, 3)  # amount = number of people to follow, number of pictures to like
-            print('Waiting 12 minutes!')
-            time.sleep(12*60)
+            search(influencer)
+            follow_people(8, 3)  # amount = number of people to follow, number of pictures to like
+            print('======Waiting 8 minutes!======')
+            time.sleep(8*60)
             driver.back()
+
+        driver.close()
 
     except Exception as err:
         print(err)
