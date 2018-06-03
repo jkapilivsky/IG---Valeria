@@ -11,6 +11,7 @@ from random import randint
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import twilio, text_me, error_handling, open_chrome, remove_k_m_periods_commas
+from Insta_functions import right_arrow, click_first_post
 
 def sleep():
     time.sleep(randint(6, 9))
@@ -71,7 +72,7 @@ while errors > 0:
         comments = 0
 
         # Click first post
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[1]/div[1]/a/div''').click()
+        click_first_post()
         sleep()
         for picture in range(posts-1):
             #likes
@@ -83,10 +84,9 @@ while errors > 0:
                 video_amount = driver.find_element_by_xpath(
                     '''/html/body/div[3]/div/div[2]/div/article/div[2]/section[2]/div/span/span''').text
                 video_views += remove_k_m_periods_commas(video_amount)
-                print(video_views)
 
             # Right arrow
-            driver.find_element_by_class_name('HBoOv').click()
+            right_arrow()
             time.sleep(randint(3,4))
 
             #print(picture, likes)
@@ -188,7 +188,7 @@ while errors > 0:
         issue = error_handling()
         error_log(issue)
         driver.close()
-        msg = "Google API down" + repr(err)
+        msg = "Google API down.. reason=" + str(err)
         text_me(message=msg)
         print(msg)
         errors -= 1

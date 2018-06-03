@@ -108,12 +108,18 @@ def follow_people(amount, num_pics_to_like):
 
         # Check number of posts they have!
         # Makes sure that the user has enough images to like!
-        total_images = driver.find_element_by_xpath(
+        try:
+            total_images = driver.find_element_by_xpath(
             '''//*[@id="react-root"]/section/main/div/header/section/ul/li[1]/span/span''').text
-        total_images = remove_k_m_periods_commas(total_images)
+            total_images = remove_k_m_periods_commas(total_images)
 
-        if total_images >= num_pics_to_like:
-            total_images = num_pics_to_like
+            if total_images >= num_pics_to_like:
+                total_images = num_pics_to_like
+
+        except NoSuchElementException:
+            print('unavailable page?')
+            driver.back()
+            continue
 
         # Clicks the person's first image
         try:

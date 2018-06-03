@@ -1,14 +1,19 @@
-def isEnglish(characters):
-    try:
-        characters.encode(encoding='utf-8').decode('ascii')
-    except UnicodeDecodeError:
-        return False
+
+value = '22.3m'
+
+if 'k' in value:
+    if '.' in value:
+        value = value + '00'
     else:
-        return True
+        value = value + '000'
 
-print(isEnglish('slabiky, ale liší se podle významu'))
-print(isEnglish('English'))
-print(isEnglish('ގެ ފުރަތަމަ ދެ އަކުރު ކަ'))
-print(isEnglish('how about this one : 通 asfަ'))
-print(isEnglish('?fd4))45s&'))
+if 'm' in value:
+    if '.' in value:
+        value = value + '00000'
+    else:
+        value = value + '000000'
 
+value = value.replace('k', '')
+value = value.replace('m', '')
+value = value.replace('.' , '')
+print(int(value))

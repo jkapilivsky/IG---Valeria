@@ -10,40 +10,8 @@ from random import *
 import sys, logging
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
-
-def search_famous_person(hashtag):
-    # Search bar
-    try:
-        search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
-    except NoSuchElementException:
-        driver.find_element_by_class_name('_8scx2').click()
-
-    search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
-    #search = driver.find_element_by_class_name('_eduze')
-    search.clear()
-    search.send_keys(hashtag)
-    search.send_keys(Keys.ENTER)
-    sleep()
-    # Goes to first person in search
-    search_results = driver.find_elements_by_class_name('_ndl3t')
-    search_results[0].click()
-    sleep()
-
-def like_unlike_check():
-
-    like_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Like']")
-    liked_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Unlike']")
-
-    if len(like_elem) == 1:
-        driver.execute_script(
-            "document.getElementsByClassName('" + like_elem[0].get_attribute("class") + "')[0].click()")
-        print('--> Image Liked!')
-        time.sleep(2)
-    elif len(liked_elem) == 1:
-        print('--> Already Liked!')
-    else:
-        print('--> Invalid Like Element!')
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check
+from Insta_functions import stats_range, right_arrow, remove_k_m_periods_commas, click_first_post
 
 def num_posts_to_like(num_images_to_like):
     count_posts = 0
@@ -75,13 +43,6 @@ def write_pickle():
     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
     # End pickle
 
-def remove_k_m_periods_commas(value):
-    value = value.replace('k', '')
-    value = value.replace('m', '')
-    value = value.replace('.', '')
-    value = value.replace(',', '')
-    return value
-
 def likes_persons_posts(num_images_to_like):
     count_posts = 0
 
@@ -89,95 +50,62 @@ def likes_persons_posts(num_images_to_like):
         # if statement looks for a video
         try:
             like_unlike_check()
-            time.sleep(randint(15, 24))
+            time.sleep(1)
             # right click on images to scroll
-            driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
+            right_arrow()
             sleep()
             count_posts += 1
 
         except NoSuchElementException:
             print('Image is not a picture!')
+            right_arrow()
             count_posts += 1
 
-def follower_following_range(follower_min, follower_max, following_min, following_max):
-    num_follower = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/header/section/ul/li[2]/a/span''').text
-
-    num_following = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/header/section/ul/li[3]/a/span''').text
-
-    num_follower = int(remove_k_m_periods_commas(num_follower))
-    num_following = int(remove_k_m_periods_commas(num_following))
-
-    print('follower:', num_follower, '| following: ', num_following)
-
-    if (num_follower < follower_min or num_follower > follower_max or
-                num_following < following_min or num_following > following_max):
-        print('Out of follower/following range!')
-        return False
-    else:
-        return True
-
-def follow_like_people(number_of_people, number_pics_to_like, minutes):
+def like_people(number_of_people, number_pics_to_like):
     count = 0
     followed = 0
     while count < number_of_people:
 
-        # TODO -- CAUSING INFINITE LOOP OF "SORRY PAGE NOT AVAILABLE!!"
-        '''NOT NEEDED SINCE WE AREN'T FOLLOWING'''
+        #clicks person's name to go their profile
         try:
-            follow_button = driver.find_element_by_class_name('_4tgw8')
-            if follow_button.text == 'Follow':
-                #follow_button.click()
-                #write_pickle()
-                followed += 1
-        except NoSuchElementException:
-            continue
-        sleep()
-        ''''''
-
-        # TODO - this section likes the follower!! its been removed for testing O.o
-        #clicks image to go to user profile!
-        try:
-            driver.find_element_by_class_name('_rewi8').click()
+            driver.find_element_by_class_name('FPmhX').click()
             sleep()
         except:
-            driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
+            right_arrow()
             count += 1
             continue
         # TODO - ends here!
 
+        print('liking: ', driver.find_element_by_class_name('AC5d8').text)
+
+        # TODO - questionable if nessesary..
         # Move to top of page
-        variable = driver.find_element_by_class_name('_8scx2')
-        actions = webdriver.ActionChains(driver)
-        actions.move_to_element(variable)
+        # variable = driver.find_element_by_class_name('AC5d8')
+        # actions = webdriver.ActionChains(driver)
+        # actions.move_to_element(variable)
 
         try:
         # If out of range. Go back and select next picture
-            if follower_following_range(150, 15000, 150, 5000) is False:
+            if stats_range() is False:
                 driver.back()
                 sleep()
-                driver.find_element_by_class_name('coreSpriteRightPaginationArrow').click()
+                right_arrow()
+                sleep()
                 continue
-        except:
+        except:  # if you can't find the stats still go back...
             driver.back()
             sleep()
-            driver.find_element_by_class_name('coreSpriteRightPaginationArrow').click()
+            right_arrow()
+            sleep()
             continue
 
         # Makes sure that the user has enough images to like!
-        total_images = driver.find_element_by_xpath(
-            '''//*[@id="react-root"]/section/main/div/header/section/ul/li[1]/span/span''').text
+        total_images = driver.find_elements_by_class_name('g47SY')[0].text
         total_images = remove_k_m_periods_commas(total_images)
-        total_images = int(total_images)
+
 
         # Clicks the person's first image
-        try:
-            driver.find_element_by_class_name('''_e3il2''').click()
-            sleep()
-        except NoSuchElementException:
-            driver.back()
-            continue
+        click_first_post()
 
         # TODO - is this correct?! shouldn't it be <= num_pics_to_like?
         if total_images >= number_pics_to_like:
@@ -189,16 +117,11 @@ def follow_like_people(number_of_people, number_pics_to_like, minutes):
         #Goes back twice to get back to hashtag
         driver.back()
         driver.back()
+        sleep()
         # right click on images to scroll
-        driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
+        right_arrow()
         count += 1
         sleep()
-        wait_time(followed, minutes)
-
-def wait_time(followed, minutes):
-    if (followed + 1) % 11 == 0:  # Sleeps for x minutes every 10 unfollow
-        print(followed, 'Followed: Waiting', minutes, 'minutes')
-        time.sleep(minutes * 60)  # multiply by 60 seconds
 
 def error_log(err):
     error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
@@ -207,7 +130,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 2
+errors = 1
 while errors > 0:
     try:
         global driver
@@ -219,7 +142,7 @@ while errors > 0:
         makeup_list = ['#makeupbyme', '#makeupdolls', '#makeupaddict', '#instamakeup', '#makeupblogger',
                        '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
                        '#lashlover', '#naturallashes', '#hudabeauty', '#lipstick', '#eyeshadow']
-        influnecer_list = ['#styleblogger', '#instamakeup']
+        influnecer_list = ['#styleblogger', '#instamakeup'] + makeup_list
 
         #Randomizes list!
         hashtag_list = sorted(hashtag_list, key=lambda x: random())
@@ -227,27 +150,19 @@ while errors > 0:
         influnecer_list = sorted(influnecer_list, key=lambda x:random())
 
         for hash in influnecer_list:
-            # Works fine
-            search_famous_person(hash)
+            print('----liking:', hash, '----')
+            search(hash)
 
-           #  '''Doesn't do anything'''
-           # # Goes to the text "Most recent"
-           #  var = driver.find_element_by_class_name('_nhglx')
-           #  actions = webdriver.ActionChains(driver)
-           #  actions.move_to_element(var)
-           #  ''''''
+            # click first image of 'recent posts' *skipping top posts
+            driver.find_element_by_xpath(
+                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
+            sleep()
 
-            # click first image of 'recent posts' *skipping to posts
-            try:
-                driver.find_element_by_xpath(
-                    '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
-                sleep()
-            except:
-                continue
-
-            follow_like_people(8, 3, 10)  # number of people, number of pics to like, time to wait every 10 people followed
-                                         # Not following anyone!
+            like_people(6, 3)  # number of people, number of pics to like
             driver.back()
+
+            print('======Waiting 15 minutes!======')
+            time.sleep(15*60)
 
         driver.close()
 
@@ -258,7 +173,7 @@ while errors > 0:
         print(err)
         errors -= 1
         if errors == 0:
-            text_me('follow #tags quit!')
+            text_me('follow #tags quit!.. reason = ' + str(err))
             quit()
         message = 'Follow #tag error...'  + str(errors) + ' errors remaining'
-        #text_me(message)
+        text_me(message)

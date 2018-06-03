@@ -65,11 +65,37 @@ def search(name):
     sleep()
 
 def remove_k_m_periods_commas(value):
+    if 'k' in value:
+        if '.' in value:
+            value = value + '00'
+        else:
+            value = value + '000'
+
+    if 'm' in value:
+        if '.' in value:
+            value = value + '00000'
+        else:
+            value = value + '000000'
+
     value = value.replace('k', '')
     value = value.replace('m', '')
     value = value.replace('.', '')
     value = value.replace(',', '')
     return int(value)
+
+def like_unlike_check():
+    like_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Like']")
+    liked_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Unlike']")
+
+    if len(like_elem) == 1:
+        driver.execute_script(
+            "document.getElementsByClassName('" + like_elem[0].get_attribute("class") + "')[0].click()")
+        print('--> Image Liked!')
+        time.sleep(2)
+    elif len(liked_elem) == 1:
+        print('--> Already Liked!')
+    else:
+        print('--> Invalid Like Element!')
 
 def isEnglish(characters):
     try:
@@ -78,3 +104,30 @@ def isEnglish(characters):
         return False
     else:
         return True
+
+def stats_range(follower_min = 150, follower_max = 25000,
+                following_min= 150, following_max = 5000,
+                posts_min = 25, posts_max = 99999999):
+
+    posts = driver.find_elements_by_class_name('g47SY')[0].text
+    followers = driver.find_elements_by_class_name('g47SY')[1].text
+    followings = driver.find_elements_by_class_name('g47SY')[2].text
+
+    posts = remove_k_m_periods_commas(posts)
+    followers = remove_k_m_periods_commas(followers)
+    followings = remove_k_m_periods_commas(followings)
+
+    if (followers < follower_min or followers > follower_max or
+                following_max < following_min or followings > following_max
+                or posts < posts_min or posts > posts_max):
+        print('Out of follower/following range!')
+        return False
+    else:
+        return True
+
+def right_arrow():
+    driver.find_element_by_class_name('HBoOv').click()
+
+def click_first_post():
+    driver.find_element_by_xpath(
+        '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[1]/div[1]/a/div''').click()
