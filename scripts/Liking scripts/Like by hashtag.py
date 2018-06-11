@@ -130,7 +130,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 1
+errors = 6
 while errors > 0:
     try:
         global driver
@@ -177,3 +177,4 @@ while errors > 0:
             quit()
         message = 'Follow #tag error...'  + str(errors) + ' errors remaining'
         text_me(message)
+        time.sleep(10*60)

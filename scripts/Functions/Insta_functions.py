@@ -131,3 +131,6 @@ def right_arrow():
 def click_first_post():
     driver.find_element_by_xpath(
         '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[1]/div[1]/a/div''').click()
+
+def go_to_profile():
+    driver.find_element_by_class_name('coreSpriteDesktopNavProfile').click()

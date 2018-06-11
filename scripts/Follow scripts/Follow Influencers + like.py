@@ -141,7 +141,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 1
+errors = 6
 while errors > 0:
     try:
         global driver
@@ -175,6 +175,7 @@ while errors > 0:
             quit()
         message = 'Influencer+like error...' + str((errors)) + ' errors remaining'
         text_me(message)
+        time.sleep(60*10)
 
 # Traceback (most recent call last):
 #   File "C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Follow scripts/Follow Influencers + like.py", line 152, in <module>
