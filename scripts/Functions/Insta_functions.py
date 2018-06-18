@@ -7,6 +7,8 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import pickle
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 from random import randint
 
@@ -129,8 +131,34 @@ def right_arrow():
     driver.find_element_by_class_name('HBoOv').click()
 
 def click_first_post():
-    driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[1]/div[1]/a/div''').click()
+    stats = driver.find_elements_by_class_name('eLAPa')
+    stats[0].click()
+    # driver.find_element_by_xpath(
+    #     '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[1]/div[1]/a/div''').click()
 
 def go_to_profile():
     driver.find_element_by_class_name('coreSpriteDesktopNavProfile').click()
+
+def click_posts_followers_followings(which_one):
+    options = driver.find_elements_by_class_name('Y8-fY')
+    if which_one == 'posts':
+        options[0].click()
+    elif which_one == 'followers':
+        options[1].click()
+    elif which_one == 'followings':
+        options[2].click()
+
+def repeat_down_arrow(number_of_times):
+    actions_down = ActionChains(driver)
+    actions_down.send_keys(Keys.ARROW_DOWN)
+
+    count = 0
+    while count < number_of_times:
+        actions_down.perform()
+        time.sleep(1.5)
+        count += 1
+
+def follow_button():
+    btn_list = driver.find_elements_by_class_name('_5f5mN')
+    main_btn = btn_list[0]
+    return main_btn

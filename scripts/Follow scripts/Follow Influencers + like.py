@@ -4,10 +4,9 @@ import time, datetime, pickle, sys
 import pandas as pd
 from random import *
 
-
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, remove_k_m_periods_commas
-from Insta_functions import isEnglish
+from Insta_functions import isEnglish, click_posts_followers_followings
 
 def write_to_database(name, future_followers):
     # Begin pickle
@@ -71,7 +70,7 @@ def likes_persons_posts(num_images_to_like):
 
 def follow_people(amount, num_pics_to_like):
     # Click followers
-    driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a''').click()
+    click_posts_followers_followings('followers')
     sleep()
 
     for future_followers in range(amount):
@@ -141,7 +140,7 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 6
+errors = 7
 while errors > 0:
     try:
         global driver
@@ -156,9 +155,9 @@ while errors > 0:
         for influencer in randomized_list2:
             print('following:', influencer)
             search(influencer)
-            follow_people(8, 3)  # amount = number of people to follow, number of pictures to like
-            print('======Waiting 8 minutes!======')
-            time.sleep(8*60)
+            follow_people(18, 3)  # amount = number of people to follow, number of pictures to like
+            print('======Waiting 18 minutes!======')
+            time.sleep(18*60)
             driver.back()
 
         driver.close()
@@ -174,7 +173,7 @@ while errors > 0:
             text_me('Influencer+like QUIT!')
             quit()
         message = 'Influencer+like error...' + str((errors)) + ' errors remaining'
-        text_me(message)
+        #text_me(message)
         time.sleep(60*10)
 
 # Traceback (most recent call last):

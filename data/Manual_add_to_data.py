@@ -2,11 +2,12 @@ import pickle, datetime
 import pandas as pd
 
 df = pickle.load(open('Instagram_data.p', 'rb'))
-print(df.count())
 of_df = df[df['status'].isin(['official_friend'])]
 off_df = of_df['username']
 # 410 official friends!
-print(off_df.count())
+print(off_df.tolist())
+if 'ashleesummer' in off_df.tolist():
+    print(True)
 quit()
 friend_list = off_df.tolist()  # 306
 

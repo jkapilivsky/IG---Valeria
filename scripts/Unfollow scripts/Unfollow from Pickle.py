@@ -68,29 +68,47 @@ while error > 0:
         no_unfollow()
 
         for person in follow_unfollow_df['username']:
-            search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
-            search.clear()
-            search.send_keys(person)
-            search.send_keys(Keys.ENTER)
+            # search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
+            # search.clear()
+            # search.send_keys(person)
+            # search.send_keys(Keys.ENTER)
+            # sleep()
+            # # Goes to first person in search
+            # search_results = driver.find_elements_by_class_name('yCE8d')
+            #
+            # # checks if results are found
+            # try:
+            #     search_results[0].click()
+            #     sleep()
+            # except:
+            #     data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+            #     df = pd.DataFrame([[person, 'Not_searchable', str(datetime.datetime.now())]],
+            #                       columns=['username', 'status', 'time_stamp'])
+            #     data = data.append(df)
+            #     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+            #     print(person, ':Not_searchable')
+            #     search.clear()
+            #     continue
+
+            driver.get("https://www.instagram.com/" + person)
             sleep()
-            # Goes to first person in search
-            search_results = driver.find_elements_by_class_name('yCE8d')
 
-            # checks if results are found
+            # Check if they are blocked
             try:
-                search_results[0].click()
-                sleep()
-            except:
-                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[person, 'Not_searchable', str(datetime.datetime.now())]],
-                                  columns=['username', 'status', 'time_stamp'])
-                data = data.append(df)
-                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
-                print(person, ':Not_searchable')
-                search.clear()
-                continue
+                btn_list = driver.find_elements_by_class_name('_5f5mN')
+                if btn_list[0].text  == 'Unblock':
+                    print(person, 'blocked')
+                    data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+                    df = pd.DataFrame([[person, 'blocked_account', str(datetime.datetime.now())]],
+                                      columns=['username', 'status', 'time_stamp'])
+                    data = data.append(df)
+                    pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+                    time.sleep(3)
+                    continue
+            except NoSuchElementException:
+                pass
 
-             # Check if they found a Sorry, this page isn't available.
+            # Check if they found a Sorry, this page isn't available.
             try:
                 driver.find_element_by_class_name('error-container')
 
@@ -99,7 +117,7 @@ while error > 0:
                                   columns=['username', 'status', 'time_stamp'])
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
-                driver.find_element_by_xpath('''/html/body/div/div[1]/header/div/div[1]/a''').click()
+                driver.get("https://www.instagram.com/")
                 time.sleep(3)
                 continue
             except NoSuchElementException:
