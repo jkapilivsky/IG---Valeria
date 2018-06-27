@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import time
+import time, datetime
 from twilio.rest import Client
 import sys, logging
 import pandas as pd
@@ -162,3 +162,10 @@ def follow_button():
     btn_list = driver.find_elements_by_class_name('_5f5mN')
     main_btn = btn_list[0]
     return main_btn
+
+def error_log(err, script):
+    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
+    df = pd.DataFrame([[err, script, str(datetime.datetime.now())]],
+                      columns=['error message', 'script', 'time_stamp'])
+    error_log = error_log.append(df)
+    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))

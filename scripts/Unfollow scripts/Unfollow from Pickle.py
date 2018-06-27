@@ -13,25 +13,6 @@ import sys, logging
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search
 
-def log_into_instagram(username, password):
-    driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a''').click()
-    time.sleep(1.5)
-
-    # Input username
-    user = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[1]/div/input''')
-    user.clear()
-    user.send_keys(username)
-
-    # Input password
-    pw = driver.find_element_by_xpath(
-        '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/input''')
-    pw.clear()
-    pw.send_keys(password)
-
-    pw.send_keys(Keys.ENTER)
-    time.sleep(3)
-
 def read_pickle():
     # Begin pickle
     global follow_unfollow_df
@@ -45,7 +26,7 @@ def read_pickle():
     print('unfollowing:', follow_unfollow_df['username'].tolist())
 
 def no_unfollow():
-    if len(follow_unfollow_df) == 0:
+    if len(follow_unfollow_df) <= 1:
         text_me('nothing to follow?')
         driver.close()
         quit()
@@ -68,28 +49,6 @@ while error > 0:
         no_unfollow()
 
         for person in follow_unfollow_df['username']:
-            # search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
-            # search.clear()
-            # search.send_keys(person)
-            # search.send_keys(Keys.ENTER)
-            # sleep()
-            # # Goes to first person in search
-            # search_results = driver.find_elements_by_class_name('yCE8d')
-            #
-            # # checks if results are found
-            # try:
-            #     search_results[0].click()
-            #     sleep()
-            # except:
-            #     data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-            #     df = pd.DataFrame([[person, 'Not_searchable', str(datetime.datetime.now())]],
-            #                       columns=['username', 'status', 'time_stamp'])
-            #     data = data.append(df)
-            #     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
-            #     print(person, ':Not_searchable')
-            #     search.clear()
-            #     continue
-
             driver.get("https://www.instagram.com/" + person)
             sleep()
 
