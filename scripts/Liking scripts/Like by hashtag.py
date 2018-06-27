@@ -78,12 +78,6 @@ def like_people(number_of_people, number_pics_to_like):
 
         print('liking: ', driver.find_element_by_class_name('AC5d8').text)
 
-        # TODO - questionable if nessesary..
-        # Move to top of page
-        # variable = driver.find_element_by_class_name('AC5d8')
-        # actions = webdriver.ActionChains(driver)
-        # actions.move_to_element(variable)
-
         try:
         # If out of range. Go back and select next picture
             if stats_range() is False:

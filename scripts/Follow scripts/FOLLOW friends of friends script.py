@@ -10,14 +10,8 @@ from random import *
 import sys, logging
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
-
-def remove_k_m_periods_commas(value):
-    value = value.replace('k', '')
-    value = value.replace('m', '')
-    value = value.replace('.', '')
-    value = value.replace(',', '')
-    return value
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
+stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_posts_followers_followings
 
 def repeat_space_bar(number_of_times):
     count = 0
@@ -53,18 +47,9 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
     sleep()
     ################################Get's list of people to follow COMPLETE############################################
 
-    for x in user_followers_list:
-        count = 0
-        # Search bar
-        search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
-        search.clear()
-        search.send_keys(x)
-        count += 1
-        search.send_keys(Keys.ENTER)
-        sleep()
-        # Goes to first person in search
-        search_results = driver.find_elements_by_class_name('_ndl3t')
-        search_results[0].click()
+    for person in user_followers_list:
+        # Goes directly to person's profile
+        driver.get("https://www.instagram.com/" + person)
         sleep()
 
         if check_if_account_is_private():
@@ -72,7 +57,7 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
 
         # clicks followers
         try:
-            driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/header/section/ul/li[2]''').click()
+            click_posts_followers_followings('followers')
             sleep()
         except: 
             continue
@@ -99,10 +84,6 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
             else:
                 continue
 
-            # if name[future_followers].find_element_by_xpath(buttons).text == 'Follow':  # Makes sure we aren't banned from following people
-            #     print('Are we banned?')
-            #     quit()
-
             print("Now following: ", name[future_followers].text)
 
             # Begin pickle
@@ -123,16 +104,9 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
                 continue
 
         driver.back()
-        sleep()
+        time.sleep(3)
         driver.back()
         sleep()
-
-def error_log(err):
-    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
-    df = pd.DataFrame([[err, 'new FOLLOW script', str(datetime.datetime.now())]],
-                      columns=['error message', 'script', 'time_stamp'])
-    error_log = error_log.append(df)
-    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
 errors = 3
 followings = 0
@@ -142,43 +116,33 @@ while errors > 0:
         driver = open_chrome('Follow_Profile')
         twilio()
         # go to profile
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
+        driver.get('https://www.instagram.com/linethmm')
         sleep()
-        # old xpath for followers
-        '''//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a'''
         # Get's people to follow!
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/header/section/ul/li[2]''').click()
+        click_posts_followers_followings('followers')
         sleep()
-        driver.back()
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/header/section/ul/li[2]''').click()
-        sleep()
-
 
         repeat_space_bar(15)
 
         # Create new list of people to follow!
         user_followers_list = []
-
         follow_people(40, 12, 16)  # Number of people, number of followings, time to wait
         print(user_followers_list)
 
         # ###################################Check # of followings##########################################################
         # go to profile
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]''').click()
+        driver.get('https://www.instagram.com/linethmm')
         sleep()
 
-        f = driver.find_element_by_xpath(
-            '''//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a/span''').text
-
-        f = remove_k_m_periods_commas(f)
-        followings = int(f)
-        print(followings)
-        #driver.close()
+        followings_text = driver.find_elements_by_class_name('g47SY')[2].text
+        followings_int = remove_k_m_periods_commas(followings_text)
+        print(followings_int)
 
     except Exception as err:
         print(err)
         issue = error_handling()
-        error_log(issue)
+        script_name = 'FOLLOW friends of friends script'
+        error_log(issue, script_name)
         driver.close()
 
         errors -= 1
