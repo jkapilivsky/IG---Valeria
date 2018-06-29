@@ -8,7 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import pickle
 from selenium.webdriver.common.action_chains import ActionChains
-
+import platform
 
 from random import randint
 
@@ -16,8 +16,15 @@ def open_chrome(profile):
     global driver
     global client
     options = webdriver.ChromeOptions()
-    options.add_argument(
-        "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/" + profile)  # Path to your chrome profile
+
+    # default directory. Personal desktop at home
+    dir = "user-data-dir=C:/Users/jamie/PycharmProjects/Instagram/Profiles/"
+
+    # Identify Solarwinds computer to change directory
+    if platform.processor() == 'Intel64 Family 6 Model 78 Stepping 3, GenuineIntel':
+        dir = "user-data-dir=C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Profiles/"
+
+    options.add_argument(dir + profile)  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
 
     cookies = pickle.load(open("../../assets/cookies.p", "rb"))
@@ -55,15 +62,7 @@ def error_handling():
                                      sys.exc_info()[2].tb_lineno)
 
 def search(name):
-    # Search bar
-    search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
-    search.clear()
-    search.send_keys(name)
-    search.send_keys(Keys.ENTER)
-    sleep()
-    # Goes to first person in search
-    search_results = driver.find_elements_by_class_name('yCE8d')
-    search_results[0].click()
+    driver.get("https://www.instagram.com/" + name)
     sleep()
 
 def remove_k_m_periods_commas(value):

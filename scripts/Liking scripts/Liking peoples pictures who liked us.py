@@ -10,23 +10,14 @@ import datetime
 import pandas as pd
 import sys, logging
 
+#Home computer
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome
+#Work computer
+sys.path.insert(0, 'C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Insta files/scripts/Functions')
 
-def like_unlike_check():
-
-    like_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Like']")
-    liked_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Unlike']")
-
-    if len(like_elem) == 1:
-        driver.execute_script(
-            "document.getElementsByClassName('" + like_elem[0].get_attribute("class") + "')[0].click()")
-        print('--> Image Liked!')
-        time.sleep(2)
-    elif len(liked_elem) == 1:
-        print('--> Already Liked!')
-    else:
-        print('--> Invalid Like Element!')
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
+stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, go_to_profile, search, \
+click_posts_followers_followings
 
 def likes_persons_posts(num_images_to_like):
     count_posts = 0
@@ -67,47 +58,28 @@ def check_if_account_exists():
 
 def check_if_image_is_not_a_video():
     try:
-        driver.find_element_by_class_name('''_gu6vm''').click()
-        return True
-    except NoSuchElementException:
-        # Skips the video and goes to the next image to check if it's not a video
-        driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
-        sleep()
-        return False
+        if driver.find_element_by_class_name('QvAa1'):
+            driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
+            sleep()
+    except:
+        pass
 
-def remove_k_m_periods_commas(value):
-    value = value.replace('k', '')
-    value = value.replace('m', '')
-    value = value.replace('.', '')
-    value = value.replace(',', '')
-    return value
 
 def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_pics_to_like):
     pic_counter = 1
 
-    for y in range(number_of_valeria_pictures-1):
+    for y in range(number_of_valeria_pictures):
         pic_count = 0
         print('picture number:', y)
 
-        try:   # This whole thing doesn't work
-            number_of_people = driver.find_element_by_xpath(
-                '''/html/body/div[4]/div/div[2]/div/div[2]/div/article/div[2]/section[2]/div/a/span''').text
-            number_of_people = remove_k_m_periods_commas(number_of_people)
-            number_of_people = int(number_of_people)
-            print(number_of_people)
-            sleep()
-        except NoSuchElementException:
-            # print('error!')
-            pass
+        check_if_image_is_not_a_video()
 
-        if check_if_image_is_not_a_video() is False:
-            continue
-        sleep()
-
+        # Click liking button
+        driver.find_element_by_class_name('zV_Nj').click()
         # ########################################begin space bar!#################################################
         tab = 0
         while tab <= 2:
-            variable = driver.find_element_by_class_name('_si7dy')
+            variable = driver.find_element_by_class_name('_914pk')
             actions = webdriver.ActionChains(driver)
             actions.move_to_element(variable)
             # actions.click()
@@ -118,7 +90,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
         count = 0
         while count < int(people_to_follow/3):  # Spacebar X number of times
-            variable = driver.find_element_by_class_name('_4rbun')
+            variable = driver.find_element_by_class_name('_914pk')
             actions = webdriver.ActionChains(driver)
             actions.move_to_element(variable)
             # actions.click()
@@ -131,57 +103,18 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
         people_list = []
         for people in range(people_to_follow):
-            selenium_list = driver.find_elements_by_class_name('''_2g7d5''')
+            selenium_list = driver.find_elements_by_class_name('FPmhX')
             people_list.append(selenium_list[people].text)
 
         print(people_list)
-
         driver.back()
-        sleep()
 
         # Likes the first x people!
         for x in people_list:  # Still need to click out of image to get to the search bar!!
             sleep()
             print(people_list.index(x), x)
-            search = driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input''')
-            search.clear()
-            search.send_keys(x)
-            search.send_keys(Keys.ENTER)
-            sleep()
-            # Goes to first person in search
-            search_results = driver.find_elements_by_class_name('_ndl3t')
-            # checks if results are found
-            try:
-                search_results[0].click()
-                sleep()
-            except:
-                try:
-                    driver.find_element_by_class_name('_oznku')
-                    search.clear()
-                    # if statement that breaks for loop if were at the end...
-                    if people_list.index(x) == len(people_list)-1:
-                        break
-                except:
-                    search.clear()
-                continue
+            search(x)
 
-            # Check if they found hashtag
-            try:
-                driver.find_element_by_class_name('_kwqc3')
-                continue
-            except NoSuchElementException:
-                if people_list.index(x) == len(people_list)-1:
-                    break
-                pass
-
-            # Check if they found a location
-            try:
-                driver.find_element_by_class_name('_thew0')
-                continue
-            except NoSuchElementException:
-                if people_list.index(x) == len(people_list)-1:
-                    break
-                pass
 
             # Check if they found a Sorry, this page isn't available.
             try:
@@ -194,39 +127,18 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
                     continue
                 pass
 
-            # Makes sure we are liking the right person!
-            try:
-                username_found = driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/header/section/div[1]/h1''').text
-                if x != username_found:
-                    if people_list.index(x) == len(people_list)-1:
-                        break
-                    continue
-            except:
-                continue
-
-
             if check_if_account_is_private() is True:
                 if people_list.index(x) == len(people_list)-1:
                     break
                 continue
 
             # Makes sure that the user has enough images to like!
-            total_images = driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/div/header/section/ul/li[1]/span/span''').text
+            total_images  = driver.find_elements_by_class_name('g47SY')[0].text
             total_images = remove_k_m_periods_commas(total_images)
-            total_images = int(total_images)
-
-
 
             # Clicks the person's first image
-            try:
-                # Click first post
-                driver.find_element_by_xpath(
-                    '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[1]/div[1]/a/div''').click()
-                sleep()
-            except NoSuchElementException:
-                driver.back()
-                continue
+            pics = driver.find_elements_by_class_name('_9AhH0')
+            pics[0].click()
 
             if total_images >= number_of_pics_to_like:
                 total_images = number_of_pics_to_like
@@ -238,23 +150,19 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
             # Below goes back twice to profile to start for loop over again
             driver.back()
             sleep()
-            driver.back()
-            sleep()
+            # driver.back()
+            # sleep()
 
         driver.back()
         sleep()
 
         # go to profile
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
+        go_to_profile()
         sleep()
 
-        # Clicks first image!
-        try:
-            driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
-        except:
-            driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/div/article/div[2]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div''').click()
+        # Clicks image we started with and then loops through where to go... (not the best)
+        pics = driver.find_elements_by_class_name('_9AhH0')
+        pics[(row-1)*3 + (column-1)].click()
 
         sleep()
         while pic_count < pic_counter:
@@ -263,13 +171,6 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
             sleep()
 
         pic_counter += 1
-
-def error_log(err):
-    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
-    df = pd.DataFrame([[err, 'Liking people who liked us script', str(datetime.datetime.now())]],
-                      columns=['error message', 'script', 'time_stamp'])
-    error_log = error_log.append(df)
-    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
 def repeat_space_bar(number_of_times):
     count = 0
@@ -282,9 +183,6 @@ def repeat_space_bar(number_of_times):
 row = 2
 column = 2
 
-#Notes to not repeat same picture!
-# 1/3/18 - ran 6/1 and 15/1
-
 
 error = 1
 while error >= 0:
@@ -294,11 +192,8 @@ while error >= 0:
         twilio()
         start = timeit.default_timer()
         sleep()
-        #time.sleep(120)
-        #log_into_instagram('linethmm', 'I1232123you)')
 
-        # go to profile
-        driver.find_element_by_xpath('''//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a''').click()
+        go_to_profile()
         sleep()
 
         # Click 'load more'
@@ -316,16 +211,19 @@ while error >= 0:
         repeat_space_bar(spacebars)  # Scrolls down to the bottom of the profile page
         sleep()
         # select image
-        try:
-            driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[1]''').click()  # They changed the xpath -.- its fixed now
-
-        except:
-            driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[2]''').click()
+        pics = driver.find_elements_by_class_name('_9AhH0')
+        print((row-1)*3 + (column-1))
+        pics[(row-1)*3 + (column-1)].click()
+        # try:
+        #     driver.find_element_by_xpath(
+        #         '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[1]''').click()  # They changed the xpath -.- its fixed now
+        #
+        # except:
+        #     driver.find_element_by_xpath(
+        #         '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[2]''').click()
 
         sleep()
-        like_peoples_stuffs(20, 370, 2)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(2, 2, 2)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')
@@ -336,7 +234,8 @@ while error >= 0:
     except Exception as err:
         print(err)
         issue = error_handling()
-        error_log(issue)
+        script = 'Liking peoples pictures who liked us'
+        error_log(issue, script)
         driver.close()
         error -= 1
 
