@@ -58,7 +58,7 @@ def error_log(err):
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
 count = 0
-error = 1
+error = 3
 while error > 0:
     try:
         global driver
@@ -105,7 +105,7 @@ while error > 0:
                     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                     time.sleep(3)
                     continue
-            except NoSuchElementException:
+            except:
                 pass
 
             # Check if they found a Sorry, this page isn't available.
@@ -143,13 +143,15 @@ while error > 0:
                 data = data.append(df)
                 pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
                 continue
-
-            if driver.find_element_by_class_name('AC5d8').text != person:
-                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-                df = pd.DataFrame([[person, 'Wrong_search', str(datetime.datetime.now())]],
-                                  columns=['username', 'status', 'time_stamp'])
-                data = data.append(df)
-                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+            try:
+                if driver.find_element_by_class_name('AC5d8').text != person:
+                    data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+                    df = pd.DataFrame([[person, 'Wrong_search', str(datetime.datetime.now())]],
+                                      columns=['username', 'status', 'time_stamp'])
+                    data = data.append(df)
+                    pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+                    continue
+            except NoSuchElementException:
                 continue
 
             button = driver.find_element_by_class_name('_5f5mN')
