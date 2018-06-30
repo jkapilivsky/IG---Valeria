@@ -5,8 +5,8 @@ import pandas as pd
 from random import *
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, remove_k_m_periods_commas
-from Insta_functions import isEnglish, click_posts_followers_followings, click_first_post, repeat_down_arrow
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, remove_k_m_periods_commas, \
+isEnglish, click_posts_followers_followings, click_first_post, repeat_down_arrow, error_log
 
 def write_to_database(names, person):
     # Begin pickle
@@ -50,7 +50,9 @@ while errors > 0:
         twilio()
 
         influencers_list = ['vdethe', 'ashleesummer', 'snitchery', 'mamapeach_',
-                            'sichenmakeupholic', 'nyane', 'michellephan', 'hudabeauty','wengie']
+                            'sichenmakeupholic', 'nyane', 'michellephan', 'hudabeauty','wengie',
+                            '@sophxsmithh','@hailiebarber', '@laur_elyse','@ponysmakeup']
+
         randomized_list = sorted(influencers_list, key=lambda x:random())
         for influencer in influencers_list:
             print('following:', influencer)
@@ -76,6 +78,8 @@ while errors > 0:
         errors -= 1
         print(err)
         issue = error_handling()
+        script_name = 'Follow Influencers engagement'
+        error_log(issue, script_name)
         driver.close()
 
         if errors == 0:

@@ -10,8 +10,8 @@ from random import *
 import sys, logging
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check
-from Insta_functions import stats_range, right_arrow, remove_k_m_periods_commas, click_first_post
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
+stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log
 
 def num_posts_to_like(num_images_to_like):
     count_posts = 0
@@ -78,12 +78,6 @@ def like_people(number_of_people, number_pics_to_like):
 
         print('liking: ', driver.find_element_by_class_name('AC5d8').text)
 
-        # TODO - questionable if nessesary..
-        # Move to top of page
-        # variable = driver.find_element_by_class_name('AC5d8')
-        # actions = webdriver.ActionChains(driver)
-        # actions.move_to_element(variable)
-
         try:
         # If out of range. Go back and select next picture
             if stats_range() is False:
@@ -123,13 +117,6 @@ def like_people(number_of_people, number_pics_to_like):
         count += 1
         sleep()
 
-def error_log(err):
-    error_log = pickle.load(open("../../data/Instagram_error_log.p", "rb"))
-    df = pd.DataFrame([[err, 'Follow and like by tag', str(datetime.datetime.now())]],
-                      columns=['error message', 'script', 'time_stamp'])
-    error_log = error_log.append(df)
-    pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
-
 errors = 6
 while errors > 0:
     try:
@@ -168,7 +155,9 @@ while errors > 0:
 
     except Exception as err:
         issue = error_handling()
-        error_log(issue)
+        script_name = 'Like by hashtag'
+        error_log(issue, script_name)
+
         driver.close()
         print(err)
         errors -= 1

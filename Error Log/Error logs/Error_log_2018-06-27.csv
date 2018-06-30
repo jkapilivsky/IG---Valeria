@@ -1,0 +1,530 @@
+,error message,script,time_stamp,timestamp
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 156",Follow and like by tag,2018-06-02 17:39:25.586777,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 157",Follow and like by tag,2018-06-02 18:03:56.605556,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 153",Follow Famous people followers,2018-06-02 20:15:42.198138,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 158",Follow and like by tag,2018-06-02 20:29:26.483594,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 158",Follow and like by tag,2018-06-02 21:21:00.432698,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 91",Unfollow from Pickle,2018-06-03 04:36:19.752065,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/div/header/section/ul/li[1]/span/span""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 153",Follow Famous people followers,2018-06-03 07:48:53.532374,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 158",Follow and like by tag,2018-06-03 08:24:24.281366,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 161",Follow and like by tag,2018-06-03 10:38:58.588814,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 161",Follow and like by tag,2018-06-03 11:18:53.714593,
+0,"<class 'EOFError'>, Ran out of input, line: 159",Follow Famous people followers,2018-06-03 19:42:24.087158,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 161",Follow and like by tag,2018-06-03 19:46:19.515459,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 161",Follow and like by tag,2018-06-03 23:42:01.393142,
+0,"<class '_pickle.UnpicklingError'>, pickle data was truncated, line: 159",Follow Famous people followers,2018-06-04 02:35:37.171782,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+, line: 91",Unfollow from Pickle,2018-06-04 04:40:22.267579,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (160, 581). Other element would receive the click: <div class=""jLwSh"" role=""dialog""></div>
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow and like by tag,2018-06-04 08:38:45.695125,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-04 16:26:32.669465,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-04 17:55:35.005143,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-04 19:03:29.323366,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-04 19:27:00.918965,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-04 20:03:07.222320,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unable to set cookie
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 53",new FOLLOW script,2018-06-04 20:27:39.174826,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-05 11:08:11.453520,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-05 11:26:10.226888,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unable to set cookie
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 65",Unfollow from Pickle,2018-06-05 14:57:39.810934,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-05 14:58:29.038746,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Chrome failed to start: crashed
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 65",Unfollow from Pickle,2018-06-05 22:40:48.265483,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""coreSpriteGlyphBlack""}
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 316",Liking people who liked us script,2018-06-06 07:57:03.103425,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-06 08:14:02.839552,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-06 08:39:23.519380,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-06 09:09:15.517026,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: chrome not reachable
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 71",Unfollow from Pickle,2018-06-06 14:33:08.648736,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unable to set cookie
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 148",Follow Famous people followers,2018-06-06 18:06:49.484536,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 154",Follow and like by tag,2018-06-07 10:48:01.537517,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/div/header/section/ul/li[2]/a/span""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 63",new FOLLOW script,2018-06-07 11:42:01.502998,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (159, 470). Other element would receive the click: <ul class=""ueMLB"">...</ul>
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-07 12:54:28.104702,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-07 13:59:21.527394,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-07 16:49:45.988941,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-08 10:38:08.150747,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-08 11:35:22.634919,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-08 14:08:56.924661,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (160, 450). Other element would receive the click: <div class=""jLwSh"" role=""dialog""></div>
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow and like by tag,2018-06-08 16:50:35.344597,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-08 18:13:38.518220,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-08 20:21:05.598241,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-08 20:36:41.956582,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-08 21:45:39.040915,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-08 22:47:02.133204,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-08 23:11:32.946069,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-09 01:16:30.957665,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-09 02:21:04.014838,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 141",Valeria new unfollowing script,2018-06-09 09:39:29.431148,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 150",Valeria new unfollowing script,2018-06-09 09:50:11.012205,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: cannot focus element
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 150",Valeria new unfollowing script,2018-06-09 09:50:43.163434,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 112",Valeria new unfollowing script,2018-06-09 10:10:06.228470,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""_2g7d5""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 112",Valeria new unfollowing script,2018-06-09 10:21:53.771909,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-09 18:43:06.319739,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-10 10:58:38.015425,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-10 11:15:55.351378,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-10 11:41:51.214416,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-10 11:53:52.670428,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-10 11:56:56.951845,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-10 12:52:28.393437,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-10 13:27:24.534460,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-10 13:42:55.137119,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-10 17:01:42.552527,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-10 18:02:37.404547,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-10 19:08:44.140447,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 00:09:29.648439,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 00:23:29.015327,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-11 02:14:59.098749,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 02:30:00.311161,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-11 03:15:05.612941,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 04:11:09.310376,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-11 04:16:41.933103,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 60",new FOLLOW script,2018-06-11 07:44:23.933967,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (160, 449). Other element would receive the click: <div class=""jLwSh"" role=""dialog""></div>
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow and like by tag,2018-06-11 08:28:09.640784,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 154",Follow and like by tag,2018-06-11 09:00:04.769719,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 09:11:46.497293,
+0,"<class 'IndexError'>, list index out of range, line: 154",Follow and like by tag,2018-06-11 09:45:26.057096,
+0,"<class 'IndexError'>, list index out of range, line: 159",Follow Famous people followers,2018-06-11 10:39:41.596201,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 11:51:00.070835,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (159, 449). Other element would receive the click: <ul class=""ueMLB"">...</ul>
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-11 12:14:45.703547,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 159",Follow Famous people followers,2018-06-11 13:02:34.145839,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (160, 449). Other element would receive the click: <div class=""jLwSh"" role=""dialog""></div>
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow and like by tag,2018-06-11 14:40:24.040048,
+0,"<class 'IndexError'>, list index out of range, line: 159",Follow Famous people followers,2018-06-11 15:56:23.090323,
+0,"<class 'IndexError'>, list index out of range, line: 159",Follow Famous people followers,2018-06-11 16:07:04.370058,
+0,"<class 'IndexError'>, list index out of range, line: 159",Follow Famous people followers,2018-06-11 16:17:43.968542,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 154",Follow and like by tag,2018-06-11 16:18:08.052875,
+0,"<class 'IndexError'>, list index out of range, line: 159",Follow Famous people followers,2018-06-11 16:28:25.410655,
+0,"<class 'IndexError'>, list index out of range, line: 159",Follow Famous people followers,2018-06-11 16:39:06.801776,
+0,"<class 'IndexError'>, list index out of range, line: 159",Follow Famous people followers,2018-06-11 16:49:45.699900,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-11 17:07:11.961817,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 17:36:24.001254,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 17:50:46.199143,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-11 22:29:00.451194,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-12 00:50:52.140952,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-12 04:02:35.467651,
+0,"<class 'gspread.exceptions.RequestError'>, (500, '500: b\'<!DOCTYPE html><html lang=""en""><head><meta name=""description"" content=""Web word processing, presentations and spreadsheets""><meta name=""viewport"" content=""width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0""><link rel=""shortcut icon"" href=""//ssl.gstatic.com/docs/common/drive_favicon1.ico""><title>Google Drive Error</title><link href=""//fonts.googleapis.com/css?family=Product+Sans"" rel=""stylesheet"" type=""text/css""><style>/* Copyright 2018 Google Inc. All Rights Reserved. */\\n.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}#drive-logo{margin:18px 0;position:absolute;white-space:nowrap}.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_116x41dp.png\\\');background-size:116px 41px;display:inline-block;height:41px;vertical-align:bottom;width:116px}.docs-drivelogo-text{color:#000;display:inline-block;opacity:0.54;text-decoration:none;font-family:\\\'Product Sans\\\',Arial,Helvetica,sans-serif;font-size:32px;text-rendering:optimizeLegibility;position:relative;top:-6px;left:-7px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:144dpi){.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_116x41dp.png\\\')}}</style><style type=""text/css"">body {background-color: #fff; font-family: Arial,sans-serif; font-size: 13px; margin: 0; padding: 0;}a, a:link, a:visited {color: #112ABB;}</style><style type=""text/css"">.errorMessage {font-size: 12pt; font-weight: bold; line-height: 150%;}</style></head><body><div id=""outerContainer""><div id=""innerContainer""><div style=""position: absolute; top: -80px;""><div id=""drive-logo""><a href=""/""><span class=""docs-drivelogo-img"" title=""Google logo""></span><span class=""docs-drivelogo-text"">&nbsp;Drive</span></a></div></div><p style=""padding-top: 15px"">Google Docs encountered an error. Please try reloading this page, or coming back to it in a few minutes.</p><p>To learn more about the Google Docs editors, please visit our <a href=""https://support.google.com/docs/?hl=en&p=error_help"" target=""_blank"">help center</a>.</p><p><br><b>We\\\'re sorry for the inconvenience.</b><br><i>- The Google Docs Team</i></p></div></div></body><style>#outerContainer {margin: auto; max-width: 750px;}#innerContainer {margin-bottom: 20px; margin-left: 40px; margin-right: 40px; margin-top: 80px; position: relative;}</style></html>\''), line: 157",new FOLLOW script,2018-06-12 09:08:08.134507,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (160, 448). Other element would receive the click: <div class=""jLwSh"" role=""dialog""></div>
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow and like by tag,2018-06-12 11:06:11.939036,
+0,"<class 'IndexError'>, list index out of range, line: 154",Follow and like by tag,2018-06-12 11:38:15.645022,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-12 11:50:46.610985,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 154",Follow and like by tag,2018-06-12 12:00:59.316809,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[2]/input""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 154",Follow and like by tag,2018-06-12 12:11:11.523729,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-12 12:22:58.120524,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (630, 477). Other element would receive the click: <ul class=""ueMLB"">...</ul>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-13 08:31:04.029602,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (160, 448). Other element would receive the click: <div class=""jLwSh"" role=""dialog""></div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow and like by tag,2018-06-13 08:33:28.503576,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""AC5d8""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-13 09:55:04.093181,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (160, 448). Other element would receive the click: <div class=""jLwSh"" role=""dialog""></div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow and like by tag,2018-06-13 10:28:50.430445,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow and like by tag,2018-06-13 10:39:25.612778,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-13 11:50:35.139355,
+0,"<class 'selenium.common.exceptions.StaleElementReferenceException'>, Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-13 12:45:01.830440,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-13 15:25:00.754664,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-13 16:52:56.748514,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-13 23:00:12.066861,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-14 00:01:33.838708,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (390, 477). Other element would receive the click: <ul class=""ueMLB"">...</ul>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-14 00:08:08.439869,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-14 00:15:46.359478,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-14 02:24:20.795762,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-14 03:16:34.013328,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (390, 697). Other element would receive the click: <div class=""_2dDPU"" role=""dialog"">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-14 03:29:13.828404,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-14 03:29:36.611761,
+0,"<class 'gspread.exceptions.RequestError'>, (500, '500: b\'<!DOCTYPE html><html lang=""en""><head><meta name=""description"" content=""Web word processing, presentations and spreadsheets""><meta name=""viewport"" content=""width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0""><link rel=""shortcut icon"" href=""//ssl.gstatic.com/docs/common/drive_favicon1.ico""><title>Google Drive Error</title><link href=""//fonts.googleapis.com/css?family=Product+Sans"" rel=""stylesheet"" type=""text/css""><style>/* Copyright 2018 Google Inc. All Rights Reserved. */\\n.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}#drive-logo{margin:18px 0;position:absolute;white-space:nowrap}.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_116x41dp.png\\\');background-size:116px 41px;display:inline-block;height:41px;vertical-align:bottom;width:116px}.docs-drivelogo-text{color:#000;display:inline-block;opacity:0.54;text-decoration:none;font-family:\\\'Product Sans\\\',Arial,Helvetica,sans-serif;font-size:32px;text-rendering:optimizeLegibility;position:relative;top:-6px;left:-7px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:144dpi){.docs-drivelogo-img{background-image:url(\\\'//ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_116x41dp.png\\\')}}</style><style type=""text/css"">body {background-color: #fff; font-family: Arial,sans-serif; font-size: 13px; margin: 0; padding: 0;}a, a:link, a:visited {color: #112ABB;}</style><style type=""text/css"">.errorMessage {font-size: 12pt; font-weight: bold; line-height: 150%;}</style></head><body><div id=""outerContainer""><div id=""innerContainer""><div style=""position: absolute; top: -80px;""><div id=""drive-logo""><a href=""/""><span class=""docs-drivelogo-img"" title=""Google logo""></span><span class=""docs-drivelogo-text"">&nbsp;Drive</span></a></div></div><p style=""padding-top: 15px"">Google Docs encountered an error. Please try reloading this page, or coming back to it in a few minutes.</p><p>To learn more about the Google Docs editors, please visit our <a href=""https://support.google.com/docs/?hl=en&p=error_help"" target=""_blank"">help center</a>.</p><p><br><b>We\\\'re sorry for the inconvenience.</b><br><i>- The Google Docs Team</i></p></div></div></body><style>#outerContainer {margin: auto; max-width: 750px;}#innerContainer {margin-bottom: 20px; margin-left: 40px; margin-right: 40px; margin-top: 80px; position: relative;}</style></html>\''), line: 139",new FOLLOW script,2018-06-14 14:07:47.784016,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-14 16:24:36.677025,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-14 17:47:50.937250,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-14 17:49:47.403095,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-14 18:04:27.472135,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-14 19:20:05.102923,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (390, 477). Other element would receive the click: <li class=""_3Tnme "">...</li>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-14 19:35:37.359736,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-14 19:50:16.125672,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (630, 697). Other element would receive the click: <div class=""_2dDPU"" role=""dialog"">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-14 20:39:35.324053,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-14 20:39:58.644789,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-14 20:46:01.905438,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-15 15:53:55.374872,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-15 16:48:42.417388,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (630, 523). Other element would receive the click: <div class=""_2dDPU"" role=""dialog"">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-15 17:43:14.542001,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (630, 673). Other element would receive the click: <div class=""_2dDPU"" role=""dialog"">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-15 18:13:50.926927,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-15 19:09:40.854690,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-15 19:33:19.378628,
+0,"<class 'IndexError'>, list index out of range, line: 154",Follow and like by tag,2018-06-15 19:46:43.738942,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-15 19:52:13.429891,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-15 20:08:28.049029,
+0,"<class 'IndexError'>, list index out of range, line: 154",Follow and like by tag,2018-06-16 10:17:14.868946,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-16 10:53:24.058870,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-16 11:14:59.721299,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-16 11:54:17.793961,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-16 12:15:48.527408,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-16 12:26:28.483746,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-16 12:43:09.830698,
+0,"<class 'httplib2.ServerNotFoundError'>, Unable to find the server at accounts.google.com, line: 100",new FOLLOW script,2018-06-16 15:07:07.465535,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (390, 673). Other element would receive the click: <div class=""_2dDPU"" role=""dialog"">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-17 00:45:35.955136,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-17 01:16:52.076584,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""react-root""]/section/nav/div[2]/div/div/div[3]/div/div[3]/a""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 60",new FOLLOW script,2018-06-17 01:16:52.630578,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""/html/body/div[3]/div/div[2]/div/article/div[2]/section[2]/div/span/span""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 85",new FOLLOW script,2018-06-17 03:17:53.785246,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (390, 523). Other element would receive the click: <div class=""_2dDPU"" role=""dialog"">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-17 05:21:05.461564,
+0,"<class 'selenium.common.exceptions.WebDriverException'>, Message: unknown error: Element <div class=""eLAPa"" role=""button"">...</div> is not clickable at point (390, 495). Other element would receive the click: <ul class=""ueMLB"">...</ul>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-17 08:44:16.742488,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-17 09:06:45.137310,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-17 10:13:25.093232,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-17 10:46:41.755235,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-17 11:16:59.032391,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 158",Follow Famous people followers,2018-06-17 11:17:25.038078,
+0,"<class 'selenium.common.exceptions.TimeoutException'>, Message: timeout
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-17 12:18:40.864482,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-17 13:20:59.459115,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-17 13:58:21.316592,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-17 14:08:56.694927,
+0,"<class 'selenium.common.exceptions.NoSuchElementException'>, Message: no such element: Unable to locate element: {""method"":""class name"",""selector"":""HBoOv""}
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+, line: 161",Follow and like by tag,2018-06-17 14:13:48.539254,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-17 15:31:08.582554,
+0,"<class 'IndexError'>, list index out of range, line: 158",Follow Famous people followers,2018-06-17 17:02:26.518247,
