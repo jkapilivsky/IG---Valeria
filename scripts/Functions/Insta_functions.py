@@ -115,9 +115,9 @@ def isEnglish(characters):
         return False
     return True
 
-def stats_range(follower_min = 250, follower_max = 25000,
-                following_min= 250, following_max = 5000,
-                posts_min = 50, posts_max = 99999999):
+def stats_range(follower_min = 150, follower_max = 25000,
+                following_min= 150, following_max = 5000,
+                posts_min = 25, posts_max = 99999999):
 
     posts = driver.find_elements_by_class_name('g47SY')[0].text
     followers = driver.find_elements_by_class_name('g47SY')[1].text
@@ -174,3 +174,7 @@ def error_log(err, script):
                       columns=['error message', 'script', 'time_stamp'])
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
+
+def click_specific_post(post_num):
+    all_posts = driver.find_elements_by_class_name('eLAPa')
+    all_posts[post_num].click()

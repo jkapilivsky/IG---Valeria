@@ -11,7 +11,7 @@ import sys, logging
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
-stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log
+stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_specific_post
 
 def num_posts_to_like(num_images_to_like):
     count_posts = 0
@@ -50,7 +50,7 @@ def likes_persons_posts(num_images_to_like):
         # if statement looks for a video
         try:
             like_unlike_check()
-            time.sleep(1)
+            time.sleep(randint(3,5))
             # right click on images to scroll
             right_arrow()
             sleep()
@@ -92,24 +92,28 @@ def like_people(number_of_people, number_pics_to_like):
             right_arrow()
             sleep()
             continue
+        #
+        # # Makes sure that the user has enough images to like! ... has too if stats_range = >50 posts
+        # total_images = driver.find_elements_by_class_name('g47SY')[0].text
+        # total_images = remove_k_m_periods_commas(total_images)
+        #
+        # # Clicks the person's first image
+        # click_first_post()
+        #
+        # # Unesesarry since min posts = 50
+        # if total_images >= number_pics_to_like:
+        #     total_images = number_pics_to_like
+        #     sleep()
 
-        # Makes sure that the user has enough images to like!
-        total_images = driver.find_elements_by_class_name('g47SY')[0].text
-        total_images = remove_k_m_periods_commas(total_images)
+        click_specific_post(0)
+        sleep()
 
+        likes_persons_posts(number_pics_to_like)
 
-        # Clicks the person's first image
-        click_first_post()
-
-        # TODO - is this correct?! shouldn't it be <= num_pics_to_like?
-        if total_images >= number_pics_to_like:
-            total_images = number_pics_to_like
-            sleep()
-
-        likes_persons_posts(total_images)
-
+        sleep()
         #Goes back twice to get back to hashtag
         driver.back()
+        sleep()
         driver.back()
         sleep()
         # right click on images to scroll
@@ -124,15 +128,12 @@ while errors > 0:
         driver = open_chrome('Like_by_tag_Profile')
         twilio()
 
-        hashtag_list = ['#hudabeauty', '#beautiful', '#iggers', '#followforfollow', '#likeforlike',
-                       '#Beautiful', '#me', '#instagood', '#Austin', '#makeupbyme']
         makeup_list = ['#makeupbyme', '#makeupdolls', '#makeupaddict', '#instamakeup', '#makeupblogger',
                        '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
                        '#lashlover', '#naturallashes', '#hudabeauty', '#lipstick', '#eyeshadow']
         influnecer_list = ['#styleblogger', '#instamakeup'] + makeup_list
 
         #Randomizes list!
-        hashtag_list = sorted(hashtag_list, key=lambda x: random())
         makeup_list = sorted(makeup_list, key=lambda x: random())
         influnecer_list = sorted(influnecer_list, key=lambda x:random())
 
@@ -141,8 +142,9 @@ while errors > 0:
             search('explore/tags/'+hash[1:])
 
             # click first image of 'recent posts' *skipping top posts
-            hashtag_images = driver.find_elements_by_class_name('eLAPa')
-            hashtag_images[9].click()
+            click_specific_post(9)  #First post is 0
+            # hashtag_images = driver.find_elements_by_class_name('eLAPa')
+            # hashtag_images[9].click()
             sleep()
 
             like_people(6, 3)  # number of people, number of pics to like
