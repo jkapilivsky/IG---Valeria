@@ -8,15 +8,17 @@ import pickle
 import pandas as pd
 from random import *
 import sys, logging
+from selenium.webdriver.common.action_chains import ActionChains
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
-stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_posts_followers_followings
+stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_posts_followers_followings, \
+isEnglish
 
 def repeat_space_bar(number_of_times):
     count = 0
     while count < number_of_times:
-        driver.find_element_by_class_name('_2g7d5').send_keys(Keys.SPACE)
+        driver.find_element_by_class_name('FPmhX').send_keys(Keys.SPACE)
         time.sleep(1)
         count += 1
 
@@ -40,7 +42,7 @@ def check_if_image_is_not_a_video():
 
 def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
     for people in range(num_of_people):
-        name = driver.find_elements_by_class_name('_2g7d5')
+        name = driver.find_elements_by_class_name('FPmhX')
         user_followers_list.append(name[people].text)
 
     driver.back()
@@ -69,13 +71,16 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
             data_names = pickle.load(open("../../data/Instagram_data.p", "rb"))
             username_list = data_names['username'].tolist()
 
-            name = driver.find_elements_by_class_name('_2g7d5')
+            name = driver.find_elements_by_class_name('FPmhX')
             buttons = "../../../../div[2]/span"
 
             if name[future_followers].text == 'linethmm':
                 continue
 
             if name[future_followers].text in username_list:
+                continue
+
+            if isEnglish(name[future_followers].text) == False:
                 continue
 
             if name[future_followers].find_element_by_xpath(buttons).text == 'Follow':
@@ -126,7 +131,7 @@ while errors > 0:
 
         # Create new list of people to follow!
         user_followers_list = []
-        follow_people(40, 12, 16)  # Number of people, number of followings, time to wait
+        follow_people(40, 12, 20)  # Number of people, number of followings, time to wait
         print(user_followers_list)
 
         # ###################################Check # of followings##########################################################

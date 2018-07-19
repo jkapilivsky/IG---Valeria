@@ -138,11 +138,11 @@ while errors > 0:
 
         for hash in influnecer_list:
             print('----liking:', hash, '----')
-            search(hash)
+            search('explore/tags/'+hash[1:])
 
             # click first image of 'recent posts' *skipping top posts
-            driver.find_element_by_xpath(
-                '''//*[@id="react-root"]/section/main/article/div[2]/div[1]/div[1]/div[1]/a/div''').click()
+            hashtag_images = driver.find_elements_by_class_name('eLAPa')
+            hashtag_images[9].click()
             sleep()
 
             like_people(6, 3)  # number of people, number of pics to like
@@ -165,5 +165,5 @@ while errors > 0:
             text_me('follow #tags quit!.. reason = ' + str(err))
             quit()
         message = 'Follow #tag error...'  + str(errors) + ' errors remaining'
-        text_me(message)
+        #text_me(message)
         time.sleep(10*60)

@@ -1,14 +1,10 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 import timeit
-from twilio.rest import Client
-from random import *
-import pickle
-import datetime
-import pandas as pd
-import sys, logging
+import sys
 
 #Home computer
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
@@ -79,26 +75,20 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
         # ########################################begin space bar!#################################################
         tab = 0
         while tab <= 2:
-            variable = driver.find_element_by_class_name('_914pk')
-            actions = webdriver.ActionChains(driver)
-            actions.move_to_element(variable)
-            # actions.click()
-            actions.send_keys(Keys.TAB)
-            actions.perform()
+            actions_tab = ActionChains(driver)
+            actions_tab.send_keys(Keys.TAB)
+            actions_tab.perform()
             time.sleep(.5)
             tab += 1
 
         count = 0
         while count < int(people_to_follow/3):  # Spacebar X number of times
-            variable = driver.find_element_by_class_name('_914pk')
-            actions = webdriver.ActionChains(driver)
-            actions.move_to_element(variable)
-            # actions.click()
-            actions.send_keys(Keys.SPACE)
-            actions.perform()
-
+            actions_space = ActionChains(driver)
+            actions_space.send_keys(Keys.SPACE)
+            actions_space.perform()
             time.sleep(.75)
             count += 1
+
         # #################################End repeat space bar###############################################
 
         people_list = []
@@ -181,10 +171,10 @@ def repeat_space_bar(number_of_times):
 
 # choose the picture!
 row = 2
-column = 2
+column = 1
 
 
-error = 1
+error = 5
 while error >= 0:
     try:
         global driver
@@ -212,18 +202,10 @@ while error >= 0:
         sleep()
         # select image
         pics = driver.find_elements_by_class_name('_9AhH0')
-        print((row-1)*3 + (column-1))
         pics[(row-1)*3 + (column-1)].click()
-        # try:
-        #     driver.find_element_by_xpath(
-        #         '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[1]''').click()  # They changed the xpath -.- its fixed now
-        #
-        # except:
-        #     driver.find_element_by_xpath(
-        #         '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[''' + str(row) + ''']/div[''' + str(column) + ''']/a/div[2]''').click()
 
         sleep()
-        like_peoples_stuffs(2, 2, 2)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(12, 350, 3)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')
@@ -232,6 +214,8 @@ while error >= 0:
         driver.close()  #
 
     except Exception as err:
+        time.sleep(60*20)
+        row += 1
         print(err)
         issue = error_handling()
         script = 'Liking peoples pictures who liked us'

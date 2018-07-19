@@ -2,7 +2,7 @@
 
 import time, datetime
 from twilio.rest import Client
-import sys, logging
+import sys
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -26,7 +26,6 @@ def open_chrome(profile):
 
     options.add_argument(dir + profile)  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
-
     cookies = pickle.load(open("../../assets/cookies.p", "rb"))
     for cookie in cookies:
         driver.add_cookie(cookie)
@@ -85,30 +84,40 @@ def remove_k_m_periods_commas(value):
     return int(value)
 
 def like_unlike_check():
-    like_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Like']")
-    liked_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Unlike']")
+    # like_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Like']")
+    # liked_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Unlike']")
+    #
+    # if len(like_elem) == 1:
+    #     driver.execute_script(
+    #         "document.getElementsByClassName('" + like_elem[0].get_attribute("class") + "')[0].click()")
+    #     print('--> Image Liked!')
+    #     time.sleep(2)
+    # elif len(liked_elem) == 1:
+    #     print('--> Already Liked!')
+    # else:
+    #     print('--> Invalid Like Element!')
 
-    if len(like_elem) == 1:
-        driver.execute_script(
-            "document.getElementsByClassName('" + like_elem[0].get_attribute("class") + "')[0].click()")
+    try:
+        like_button = driver.find_element_by_class_name('glyphsSpriteHeart__outline__24__grey_9')
+        like_button.click()
         print('--> Image Liked!')
-        time.sleep(2)
-    elif len(liked_elem) == 1:
-        print('--> Already Liked!')
-    else:
-        print('--> Invalid Like Element!')
+    except:
+        try:
+            driver.find_element_by_class_name('glyphsSpriteHeart__filled__24__red_5')
+            print('--> Already Liked!')
+        except:
+            print('--> Invalid Like Element!')
 
 def isEnglish(characters):
     try:
         characters.encode(encoding='utf-8').decode('ascii')
     except UnicodeDecodeError:
         return False
-    else:
-        return True
+    return True
 
-def stats_range(follower_min = 150, follower_max = 25000,
-                following_min= 150, following_max = 5000,
-                posts_min = 25, posts_max = 99999999):
+def stats_range(follower_min = 250, follower_max = 25000,
+                following_min= 250, following_max = 5000,
+                posts_min = 50, posts_max = 99999999):
 
     posts = driver.find_elements_by_class_name('g47SY')[0].text
     followers = driver.find_elements_by_class_name('g47SY')[1].text
@@ -127,13 +136,11 @@ def stats_range(follower_min = 150, follower_max = 25000,
         return True
 
 def right_arrow():
-    driver.find_element_by_class_name('HBoOv').click()
+    driver.find_element_by_class_name('coreSpriteRightPaginationArrow').click()
 
 def click_first_post():
     stats = driver.find_elements_by_class_name('eLAPa')
     stats[0].click()
-    # driver.find_element_by_xpath(
-    #     '''//*[@id="react-root"]/section/main/div/article/div[1]/div/div[1]/div[1]/a/div''').click()
 
 def go_to_profile():
     driver.find_element_by_class_name('coreSpriteDesktopNavProfile').click()
@@ -150,7 +157,6 @@ def click_posts_followers_followings(which_one):
 def repeat_down_arrow(number_of_times):
     actions_down = ActionChains(driver)
     actions_down.send_keys(Keys.ARROW_DOWN)
-
     count = 0
     while count < number_of_times:
         actions_down.perform()

@@ -62,7 +62,11 @@ while errors > 0:
             click_first_post()
             time.sleep(2)
             # Click likes amount to get to people who've liked their picture
-            driver.find_element_by_class_name('zV_Nj').click()
+            try:
+                driver.find_element_by_class_name('zV_Nj').click()
+            except:
+                driver.back()
+                continue
             sleep()
             follow_people_who_interacted()  # Number of people to follow
             sleep()
