@@ -58,8 +58,8 @@ def likes_persons_posts(num_images_to_like):
 
         except NoSuchElementException:
             print('Image is not a picture!')
-            right_arrow()
-            count_posts += 1
+            driver.back()
+            break
 
 def like_people(number_of_people, number_pics_to_like):
     count = 0
@@ -76,7 +76,7 @@ def like_people(number_of_people, number_pics_to_like):
             continue
         # TODO - ends here!
 
-        print('liking: ', driver.find_element_by_class_name('AC5d8').text)
+        print('liking:' + driver.find_element_by_class_name('AC5d8').text)
 
         try:
         # If out of range. Go back and select next picture
@@ -92,18 +92,6 @@ def like_people(number_of_people, number_pics_to_like):
             right_arrow()
             sleep()
             continue
-        #
-        # # Makes sure that the user has enough images to like! ... has too if stats_range = >50 posts
-        # total_images = driver.find_elements_by_class_name('g47SY')[0].text
-        # total_images = remove_k_m_periods_commas(total_images)
-        #
-        # # Clicks the person's first image
-        # click_first_post()
-        #
-        # # Unesesarry since min posts = 50
-        # if total_images >= number_pics_to_like:
-        #     total_images = number_pics_to_like
-        #     sleep()
 
         click_specific_post(0)
         sleep()

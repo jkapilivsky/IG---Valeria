@@ -13,7 +13,7 @@ sys.path.insert(0, 'C:/Users/jamie.kapilivsky/PycharmProjects/Instagram/Insta fi
 
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
 stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, go_to_profile, search, \
-click_posts_followers_followings
+click_posts_followers_followings, repeat_space_bar, click_specific_post, right_arrow
 
 def likes_persons_posts(num_images_to_like):
     count_posts = 0
@@ -24,7 +24,7 @@ def likes_persons_posts(num_images_to_like):
             like_unlike_check()
             sleep()
             # right click on images to scroll
-            driver.find_element_by_class_name('''coreSpriteRightPaginationArrow''').click()
+            right_arrow()
             sleep()
             count_posts += 1
 
@@ -60,14 +60,15 @@ def check_if_image_is_not_a_video():
     except:
         pass
 
-
-def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_pics_to_like):
+def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_pics_to_like, post_number):
     pic_counter = 1
+    post_number = post_number
 
     for y in range(number_of_valeria_pictures):
         pic_count = 0
         print('picture number:', y)
 
+        # We don't do vidoes... But this looks for the play button and works
         check_if_image_is_not_a_video()
 
         # Click liking button
@@ -127,8 +128,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
             total_images = remove_k_m_periods_commas(total_images)
 
             # Clicks the person's first image
-            pics = driver.find_elements_by_class_name('_9AhH0')
-            pics[0].click()
+            click_specific_post(0)
 
             if total_images >= number_of_pics_to_like:
                 total_images = number_of_pics_to_like
@@ -150,9 +150,9 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
         go_to_profile()
         sleep()
 
+        post_number += 1
         # Clicks image we started with and then loops through where to go... (not the best)
-        pics = driver.find_elements_by_class_name('_9AhH0')
-        pics[(row-1)*3 + (column-1)].click()
+        click_specific_post(post_number)
 
         sleep()
         while pic_count < pic_counter:
@@ -162,19 +162,12 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
         pic_counter += 1
 
-def repeat_space_bar(number_of_times):
-    count = 0
-    while count < number_of_times:
-        driver.find_element_by_class_name('coreSpriteGlyphBlack').send_keys(Keys.SPACE)
-        time.sleep(1)
-        count += 1
-
 # choose the picture!
-row = 2
+row = 6
 column = 1
+post_number = (row-1)*3 + (column-1)
 
-
-error = 5
+error = 2
 while error >= 0:
     try:
         global driver
@@ -186,13 +179,6 @@ while error >= 0:
         go_to_profile()
         sleep()
 
-        # Click 'load more'
-        try:
-            driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div/a''').click()
-            sleep()
-        except NoSuchElementException:
-            pass
-
         if row < 10:
             spacebars = row/2
         else:
@@ -201,11 +187,10 @@ while error >= 0:
         repeat_space_bar(spacebars)  # Scrolls down to the bottom of the profile page
         sleep()
         # select image
-        pics = driver.find_elements_by_class_name('_9AhH0')
-        pics[(row-1)*3 + (column-1)].click()
+        click_specific_post(post_number)
 
         sleep()
-        like_peoples_stuffs(12, 350, 3)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
+        like_peoples_stuffs(12, 375, 3, post_number)  # Number of Valeria's pics, number of people, Number of pics to like (line 264)
 
         stop = timeit.default_timer()
         print('Liking people\'s stuffs')

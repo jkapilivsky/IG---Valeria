@@ -97,6 +97,19 @@ def like_unlike_check():
     # else:
     #     print('--> Invalid Like Element!')
 
+    # TODO - why is heart_button.text printing blank?
+    # heart_button = driver.find_element_by_class_name('Szr5J')
+    # print(heart_button.text)
+    # if heart_button.text == 'Like':
+    #     heart_button.click()
+    #     print('--> Image Liked!')
+    #
+    # elif heart_button.text == 'Unlike':
+    #     print('--> Already Liked!')
+    #
+    # else:
+    #     print('--> Invalid Like Element!')
+
     try:
         like_button = driver.find_element_by_class_name('glyphsSpriteHeart__outline__24__grey_9')
         like_button.click()
@@ -161,6 +174,15 @@ def repeat_down_arrow(number_of_times):
     while count < number_of_times:
         actions_down.perform()
         time.sleep(1.5)
+        count += 1
+
+def repeat_space_bar(number_of_times):
+    action_space = ActionChains(driver)
+    action_space.send_keys(Keys.SPACE)
+    count = 0
+    while count < number_of_times:
+        action_space.perform()
+        time.sleep(2)
         count += 1
 
 def follow_button():
