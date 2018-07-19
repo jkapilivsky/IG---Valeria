@@ -1,26 +1,14 @@
-from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.keys import Keys
 import time
-from twilio.rest import Client
 import datetime
 import pickle
 import pandas as pd
-from random import *
-import sys, logging
-from selenium.webdriver.common.action_chains import ActionChains
+import sys
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
 stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_posts_followers_followings, \
-isEnglish
-
-def repeat_space_bar(number_of_times):
-    count = 0
-    while count < number_of_times:
-        driver.find_element_by_class_name('FPmhX').send_keys(Keys.SPACE)
-        time.sleep(1)
-        count += 1
+isEnglish, repeat_space_bar
 
 def check_if_account_is_private():
     try:

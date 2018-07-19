@@ -5,8 +5,8 @@ import pandas as pd
 from random import *
 
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
-from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, remove_k_m_periods_commas
-from Insta_functions import isEnglish, click_posts_followers_followings
+from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, remove_k_m_periods_commas, \
+isEnglish, click_posts_followers_followings, like_unlike_check
 
 def write_to_database(name, future_followers):
     # Begin pickle
@@ -19,21 +19,6 @@ def write_to_database(name, future_followers):
     pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
     # End pickle
     sleep()
-
-def like_unlike_check():
-
-    like_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Like']")
-    liked_elem = driver.find_elements_by_xpath("//a[@role = 'button']/span[text()='Unlike']")
-
-    if len(like_elem) == 1:
-        driver.execute_script(
-            "document.getElementsByClassName('" + like_elem[0].get_attribute("class") + "')[0].click()")
-        print('--> Image Liked!')
-        time.sleep(2)
-    elif len(liked_elem) == 1:
-        print('--> Already Liked!')
-    else:
-        print('--> Invalid Like Element!')
 
 def likes_persons_posts(num_images_to_like):
     count_posts = 0
@@ -140,14 +125,13 @@ def error_log(err):
     error_log = error_log.append(df)
     pickle.dump(error_log, open("../../data/Instagram_error_log.p", "wb"))
 
-errors = 7
+errors = 3
 while errors > 0:
     try:
         global driver
         driver = open_chrome('Follow_Like_Influencers')
         twilio()
-        influencers_list = ['sichenmakeupholic', 'nyane']
-        #finding_hash_first = ['michellephan', 'hudabeauty','wengie', ]
+        influencers_list = ['sichenmakeupholic', 'nyane', 'michellephan', 'hudabeauty','wengie']
         new_influencers_list = ['vdethe', 'ashleesummer', 'snitchery', 'mamapeach_'] + influencers_list
         randomized_list = sorted(influencers_list, key=lambda x:random())
         randomized_list2 = sorted(new_influencers_list, key=lambda x:random())

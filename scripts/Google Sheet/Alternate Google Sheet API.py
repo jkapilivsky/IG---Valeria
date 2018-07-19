@@ -96,7 +96,7 @@ while errors > 0:
 
         # use creds to create a client to interact with the Google Drive API
         scope = ['https://spreadsheets.google.com/feeds']
-        creds = ServiceAccountCredentials.from_json_keyfile_name('../../../API Keys/GSheet_client_secret', scope)  # TODO- make sure this is ok!
+        creds = ServiceAccountCredentials.from_json_keyfile_name('../../../API Keys/GSheet_client_secret', scope)
         client = gspread.authorize(creds)
 
         # Find a workbook by name and open the first sheet

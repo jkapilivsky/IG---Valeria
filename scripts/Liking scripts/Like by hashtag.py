@@ -74,7 +74,6 @@ def like_people(number_of_people, number_pics_to_like):
             right_arrow()
             count += 1
             continue
-        # TODO - ends here!
 
         print('liking:' + driver.find_element_by_class_name('AC5d8').text)
 
