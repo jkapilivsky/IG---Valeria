@@ -9,7 +9,7 @@ import pandas as pd
 from random import *
 import sys, logging
 
-
+time.sleep(60*60*1)
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search
 

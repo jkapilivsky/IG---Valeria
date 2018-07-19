@@ -1,4 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.keys import Keys
 import time
 import datetime
 import pickle
@@ -8,7 +9,14 @@ import sys
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
 stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_posts_followers_followings, \
-isEnglish, repeat_space_bar
+isEnglish
+
+def repeat_space_bar(number_of_times):
+    count = 0
+    while count < number_of_times:
+        driver.find_element_by_class_name('FPmhX').send_keys(Keys.SPACE)
+        time.sleep(1)
+        count += 1
 
 def check_if_account_is_private():
     try:
@@ -55,12 +63,12 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
         repeat_space_bar(30)
 
         for future_followers in range(num_of_their_followers):
-
+            sleep()
             data_names = pickle.load(open("../../data/Instagram_data.p", "rb"))
             username_list = data_names['username'].tolist()
 
             name = driver.find_elements_by_class_name('FPmhX')
-            buttons = "../../../../div[2]/span"
+            buttons = "../../../../div[2]"
 
             if name[future_followers].text == 'linethmm':
                 continue
