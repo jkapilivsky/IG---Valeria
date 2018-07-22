@@ -163,7 +163,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
         pic_counter += 1
 
 # choose the picture!
-row = 6
+row = 7
 column = 1
 post_number = (row-1)*3 + (column-1)
 

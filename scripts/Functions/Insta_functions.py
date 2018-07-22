@@ -27,8 +27,8 @@ def open_chrome(profile):
     options.add_argument(dir + profile)  # Path to your chrome profile
     driver = webdriver.Chrome(executable_path='../../assets/chromedriver', chrome_options=options)
     cookies = pickle.load(open("../../assets/cookies.p", "rb"))
-    for cookie in cookies:
-        driver.add_cookie(cookie)
+    # for cookie in cookies:
+    #     driver.add_cookie(cookie)
 
     driver.get("https://www.instagram.com/")
     time.sleep(randint(6, 9))
@@ -186,7 +186,7 @@ def repeat_space_bar(number_of_times):
         count += 1
 
 def follow_button():
-    btn_list = driver.find_elements_by_class_name('_5f5mN')
+    btn_list = driver.find_elements_by_class_name('BY3EC')
     main_btn = btn_list[0]
     return main_btn
 

@@ -9,7 +9,6 @@ import pandas as pd
 from random import *
 import sys, logging
 
-time.sleep(60*60*1)
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search
 
@@ -51,6 +50,27 @@ while error > 0:
         for person in follow_unfollow_df['username']:
             driver.get("https://www.instagram.com/" + person)
             sleep()
+
+            if person == 'linethmm':
+                continue
+
+            # Private accounts with 'Follow' have a new class name -.- ugh
+            try:
+                private_account = driver.find_element_by_class_name('rkEop')
+                if private_account:
+                    print(person, 'already unfollowed and account is private')
+                # Begin pickle
+                data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+                df = pd.DataFrame([[person, 'Unfollowed', str(datetime.datetime.now())]],
+                                  columns=['username', 'status', 'time_stamp'])
+                data = data.append(df)
+                pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+                # End pickle
+                time.sleep(3)
+                continue
+            except:
+                pass
+
 
             # Check if they are blocked
             try:
@@ -113,7 +133,9 @@ while error > 0:
             except NoSuchElementException:
                 continue
 
-            button = driver.find_element_by_class_name('_5f5mN')
+
+
+            button = driver.find_element_by_class_name('BY3EC')
 
             if button.text == 'Following':
                 button.click()
@@ -163,7 +185,7 @@ while error > 0:
         print(err)
         error -= 1
         if error == 0:
-            text_me('unfollow ended!')
+            #text_me('unfollow ended!')
             quit()
         msg = 'Unfollow issue!'
-        text_me(msg)
+        #text_me(msg)

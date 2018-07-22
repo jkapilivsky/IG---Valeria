@@ -112,7 +112,7 @@ errors = 6
 while errors > 0:
     try:
         global driver
-        driver = open_chrome('Like_by_tag_Profile')
+        driver = open_chrome('Extra_Profile')
         twilio()
 
         makeup_list = ['#makeupbyme', '#makeupdolls', '#makeupaddict', '#instamakeup', '#makeupblogger',

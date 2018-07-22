@@ -115,6 +115,7 @@ while errors > 0:
     try:
         global driver
         driver = open_chrome('Follow_Profile')
+        time.sleep(60)
         twilio()
         # go to profile
         driver.get('https://www.instagram.com/linethmm')
