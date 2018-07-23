@@ -89,7 +89,7 @@ while error > 0:
 
         count = 0
         for people in reversed(range(0, people_to_unfollow)):
-            unfollow_button = driver.find_elements_by_class_name('_5f5mN')
+            unfollow_button = driver.find_elements_by_class_name('sqdOP')
             name = driver.find_elements_by_class_name('FPmhX')
 
             # Todo - check if name is equal to button... or it will unfollow wrong peoples

@@ -73,6 +73,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
 
         # Click liking button
         driver.find_element_by_class_name('zV_Nj').click()
+        sleep()
         # ########################################begin space bar!#################################################
         tab = 0
         while tab <= 2:
@@ -81,7 +82,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
             actions_tab.perform()
             time.sleep(.5)
             tab += 1
-
+        sleep()
         count = 0
         while count < int(people_to_follow/3):  # Spacebar X number of times
             actions_space = ActionChains(driver)
@@ -163,7 +164,7 @@ def like_peoples_stuffs(number_of_valeria_pictures, people_to_follow, number_of_
         pic_counter += 1
 
 # choose the picture!
-row = 7
+row = 10
 column = 1
 post_number = (row-1)*3 + (column-1)
 

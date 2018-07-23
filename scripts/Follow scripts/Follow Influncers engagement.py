@@ -66,6 +66,7 @@ while errors > 0:
                 driver.find_element_by_class_name('zV_Nj').click()
             except:
                 driver.back()
+                print('didnt click the X likes button on first pic')
                 continue
             sleep()
             follow_people_who_interacted()  # Number of people to follow
