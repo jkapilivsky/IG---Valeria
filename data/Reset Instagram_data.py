@@ -7,7 +7,8 @@ date = datetime.date.today()
 df = pd.read_pickle('Instagram_data.p')
 
 df = df.iloc[0:0]
-
+df.to_pickle('Instagram_data.p')
+quit()
 '''
 make sure to change the original pickle file name first!!
 '''
@@ -82,5 +83,5 @@ for friends in following_list:
     df = df.append(df_friend)
 
 
-#df.to_pickle('Instagram_data.p')
+df.to_pickle('Instagram_data.p')
 print('Complete')
