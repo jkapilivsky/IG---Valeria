@@ -1,20 +1,30 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-import time
+import time, os
 import datetime
 import pickle
 import pandas as pd
 import sys
-
+from random import random
 sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
 stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_posts_followers_followings, \
 isEnglish
 
-official_friend_data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-# THIS ACTUALLY GRABES ALL USERSNAMES INTERACTED WITH!
-official_friend_urls_list = official_friend_data['username'].tolist()
+# Get just official friends to ignore
+official_friend_data = pickle.load(open("../../data/Official_friends_df.p", "rb"))
+official_friend_urls_list = official_friend_data['user_url'].tolist()
+
+# Ignore users that have been interacted with more than 2 times
+# TODO - eventuall no more than 3 interactions within X amount of time
+ppl_interacted_with = pickle.load(open('../../data/Instagram_data.p', 'rb'))
+ppl_over_2_interactions = ppl_interacted_with[
+    ppl_interacted_with['number_of_interactions'] >= 2]
+ppl_interacted_with_list = ppl_interacted_with['user_url'].tolist()
+
+ppl_to_skip_over = official_friend_urls_list + ppl_interacted_with_list
+
 
 def repeat_space_bar(number_of_times):
     count = 0
@@ -22,6 +32,7 @@ def repeat_space_bar(number_of_times):
         driver.find_element_by_class_name('FPmhX').send_keys(Keys.SPACE)
         time.sleep(1)
         count += 1
+
 
 def tab_and_space(num_spacebars):
     tab = 0
@@ -133,17 +144,21 @@ def like_and_follow_people_then_unfollow(people_list, number_of_pics_to_like=3):
             break
 
         print('#'*20)
-        # TODO - need to save the users in a database!
         # Begin pickle
+        posts = driver.find_elements_by_class_name('g47SY')[0].text
+        followers = driver.find_elements_by_class_name('g47SY')[1].text
+        followings = driver.find_elements_by_class_name('g47SY')[2].text
+
         data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-        df = pd.DataFrame(
-            [[driver.current_url, 'Following', str(datetime.datetime.now()), 'Friends_of_friends']],
-            columns=['username', 'status', 'time_stamp', 'acquisition'])
+        df = pd.DataFrame([['No', os.path.basename(__file__)[:-3], 'Following', driver.current_url,
+                            str(datetime.datetime.now()), str(datetime.datetime.now()),
+                            1, posts, followers, followings]],
+            columns=['Official_Friend', 'acquisition', 'status', 'user_url',
+                    'first_interacted_time', 'last_interacted_time',
+                    'number_of_interactions', 'posts', 'followers', 'following'])
         data = data.append(df)
         pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
         # End pickle
-
-
 
     print(people_followed_list)
     print('WAIT 1 HOUR TO START UNFOLLOWING!')
@@ -213,13 +228,10 @@ while errors > 0:
                             'sichenmakeupholic', 'nyane', 'michellephan', 'hudabeauty','wengie',
                             'sophxsmithh','hailiebarber', 'laur_elyse','ponysmakeup']
 
-        influencers_list2 = ['sophxsmithh', 'nyane'] + influencers_list
-
-        test_list = ['ashleesummer']
 
         # If we want to randomize list
-        # randomized_list = sorted(influencers_list, key=lambda x:random())
-        for influencer in influencers_list:
+        randomized_list = sorted(influencers_list, key=lambda x:random())
+        for influencer in randomized_list:
             print('following influencer:', influencer)
             driver.get("https://www.instagram.com/" + influencer)
             sleep()
@@ -236,7 +248,13 @@ while errors > 0:
             people_list = get_accounts_that_liked_influncer(accounts_to_potentially_follow)  # Number of people to follow
             sleep()
 
-            like_and_follow_people_then_unfollow(people_list, number_of_pics_to_like=3)  # Sends list of people and number of likes per person
+            # Takes out people not to interact with
+            updated_people_list = []
+            for person in people_list:
+                if person not in ppl_to_skip_over:
+                    updated_people_list.append(person)
+
+            like_and_follow_people_then_unfollow(updated_people_list, number_of_pics_to_like=3)  # Sends list of people and number of likes per person
 
 
 
