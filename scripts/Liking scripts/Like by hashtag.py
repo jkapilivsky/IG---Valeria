@@ -112,14 +112,14 @@ errors = 6
 while errors > 0:
     try:
         global driver
-        driver = open_chrome('Extra_Profile')
+        driver = open_chrome('Follow_Profile')
         twilio()
 
         makeup_list = ['#makeupbyme', '#makeupdolls', '#makeupaddict', '#instamakeup', '#makeupblogger',
                        '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
                        '#lashlover', '#naturallashes', '#hudabeauty', '#lipstick', '#eyeshadow']
         influnecer_list = ['#styleblogger', '#instamakeup'] + makeup_list
-
+        time.sleep(60*10)
         #Randomizes list!
         makeup_list = sorted(makeup_list, key=lambda x: random())
         influnecer_list = sorted(influnecer_list, key=lambda x:random())

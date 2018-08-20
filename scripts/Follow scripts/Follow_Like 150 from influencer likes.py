@@ -12,10 +12,16 @@ from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome,
 stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_posts_followers_followings, \
 isEnglish
 
-#TODO - need to keep track of who we have followed/unfollowed!
-
 official_friend_data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+# THIS ACTUALLY GRABES ALL USERSNAMES INTERACTED WITH!
 official_friend_urls_list = official_friend_data['username'].tolist()
+
+def repeat_space_bar(number_of_times):
+    count = 0
+    while count < number_of_times:
+        driver.find_element_by_class_name('FPmhX').send_keys(Keys.SPACE)
+        time.sleep(1)
+        count += 1
 
 def tab_and_space(num_spacebars):
     tab = 0
@@ -76,6 +82,13 @@ def like_and_follow_people_then_unfollow(people_list, number_of_pics_to_like=3):
         except NoSuchElementException:
             pass
 
+        # Make sure page is available
+        try:
+            if driver.find_element_by_class_name('error-container'):
+                continue
+        except NoSuchElementException:
+            pass
+
         # Check stats to make sure they are "acceptable"
         if stats_range(follower_min = 150, follower_max = 25000,
                 following_min= 150, following_max = 5000,
@@ -96,12 +109,19 @@ def like_and_follow_people_then_unfollow(people_list, number_of_pics_to_like=3):
         # TODO - turn off/on following them
         driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
         sleep()
-        huh = driver.find_elements_by_class_name('_5f5mN')
-        huh[0].click()
-        people_followed_list.append(driver.current_url)
-        print('following:', driver.current_url)
-        followed += 1
 
+        try:
+            driver.find_element_by_class_name('_6VtSN').click()
+        except:
+            try:
+                driver.find_elements_by_class_name('BY3EC').click()
+            except:
+                print('cant find follow btn!! :(')
+
+        people_followed_list.append(driver.current_url)
+        print('following person:', driver.current_url)
+        followed += 1
+        sleep()
         # Wait time after 10 follows
         if (followed+1) % 10 == 0:
             print('Waiting 10 minutes')
@@ -114,6 +134,16 @@ def like_and_follow_people_then_unfollow(people_list, number_of_pics_to_like=3):
 
         print('#'*20)
         # TODO - need to save the users in a database!
+        # Begin pickle
+        data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+        df = pd.DataFrame(
+            [[driver.current_url, 'Following', str(datetime.datetime.now()), 'Friends_of_friends']],
+            columns=['username', 'status', 'time_stamp', 'acquisition'])
+        data = data.append(df)
+        pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+        # End pickle
+
+
 
     print(people_followed_list)
     print('WAIT 1 HOUR TO START UNFOLLOWING!')
@@ -126,9 +156,30 @@ def like_and_follow_people_then_unfollow(people_list, number_of_pics_to_like=3):
         sleep()
         driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
         sleep()
-        driver.find_element_by_class_name('_5f5mN').click()
+        try:
+            driver.find_element_by_class_name('_5f5mN').click()
+        except:
+            try:
+                driver.find_element_by_class_name('_6VtSN').click()
+            except:
+                try:
+                    driver.find_elements_by_class_name('BY3EC').click()
+                except:
+                    print('cant find follow btn!! :(')
+
+        print('unfollowed person', people_url)
         sleep()
         unfollow_count += 1
+
+        # Begin pickle
+        data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+        df = pd.DataFrame(
+            [[driver.current_url, 'Unfollowed', str(datetime.datetime.now()), 'Friends_of_friends']],
+            columns=['username', 'status', 'time_stamp', 'acquisition'])
+        data = data.append(df)
+        pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
+        # End pickle
+
 
         # Wait time after 10 unfollows
         if (unfollow_count+1) % 10 == 0:
@@ -149,8 +200,9 @@ def get_accounts_that_liked_influncer(num_people=250):
     driver.back()
     return people_list
 
-errors = 1
-max_to_follow = 5
+errors = 3
+accounts_to_potentially_follow = 350
+max_to_follow = 50
 while errors > 0:
     try:
         global driver
@@ -163,12 +215,12 @@ while errors > 0:
 
         influencers_list2 = ['sophxsmithh', 'nyane'] + influencers_list
 
-        test_list = ['sophxsmithh','hailiebarber', 'laur_elyse']
+        test_list = ['ashleesummer']
 
         # If we want to randomize list
         # randomized_list = sorted(influencers_list, key=lambda x:random())
-        for influencer in test_list:
-            print('following:', influencer)
+        for influencer in influencers_list:
+            print('following influencer:', influencer)
             driver.get("https://www.instagram.com/" + influencer)
             sleep()
 
@@ -176,9 +228,12 @@ while errors > 0:
             time.sleep(2)
             # Click likes amount to get to people who've liked their picture
             driver.find_element_by_class_name('zV_Nj').click()
-
             sleep()
-            people_list = get_accounts_that_liked_influncer(60)  # Number of people to follow
+
+            # Scroll down to get more peoples
+            repeat_space_bar(round(accounts_to_potentially_follow/4))
+
+            people_list = get_accounts_that_liked_influncer(accounts_to_potentially_follow)  # Number of people to follow
             sleep()
 
             like_and_follow_people_then_unfollow(people_list, number_of_pics_to_like=3)  # Sends list of people and number of likes per person
@@ -189,7 +244,7 @@ while errors > 0:
         driver.close()
         quit()
         print('########time to start over#######waiting 2 hours########')
-        time.sleep(120*60)  # Wait 2 hours to start over
+        time.sleep(60*60*1)  # Wait 2 hours to start over (60 sec * 60 min * 2 hour)
 
     except Exception as err:
         errors -= 1

@@ -1,6 +1,8 @@
 import pickle
 import pandas as pd
 
+# TODO -  need to fix to increase number of interactions if duplicate!
+
 
 data = pickle.load(open("../../data/Instagram_data.p", "rb"))
 data.drop_duplicates(subset='username', keep='last', inplace=True)

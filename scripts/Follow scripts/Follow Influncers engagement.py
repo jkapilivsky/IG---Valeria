@@ -8,6 +8,13 @@ sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, remove_k_m_periods_commas, \
 isEnglish, click_posts_followers_followings, click_first_post, repeat_down_arrow, error_log
 
+def repeat_space_bar(number_of_times):
+    count = 0
+    while count < number_of_times:
+        driver.find_element_by_class_name('FPmhX').send_keys(Keys.SPACE)
+        time.sleep(1)
+        count += 1
+
 def write_to_database(names, person):
     # Begin pickle
     data = pickle.load(open("../../data/Instagram_data.p", "rb"))
@@ -22,19 +29,18 @@ def write_to_database(names, person):
 
 def follow_people_who_interacted(num_people = 12):
     if num_people > 12:
-        # TODO - doesnt work yet
-        repeat_down_arrow(round(num_people/6))
+        repeat_space_bar(round(num_people/4))
 
-    follow_btns = driver.find_elements_by_class_name('_5f5mN')
+    follow_btns = driver.find_elements_by_class_name('oF4XW')
     names = driver.find_elements_by_class_name('FPmhX')
 
     for person in range(num_people):
-        print(names[person].text)
-        print(follow_btns[person+2].text)
+        #print(names[person].text)
+        #print(follow_btns[person+2].text)
         if isEnglish(names[person].text) == False:
             continue
 
-        if follow_btns[person+2].text != 'Follow':
+        if follow_btns[person+1].text != 'Follow':
             continue
 
         follow_btns[person+2].click()
@@ -51,10 +57,10 @@ while errors > 0:
 
         influencers_list = ['vdethe', 'ashleesummer', 'snitchery', 'mamapeach_',
                             'sichenmakeupholic', 'nyane', 'michellephan', 'hudabeauty','wengie',
-                            '@sophxsmithh','@hailiebarber', '@laur_elyse','@ponysmakeup']
+                            'sophxsmithh','hailiebarber', 'laur_elyse','ponysmakeup']
 
         randomized_list = sorted(influencers_list, key=lambda x:random())
-        for influencer in influencers_list:
+        for influencer in randomized_list:
             print('following:', influencer)
             driver.get("https://www.instagram.com/" + influencer)
             sleep()
