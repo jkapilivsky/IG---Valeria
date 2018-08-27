@@ -4,12 +4,14 @@ import time
 import datetime
 import pickle
 import pandas as pd
-import sys
+import sys, os
+from random import randint
 
-sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/IG---Valeria/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
 stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_posts_followers_followings, \
 isEnglish
+
 
 def repeat_space_bar(number_of_times):
     count = 0
@@ -20,8 +22,9 @@ def repeat_space_bar(number_of_times):
 
 def check_if_account_is_private():
     try:
-        if driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/article/div/h2'''):
+        if driver.find_element_by_xpath('''//*[@id="react-root"]/section/main/div/div/article/div/div/h2'''):
             print('Account is Private')
+            sleep()
             return True
     except NoSuchElementException:
         return False
@@ -44,8 +47,8 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
     driver.back()
     sleep()
     ################################Get's list of people to follow COMPLETE############################################
-
-    for person in user_followers_list:
+    ppl_followed = 0
+    for person in user_followers_list[7:]:
         # Goes directly to person's profile
         driver.get("https://www.instagram.com/" + person)
         sleep()
@@ -60,46 +63,69 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
         except: 
             continue
 
-        repeat_space_bar(30)
+        repeat_space_bar(num_of_their_followers/3)
 
+        people_to_follow_from_friend = []
         for future_followers in range(num_of_their_followers):
-            sleep()
-            data_names = pickle.load(open("../../data/Instagram_data.p", "rb"))
-            username_list = data_names['username'].tolist()
-
             name = driver.find_elements_by_class_name('FPmhX')
-            buttons = "../../../../div[2]"
+            people_to_follow_from_friend.append('https://www.instagram.com/'+name[future_followers].text)
 
-            if name[future_followers].text == 'linethmm':
+        data_names = pickle.load(open("../../data/Instagram_data.p", "rb"))
+        username_list = data_names['user_url'].tolist()  # TODO - filter by number of interactions!
+
+        for person_url in people_to_follow_from_friend:
+            if person_url in username_list:
                 continue
 
-            if name[future_followers].text in username_list:
+            if isEnglish(person_url[26:]) == False:
                 continue
 
-            if isEnglish(name[future_followers].text) == False:
+            driver.get(person_url)
+
+            if check_if_account_is_private():
                 continue
 
-            if name[future_followers].find_element_by_xpath(buttons).text == 'Follow':
-                name[future_followers].find_element_by_xpath(buttons).click()
+            # Make sure page is available
+            try:
+                if driver.find_element_by_class_name('error-container'):
+                    continue
+            except NoSuchElementException:
+                pass
+
+            # Check stats to make sure they are "acceptable"
+            if stats_range(follower_min=150, follower_max=25000,
+                           following_min=150, following_max=6000,
+                           posts_min=35, posts_max=99999999) == False:
+                sleep()
+                continue
+
+            flw_btn = driver.find_element_by_class_name('_5f5mN')
+            if flw_btn.text == 'Follow':
+                flw_btn.click()
+                ppl_followed += 1
                 sleep()
             else:
                 continue
 
-            print("Now following: ", name[future_followers].text)
+            print("Now following: ", person_url)
 
+            posts = driver.find_elements_by_class_name('g47SY')[0].text
+            followers = driver.find_elements_by_class_name('g47SY')[1].text
+            followings = driver.find_elements_by_class_name('g47SY')[2].text
             # Begin pickle
             data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-            df = pd.DataFrame(
-                [[name[future_followers].text, 'Following', str(datetime.datetime.now()), 'Friends_of_friends']],
-                columns=['username', 'status', 'time_stamp', 'acquisition'])
+            df = pd.DataFrame([['No', os.path.basename(__file__)[:-3], 'Following', driver.current_url,
+                                str(datetime.datetime.now()), str(datetime.datetime.now()),
+                                1, posts, followers, followings]],
+                              columns=['Official_Friend', 'acquisition', 'status', 'user_url',
+                                       'first_interacted_time', 'last_interacted_time',
+                                       'number_of_interactions', 'posts', 'followers', 'following'])
             data = data.append(df)
             pickle.dump(data, open("../../data/Instagram_data.p", "wb"))
             # End pickle
 
-            sleep()
-
-            if (future_followers + 1) % 11 == 0:  # Sleeps for 6 minutes every 10 unfollow
-                print(future_followers, 'Followed: Waiting', sleep_time_minutes, 'minutes')
+            if (ppl_followed + 1) % 11 == 0:  # Sleeps for 6 minutes every 10 unfollow
+                print(ppl_followed, 'Followed: Waiting', sleep_time_minutes, 'minutes')
                 time.sleep(sleep_time_minutes * 60)
             else:
                 continue
@@ -110,12 +136,11 @@ def follow_people(num_of_people, num_of_their_followers, sleep_time_minutes):
         sleep()
 
 errors = 3
-followings = 0
+
 while errors > 0:
     try:
         global driver
         driver = open_chrome('Follow_Profile')
-        time.sleep(60)
         twilio()
         # go to profile
         driver.get('https://www.instagram.com/linethmm')
@@ -124,11 +149,13 @@ while errors > 0:
         click_posts_followers_followings('followers')
         sleep()
 
-        repeat_space_bar(15)
+        number_of_people = 12
+
+        repeat_space_bar(number_of_people/2)
 
         # Create new list of people to follow!
         user_followers_list = []
-        follow_people(40, 12, 20)  # Number of people, number of followings, time to wait
+        follow_people(number_of_people, 25, 20)  # Number of people, number of followings, time to wait
         print(user_followers_list)
 
         # ###################################Check # of followings##########################################################
@@ -153,6 +180,3 @@ while errors > 0:
             quit()
         message = 'Follow error = #' + str(errors)
         text_me(message)
-
-
-

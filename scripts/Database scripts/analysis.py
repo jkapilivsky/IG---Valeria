@@ -2,11 +2,26 @@ import pickle
 import pandas as pd
 import os
 import datetime
+print(len('https://www.instagram.com/'))
 
-# insta_data = pickle.load(open("../../data/Instagram_data.p", "rb"))
-# print(insta_data.head())
-# print(insta_data.columns)
+test = 'https://www.instagram.com/jamie'
+print(test[26:])
 
+insta_data = pickle.load(open("../../data/Instagram_data.p", "rb"))
+print(insta_data.head())
+print(insta_data['user_url'].head())
+print(insta_data.columns)
+
+# linethmm_df = pd.DataFrame([['Yes', 'NaN', '', 'https://www.instagram.com/linethmm',
+#                             '4/5/1993', '4/5/1993', 1000, 10000000, 10000000, 1000000]], columns=
+#                             ['Official_Friend', 'acquisition', 'status', 'user_url',
+#                              'first_interacted_time', 'last_interacted_time',
+#                              'number_of_interactions', 'posts', 'followers', 'following']
+#                            )
+# merge = pd.concat([insta_data, linethmm_df])
+# print(merge[merge['user_url'] == 'https://www.instagram.com/linethmm'])
+# pickle.dump(merge, open("../../data/Instagram_data.p", "wb"))
+quit()
 datetime.datetime.now()
 
 

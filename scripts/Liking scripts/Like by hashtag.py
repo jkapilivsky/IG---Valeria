@@ -9,7 +9,7 @@ import pandas as pd
 from random import *
 import sys, logging
 
-sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/Instagram/Insta files/scripts/Functions')
+sys.path.insert(0, 'C:/Users/jamie/PycharmProjects/IG---Valeria/scripts/Functions')
 from Insta_functions import sleep, twilio, text_me, error_handling, open_chrome, search, like_unlike_check, \
 stats_range, right_arrow, remove_k_m_periods_commas, click_first_post, error_log, click_specific_post
 
@@ -119,7 +119,6 @@ while errors > 0:
                        '#beautyaddict', '#styleblogger', '#fashionblogger', '#maccosmetics',
                        '#lashlover', '#naturallashes', '#hudabeauty', '#lipstick', '#eyeshadow']
         influnecer_list = ['#styleblogger', '#instamakeup'] + makeup_list
-        time.sleep(60*10)
         #Randomizes list!
         makeup_list = sorted(makeup_list, key=lambda x: random())
         influnecer_list = sorted(influnecer_list, key=lambda x:random())
@@ -153,6 +152,6 @@ while errors > 0:
         if errors == 0:
             text_me('follow #tags quit!.. reason = ' + str(err))
             quit()
-        message = 'Follow #tag error...'  + str(errors) + ' errors remaining'
+        message = 'Follow #tag error...' + str(errors) + ' errors remaining'
         #text_me(message)
         time.sleep(10*60)
